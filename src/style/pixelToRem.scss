@@ -1,0 +1,3 @@
+@mixin pixelToRem($property, $value) {
+  #{$property}: calc($value / 16) + rem;
+}

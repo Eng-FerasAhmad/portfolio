@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + vitest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint and prettier rules.
 
-Currently, two official plugins are available:
+### checkout and install
++ clone the repo
++ `npm install`
++ `npm run dev`
++ run all tests: `npm run test`
++ run one test: `npm run test App.test.tsx`
++ run fix prettier: `npx prettier . --write`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installed libraries
+| Library   |      version      |
+|----------|:-------------:|
+| React | 18.2.0 |
+| Vite | 4.4.5 |
+| Vitest | 0.34.6 |
+| Axios | 1.5.1 |
+| eslint | 8.45.0 |
+| prettier | 3.0.3 |
 
-## Expanding the ESLint configuration
+## Structure
+### components
+add your new component (and their test and style files) in sub folder under this component e.g. footer, header
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### library
+add the shared and generic component (with test and styles) in this folder e.g. button, input, dialog
 
-- Configure the top-level `parserOptions` property like this:
+### constant
+add the constants into this folder
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### types
+add the types into this folder
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### style
+add global styles into this folder
