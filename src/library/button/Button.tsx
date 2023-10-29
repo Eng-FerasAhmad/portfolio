@@ -1,4 +1,4 @@
-import './styles.scss';
+import { ButtonContainer } from './styles';
 
 interface Props {
   label: string;
@@ -7,8 +7,8 @@ interface Props {
 
 export default function Button({ label, clickHandler }: Props) {
   return (
-    <button className="button" onClick={clickHandler} data-testid="button">
+    <ButtonContainer onClick={clickHandler} data-testid="button">
       {label}
-    </button>
+    </ButtonContainer>
   );
 }

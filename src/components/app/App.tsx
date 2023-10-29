@@ -1,10 +1,12 @@
+import { GlobalStyle } from '../../style/global';
 import Entry from '../entry/Entry';
-import './app.scss';
+import { AppContainer } from './styles';
 
 export default function App(): JSX.Element {
   return (
-    <div className="app" data-testid="app">
+    <AppContainer data-testid="app">
+      <GlobalStyle />
       <Entry />
-    </div>
+    </AppContainer>
   );
 }

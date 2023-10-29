@@ -1,9 +1,11 @@
+import { EntryContainer, EntryFormWrapper } from "./styles";
+
 export default function Entry(): JSX.Element {
   return (
-    <div className="entry" data-testid="entry">
-      <div className='entry-form'>
+    <EntryContainer data-testid="entry">
+      <EntryFormWrapper>
         Personal Portfolio Comming soon...
-      </div>
-    </div>
+      </EntryFormWrapper>
+    </EntryContainer>
   );
 }

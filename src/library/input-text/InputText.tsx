@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import './style.scss';
+import { InputTextContainer } from './styles';
 
 interface Props {
   label: string;
@@ -17,9 +17,9 @@ export default function InputText({ label, placeholder, changeHandler }: Props) 
   };
 
   return (
-    <div className="input-text" data-testid="input">
-      <label htmlFor={label} className='input-text-label'>{label}</label>
+    <InputTextContainer data-testid="input">
+      <label htmlFor={label}>{label}</label>
       <input type="text" id={label} placeholder={placeholder} onChange={handleChange} />
-    </div>
+    </InputTextContainer>
   );
 }
