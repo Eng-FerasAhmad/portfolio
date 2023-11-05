@@ -5,7 +5,7 @@ import { pixelToRem } from '../utils/utils'
 export const GlobalStyle = createGlobalStyle`
   html {
     font-size: ${pixelToRem(14)};
-    color: black;
+    color: ${props => props.theme.color.page.background};
   }
 
   html, body {
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     outine: 0;
     width: 100%;
     height: 100vh;
-    background: #F5F5F5;
+    background: ${props => props.theme.color.page.background};
     font-family: 'Helvetica', 'Catamaran', 'Arial', 'sans-serif';
     font-weight: 200;
   }
