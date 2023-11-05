@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     border: none;
     outine: 0;
-    width: 100%;
+ 
     height: 100vh;
     background: ${props => props.theme.color.page.background};
     font-family: 'Helvetica', 'Catamaran', 'Arial', 'sans-serif';

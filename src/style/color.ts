@@ -1,11 +1,11 @@
 export const darkThemeColor = {
   customBlack: '#22272e',
-  fontPrimary: '#cce7e8',
+  fontPrimary: '#adbac7',
   fontSecondary: '',
 }
 
 export const lightThemeColor = {
   customWhite: '#eeeee4',
-  fontPrimary: '#1874a5',
+  fontPrimary: '#24292f',
   fontSecondary: '',
 }
