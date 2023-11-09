@@ -7,7 +7,11 @@ interface Props {
   changeHandler: (e: ChangeEvent<HTMLInputElement> | undefined) => void;
 }
 
-export default function InputText({ label, placeholder, changeHandler }: Props) {
+export default function InputText({
+  label,
+  placeholder,
+  changeHandler,
+}: Props) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event?.target && event.target.value.length > 0) {
       changeHandler(event);
@@ -19,7 +23,12 @@ export default function InputText({ label, placeholder, changeHandler }: Props) 
   return (
     <InputTextContainer data-testid="input">
       <label htmlFor={label}>{label}</label>
-      <input type="text" id={label} placeholder={placeholder} onChange={handleChange} />
+      <input
+        type="text"
+        id={label}
+        placeholder={placeholder}
+        onChange={handleChange}
+      />
     </InputTextContainer>
   );
 }

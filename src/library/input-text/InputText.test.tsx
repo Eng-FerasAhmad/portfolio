@@ -6,15 +6,21 @@ import InputText from './InputText';
 describe('<Input />', () => {
   test('Should render the component', async () => {
     const changeHandlerSpy = vitest.fn();
-    render(<InputText label='label' placeholder="placeholder" changeHandler={changeHandlerSpy} />);
+    render(
+      <InputText
+        label="label"
+        placeholder="placeholder"
+        changeHandler={changeHandlerSpy}
+      />
+    );
 
     const input = screen.getByRole('textbox');
     expect(input).toBeInTheDocument();
 
     fireEvent.change(input, {
       target: {
-        value: 'Max'
-      }
+        value: 'Max',
+      },
     });
 
     waitFor(() => {
@@ -27,15 +33,21 @@ describe('<Input />', () => {
 
   test('Should handle empty value', async () => {
     const changeHandlerSpy = vitest.fn();
-    render(<InputText label='label' placeholder="placeholder" changeHandler={changeHandlerSpy} />);
+    render(
+      <InputText
+        label="label"
+        placeholder="placeholder"
+        changeHandler={changeHandlerSpy}
+      />
+    );
 
     const input = screen.getByRole('textbox');
     expect(input).toBeInTheDocument();
 
     fireEvent.change(input, {
       target: {
-        value: ''
-      }
+        value: '',
+      },
     });
 
     waitFor(() => {

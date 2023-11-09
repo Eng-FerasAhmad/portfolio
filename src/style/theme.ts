@@ -1,4 +1,4 @@
-import { darkThemeColor, lightThemeColor } from "./color";
+import { darkThemeColor, lightThemeColor } from './color';
 
 export const themeDark = {
   color: {
@@ -7,10 +7,10 @@ export const themeDark = {
       font: darkThemeColor.fontPrimary,
     },
     button: {
-      background:darkThemeColor.customBlack,
-      font: darkThemeColor.fontPrimary
-    }
-  }
+      background: darkThemeColor.customBlack,
+      font: darkThemeColor.fontPrimary,
+    },
+  },
 };
 
 export const themeLight = {
@@ -22,6 +22,6 @@ export const themeLight = {
     button: {
       background: lightThemeColor.customWhite,
       font: lightThemeColor.fontPrimary,
-    }
+    },
   },
 };

@@ -1,11 +1,11 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
-import { pixelToRem } from '../utils/utils'
+import { pixelToRem } from '../utils/utils';
 
 export const GlobalStyle = createGlobalStyle`
   html {
     font-size: ${pixelToRem(14)};
-    color: ${props => props.theme.color.page.background};
+    color: ${(props) => props.theme.color.page.background};
   }
 
   html, body {
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     outine: 0;
  
     height: 100vh;
-    background: ${props => props.theme.color.page.background};
+    background: ${(props) => props.theme.color.page.background};
     font-family: 'Helvetica', 'Catamaran', 'Arial', 'sans-serif';
     font-weight: 200;
   }
@@ -31,4 +31,4 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 200;
     letter-spacing: 1px;
   }
-`
+`;

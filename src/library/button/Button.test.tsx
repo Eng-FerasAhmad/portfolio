@@ -1,7 +1,7 @@
-import { act, render, screen } from "@testing-library/react";
-import { describe, expect, test, vitest } from "vitest";
+import { act, render, screen } from '@testing-library/react';
+import { describe, expect, test, vitest } from 'vitest';
 import userEvent from '@testing-library/user-event';
-import Button from "./Button";
+import Button from './Button';
 
 describe('<Button />', () => {
   test('Should render the component', () => {

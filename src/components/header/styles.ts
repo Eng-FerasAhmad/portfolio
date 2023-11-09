@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { pixelToRem } from "../../utils/utils";
+import styled from 'styled-components';
+import { pixelToRem } from '../../utils/utils';
 
 export const HeaderContainer = styled.div`
   height: ${pixelToRem(32)};

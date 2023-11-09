@@ -9,11 +9,11 @@ export const AppContainer = styled.div`
   justify-content: center;
 
   @media ${device.mobile} {
-    margin: ${pixelToRem(0)}
+    margin: ${pixelToRem(0)};
   }
 
   @media ${device.tablet} {
-    margin: ${pixelToRem(0)}
+    margin: ${pixelToRem(0)};
   }
 
   @media ${device.desktop} {
