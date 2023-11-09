@@ -10,3 +10,11 @@ export const HeaderContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `;
+
+export const LogoWrapper = styled.div`
+
+`;
+
+export const NavigationWrapper = styled.div`
+  
+`;

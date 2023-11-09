@@ -7,9 +7,7 @@ describe('<App />', async () => {
     render(<App />);
 
     expect(screen.getByTestId('app')).toBeInTheDocument();
-    expect(
-      screen.getByText('Simple React + Vite + Vitest template')
-    ).toBeInTheDocument();
-    expect(screen.getByTestId('app')).toHaveClass('app');
+    expect(screen.getByTestId('entry')).toBeInTheDocument();
+    expect(screen.getByTestId('header')).toBeInTheDocument();    
   });
 });

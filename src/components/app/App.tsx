@@ -1,5 +1,5 @@
 import { GlobalStyle } from '../../style/global';
-import Entry from '../entry/Entry';
+import Landing from '../landing/Landing';
 import { AppContainer } from './styles';
 import Header from '../header/Header';
 import ThemeContextProvider from '../../context/ThemeContext';
@@ -10,7 +10,7 @@ export default function App(): JSX.Element {
       <ThemeContextProvider>
         <GlobalStyle />
         <Header />
-        <Entry />
+        <Landing />
       </ThemeContextProvider>
     </AppContainer>
   );
