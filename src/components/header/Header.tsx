@@ -9,7 +9,7 @@ export default function Header(): JSX.Element {
 
   return (
     <HeaderContainer data-testid="header">
-      <LogoWrapper>Header</LogoWrapper>
+      <LogoWrapper></LogoWrapper>
       <NavigationWrapper>
         <ThemeIcon isDark={isDarkTheme!} clickHandler={() => toggleTheme()} />
       </NavigationWrapper>

@@ -1,9 +1,12 @@
-import { LandingContainer, LandingFormWrapper } from './styles';
+import { LandingContainer, LandingWrapper, LandingWrapperComminSoon } from './styles';
 
 export default function Landing(): JSX.Element {
   return (
     <LandingContainer data-testid="entry">
-      <LandingFormWrapper>Personal Portfolio Comming soon...</LandingFormWrapper>
+      <LandingWrapper>
+        <LandingWrapperComminSoon>Portfolio Feras Ahmad</LandingWrapperComminSoon>
+        <LandingWrapperComminSoon>Comming soon</LandingWrapperComminSoon>
+      </LandingWrapper>
     </LandingContainer>
   );
 }

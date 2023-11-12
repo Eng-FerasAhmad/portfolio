@@ -10,3 +10,9 @@ export const device = {
   tablet: `(min-width: ${screenSize.sm})`,
   desktop: `(min-width: ${screenSize.md})`,
 };
+
+export const contentWidth = {
+  mobile: 320,
+  tablet: 768,
+  desktop: 900,
+};
