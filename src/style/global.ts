@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     outine: 0;
  
     height: 100vh;
-    background: ${(props) => props.theme.color.page.background};
+    background-image: ${(props) => props.theme.color.page.backgroundImage};
     font-family: 'Helvetica', 'Catamaran', 'Arial', 'sans-serif';
     font-weight: 200;
   }

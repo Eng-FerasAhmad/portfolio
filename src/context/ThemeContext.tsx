@@ -6,10 +6,12 @@ import { LocalStorageKey } from '../library/local-storage/types';
 
 interface ContextValue {
   toggleTheme: () => void;
+  isDarkTheme: boolean | undefined;
 }
 
 export const ThemeContext = createContext<ContextValue>({
   toggleTheme: () => undefined,
+  isDarkTheme: undefined,
 });
 
 interface Props {
@@ -39,7 +41,7 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
   }, [getItemToLocalStorage]);
 
   return (
-    <ThemeContext.Provider value={{ toggleTheme }}>
+    <ThemeContext.Provider value={{ toggleTheme, isDarkTheme }}>
       {isDarkTheme !== undefined && (
         <ThemeProvider theme={isDarkTheme ? themeDark : themeLight}>
           {children}

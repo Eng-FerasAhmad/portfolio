@@ -9,3 +9,8 @@ export const lightThemeColor = {
   fontPrimary: '#24292f',
   fontSecondary: '',
 };
+
+export const color = {
+  light: '#fff',
+  dark: '#22272e',
+}

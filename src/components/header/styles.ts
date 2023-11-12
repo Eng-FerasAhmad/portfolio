@@ -3,7 +3,6 @@ import { pixelToRem } from '../../utils/utils';
 
 export const HeaderContainer = styled.div`
   height: ${pixelToRem(32)};
-  background: red;
   padding: ${pixelToRem(16, 40)};
   line-height: ${pixelToRem(32)};
   display: flex;
@@ -12,7 +11,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
-
+  color: ${(props) => props.theme.color.page.font};
 `;
 
 export const NavigationWrapper = styled.div`

@@ -1,17 +1,17 @@
 import { useContext } from 'react';
 
-import Button from '../../library/button/Button';
 import { HeaderContainer, LogoWrapper, NavigationWrapper } from './styles';
 import { ThemeContext } from '../../context/ThemeContext';
+import ThemeIcon from '../../library/theme-toggle/ThemeToggle';
 
 export default function Header(): JSX.Element {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme, isDarkTheme } = useContext(ThemeContext);
 
   return (
     <HeaderContainer data-testid="header">
       <LogoWrapper>Header</LogoWrapper>
       <NavigationWrapper>
-        <Button label="Button" clickHandler={() => toggleTheme()} />
+        <ThemeIcon isDark={isDarkTheme!} clickHandler={() => toggleTheme()} />
       </NavigationWrapper>
     </HeaderContainer>
   );
