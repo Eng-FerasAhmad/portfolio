@@ -23,6 +23,13 @@ export const LandingContainer = styled.div`
 export const LandingWrapper = styled.div`
   font-size: ${pixelToRem(55)};
   height: ${pixelToRem(200)};
+  text-align: center;
+  @media ${device.mobile} {
+    font-size: ${pixelToRem(35)};
+  }
+  @media ${device.tablet} {
+   font-size: ${pixelToRem(55)};
+  }
 `;
 
 export const LandingWrapperComminSoon = styled.div`
