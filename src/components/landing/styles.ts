@@ -5,6 +5,7 @@ import { contentWidth, device } from '../../style/screenSize';
 export const LandingContainer = styled.div`
   color: ${(props) => props.theme.color.page.font};
   margin: auto;
+  padding: ${pixelToRem(100,0)};
 
   @media ${device.mobile} {
     max-width: ${pixelToRem(contentWidth.mobile)};
@@ -21,9 +22,11 @@ export const LandingContainer = styled.div`
 
 export const LandingWrapper = styled.div`
   font-size: ${pixelToRem(55)};
-  font-family: 'Ubuntu', sans-serif;
+  height: ${pixelToRem(200)};
 `;
 
 export const LandingWrapperComminSoon = styled.div`
-  font-family: 'Ubuntu', sans-serif;
+  font-size: ${pixelToRem(35)};
+  text-align: center;
+  margin-top: ${pixelToRem(20)};
 `;
