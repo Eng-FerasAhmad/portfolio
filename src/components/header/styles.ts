@@ -12,6 +12,8 @@ export const HeaderContainer = styled.div`
 
 export const LogoWrapper = styled.div`
   color: ${(props) => props.theme.color.page.font};
+  font-family: 'Dancing Script', cursive;
+  font-size: ${pixelToRem(32)}
 `;
 
 export const NavigationWrapper = styled.div`

@@ -16,18 +16,16 @@ export const GlobalStyle = createGlobalStyle`
  
     height: 100vh;
     background-image: ${(props) => props.theme.color.page.backgroundImage};
-    font-family: 'Helvetica', 'Catamaran', 'Arial', 'sans-serif';
+    font-family: 'Rubik', sans-serif;
     font-weight: 200;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica', 'Catamaran', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px;
   }
 
   p {
-    font-family: 'Helvetica', 'Catamaran', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px;
   }
