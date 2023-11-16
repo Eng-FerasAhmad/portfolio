@@ -8,6 +8,6 @@ describe('<App />', async () => {
 
     expect(screen.getByTestId('app')).toBeInTheDocument();
     expect(screen.getByTestId('entry')).toBeInTheDocument();
-    expect(screen.getByTestId('header')).toBeInTheDocument();    
+    expect(screen.getByTestId('header')).toBeInTheDocument();
   });
 });

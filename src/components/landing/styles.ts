@@ -5,14 +5,14 @@ import { contentWidth, device } from '../../style/screenSize';
 export const LandingContainer = styled.div`
   color: ${(props) => props.theme.color.page.font};
   margin: auto;
-  padding: ${pixelToRem(100,0)};
+  padding: ${pixelToRem(100, 0)};
 
   @media ${device.mobile} {
     max-width: ${pixelToRem(contentWidth.mobile)};
   }
 
   @media ${device.tablet} {
-   max-width: ${pixelToRem(contentWidth.tablet)};
+    max-width: ${pixelToRem(contentWidth.tablet)};
   }
 
   @media ${device.desktop} {
@@ -28,7 +28,7 @@ export const LandingWrapper = styled.div`
     font-size: ${pixelToRem(35)};
   }
   @media ${device.tablet} {
-   font-size: ${pixelToRem(55)};
+    font-size: ${pixelToRem(55)};
   }
 `;
 

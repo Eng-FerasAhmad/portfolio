@@ -13,4 +13,4 @@ export const lightThemeColor = {
 export const color = {
   light: '#fff',
   dark: '#22272e',
-}
+};
