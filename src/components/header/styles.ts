@@ -5,6 +5,12 @@ export const HeaderContainer = styled.div`
   height: ${pixelToRem(80)};
   padding: ${pixelToRem(16, 40)};
   line-height: ${pixelToRem(32)};
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+`;
+
+export const NavbarWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,4 +26,5 @@ export const LogoWrapper = styled.div`
 export const NavigationWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;

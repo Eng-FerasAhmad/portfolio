@@ -8,7 +8,7 @@ interface Props {
 
 export default function GithubIcon({ isDark }: Props) {
   const clickHandler = () => {
-    window.open('https://github.com/Eng-FerasAhmad', '_blank')
+    window.open('https://github.com/Eng-FerasAhmad', '_blank');
   };
 
   return (
