@@ -1,21 +1,9 @@
 {
-  "title": "Senior Frontend Ingenieur",
+  "title": "Frontend Engineer",
   "name": "Feras Ahmad",
-  "about": "Informationen über mich",
-  "dateOfBirth": "",
-  "nationality": "",
-  "address": "",
-  "education": [
-    {
-      "title": "Diplom Informatik Ingenieur",
-      "start": "01-09-2004",
-      "end": "01-05-2010",
-      "country": "Aleppo-Syrien",
-      "visible": true
-    }
-  ],
+  "about": "About me!",
   "socialAccount": [
     {"name": "LinkedIn", "url": "", "visible": false}
   ],
-  "language": ["Deutsch", "english", "Arabisch"]
+  "language": ["German", "English", "Arabic"]
 }
