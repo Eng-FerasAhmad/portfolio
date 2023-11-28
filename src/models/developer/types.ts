@@ -1,4 +1,4 @@
-export interface Developer {
+export interface DeveloperViewModel {
   title: string;
   name: string;
   about: string;

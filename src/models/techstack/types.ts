@@ -1,4 +1,4 @@
-export interface Techstack {
+export interface TechstackViewModel {
   category: string;
   skills: Array<Skills>;
 }

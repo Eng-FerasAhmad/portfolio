@@ -1,6 +1,6 @@
 import { SkillsId } from "../techstack/types";
 
-export interface Project {
+export interface ProjectViewModel {
   company: string;
   projectName: string;
   projectLink: string;
