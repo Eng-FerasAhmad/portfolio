@@ -1,4 +1,9 @@
 export interface TechstackViewModel {
+  entityHeader: string;
+  techstack: Techstack;
+}
+
+export interface Techstack {
   category: string;
   skills: Array<Skills>;
 }

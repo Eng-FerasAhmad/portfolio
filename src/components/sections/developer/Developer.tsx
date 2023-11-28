@@ -17,9 +17,7 @@ export default function Developer() {
 
   return (
     <DeveloperContainer>
-      Developer
-      {data && data.about}
-      <></>
+      <div>{data && data.entityHeader}</div>
     </DeveloperContainer>
   )
 }

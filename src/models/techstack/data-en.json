@@ -1,13 +1,15 @@
-[
-  {
-    "category": "Frameworks",
-    "skills": {
-      "id": "react",
-      "name": "React",
-      "logo" :"React logo",
-      "level": "Senior",
-      "percent": 100,
-      "homepage": ""
+{
+  "entityHeader" : "Techstack",
+  "techstack": [
+    {
+      "category": "Frameworks",
+      "skills": {
+        "name": "React",
+        "logo" :"React logo",
+        "level": "Senior",
+        "percent": 100,
+        "homepage": ""
+      }
     }
-  }
-]
+  ]
+}

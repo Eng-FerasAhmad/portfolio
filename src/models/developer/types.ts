@@ -1,4 +1,5 @@
 export interface DeveloperViewModel {
+  entityHeader: string;
   title: string;
   name: string;
   about: string;

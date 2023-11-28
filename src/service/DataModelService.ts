@@ -16,7 +16,7 @@ const languageData= new Map<Language, string>([
 export default async function dataModelService<T>(dataModel: DataModel, lang: Language):Promise<T> {
   const model = modelData.get(dataModel);
   const language = languageData.get(lang)
-  const response = await fetch(`${baseUrl}/${model!}-${language}.json`);
+  const response = await fetch(`${baseUrl}/${model!}/${language}.json`);
   const data = response.json() as T;
   return data;
 }
