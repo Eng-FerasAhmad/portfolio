@@ -1,17 +1,20 @@
+import Contact from '../sections/contact/Contact';
+import Developer from '../sections/developer/Developer';
+import Project from '../sections/project/Project';
+import Techstack from '../sections/techstack/Techstack';
 import {
   LandingContainer,
   LandingWrapper,
-  LandingWrapperComminSoon,
 } from './styles';
-import { IoHeart } from 'react-icons/io5';
 
 export default function Landing() {
   return (
     <LandingContainer data-testid="entry">
       <LandingWrapper>
-        <LandingWrapperComminSoon>
-          Comming soon <IoHeart />
-        </LandingWrapperComminSoon>
+        <Developer />
+        <Techstack />
+        <Project />
+        <Contact />
       </LandingWrapper>
     </LandingContainer>
   );
