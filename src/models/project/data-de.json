@@ -3,16 +3,12 @@
     "company": "Süddeutsche Zeitung",
     "projectName": "SZ",
     "projectLink": "",
-    "skills": [
-      "vue", "linter"
-    ],
+    "skills": ["vue", "linter"],
     "role": "Frontend Developer",
     "start": "",
     "end": "",
     "language": ["Deutsch"],
     "Branch": "Medien",
-    "task": [
-      {"id": "Documentation", "title": "Documentation"}
-    ]
+    "task": [{ "id": "Documentation", "title": "Documentation" }]
   }
 ]

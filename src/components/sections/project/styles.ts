@@ -1,5 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const ProjectContainer = styled.div`
-  
-`;
+export const ProjectContainer = styled.div``;

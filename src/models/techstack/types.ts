@@ -17,7 +17,7 @@ export interface Skills {
   homepage: string;
 }
 
-export type SkillLevel = 'Senior' | 'Professional' | 'Junior'
+export type SkillLevel = 'Senior' | 'Professional' | 'Junior';
 
 export enum SkillsId {
   REACT = 'react',

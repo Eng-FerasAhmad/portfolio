@@ -1,23 +1,12 @@
-import { useEffect, useState } from 'react';
-
-import { DeveloperContainer } from "./styles";
-import dataModelService from '../../../service/DataModelService';
-import { DeveloperViewModel } from '../../../models/developer/types';
-import { DataModel, Language } from '../../../service/types';
+import { DeveloperContainer } from './styles';
+import useDeveloper from './useDeveloper';
 
 export default function Developer() {
-  const [data, setData] = useState<DeveloperViewModel | undefined>(undefined);
-  useEffect(() => {
-    dataModelService<DeveloperViewModel>(DataModel.DEVELOPER, Language.EN).then((data) => {
-      setData(data);
-    }).catch((error) => {
-      console.log('error', error.message)
-    });
-  }, []);
+  const { viewModel } = useDeveloper();
 
   return (
     <DeveloperContainer>
-      <div>{data && data.entityHeader}</div>
+      <div>{viewModel && viewModel.entityHeader}</div>
     </DeveloperContainer>
-  )
+  );
 }

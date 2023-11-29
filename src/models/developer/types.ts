@@ -3,7 +3,7 @@ export interface DeveloperViewModel {
   title: string;
   name: string;
   about: string;
-  socialAccount: Array<SocialAccount>
+  socialAccount: Array<SocialAccount>;
   language: Array<string>;
 }
 

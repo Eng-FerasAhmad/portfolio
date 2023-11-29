@@ -1,4 +1,4 @@
-import { SkillsId } from "../techstack/types";
+import { SkillsId } from '../techstack/types';
 
 export interface ProjectViewModel {
   company: string;
@@ -30,5 +30,5 @@ export enum TasksId {
 }
 
 export enum Branch {
-  MEDIA = 'media'
+  MEDIA = 'media',
 }

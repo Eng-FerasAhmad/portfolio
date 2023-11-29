@@ -1,5 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const DeveloperContainer = styled.div`
-  
-`;
+export const DeveloperContainer = styled.div``;

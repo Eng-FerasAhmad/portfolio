@@ -1,4 +1,4 @@
-import { ProjectContainer } from "./styles";
+import { ProjectContainer } from './styles';
 
 export default function Project() {
   return (
@@ -6,5 +6,5 @@ export default function Project() {
       Project
       <></>
     </ProjectContainer>
-  )
+  );
 }

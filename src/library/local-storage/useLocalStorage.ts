@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import { LocalStorageKey } from './types';
 
-interface UseLocalStorage<T> {
-  setItemToLocalStorage: (key: LocalStorageKey, value: T) => void;
+interface UseLocalStorage {
+  setItemToLocalStorage: <T>(key: LocalStorageKey, value: T) => void;
   removeItemToLocalStorage: (key: LocalStorageKey) => void;
-  getItemToLocalStorage: (key: LocalStorageKey) => T | undefined;
+  getItemToLocalStorage: <T>(key: LocalStorageKey) => T | undefined;
 }
 
-export default function useLocalStorage<T>(): UseLocalStorage<T> {
+export default function useLocalStorage(): UseLocalStorage {
   const setItemToLocalStorage = useCallback(
     <U>(key: LocalStorageKey, value: U) => {
       const item = JSON.stringify(value);

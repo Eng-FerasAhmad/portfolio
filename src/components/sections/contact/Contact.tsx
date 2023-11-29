@@ -1,4 +1,4 @@
-import { ContactContainer } from "./styles";
+import { ContactContainer } from './styles';
 
 export default function Contact() {
   return (
@@ -6,6 +6,5 @@ export default function Contact() {
       Contact
       <></>
     </ContactContainer>
-  )
+  );
 }
-

@@ -1,10 +1,8 @@
 {
-  "entityHeader" : "Developer",
+  "entityHeader": "Entwickler",
   "title": "Frontend Ingenieur",
   "name": "Feras Ahmad",
   "about": "Informationen über mich",
-  "socialAccount": [
-    {"name": "LinkedIn", "url": "", "visible": false}
-  ],
+  "socialAccount": [{ "name": "LinkedIn", "url": "", "visible": false }],
   "language": ["Deutsch", "Englisch", "Arabisch"]
 }
