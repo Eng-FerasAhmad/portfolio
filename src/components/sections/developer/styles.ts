@@ -6,13 +6,13 @@ export const DeveloperContainer = styled.div`
   font-size: ${pixelToRem(24)};
   margin-bottom: ${pixelToRem(48)};
   height: fit-content;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
 
   @media ${device.mobile} {
     flex-direction: column;
@@ -34,6 +34,7 @@ export const ImageContainer = styled.div`
   border-radius: 50%;
   width: ${pixelToRem(150)};
   height: ${pixelToRem(150)};
+  flex-shrink: 0;  
 
   @media ${device.mobile} {
     margin: auto;
@@ -52,18 +53,17 @@ export const DescriptionContainer = styled.div`
   white-space: pre-line;
   text-align: left;
   line-height:  ${pixelToRem(32)};
-  width: 70%;
 
   @media ${device.mobile} {
     width: 100%;
   }
 
   @media ${device.tablet} {
-    width: 70%;
+    width: fit-content;
   }
 
   @media ${device.desktop} {
-    width: 70%;
+    width: fit-content;
   }
 `;
 
