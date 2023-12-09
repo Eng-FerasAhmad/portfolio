@@ -13,6 +13,6 @@ export default function Landing() {
         <Project />
         <Contact />
       </LandingWrapper>
-    </LandingContainer>
+      </LandingContainer>
   );
 }
