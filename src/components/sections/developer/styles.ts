@@ -23,7 +23,7 @@ export const DeveloperContainer = styled.div`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-`; 
+`;
 
 export const ImageContainer = styled.div`
   flex-shrink: 0;
@@ -40,7 +40,7 @@ export const ProfileWrapper = styled.img`
 export const DescriptionContainer = styled.div`
   white-space: pre-line;
   text-align: center;
-  line-height:  ${pixelToRem(32)};
+  line-height: ${pixelToRem(32)};
 
   @media ${device.mobile} {
     width: 100%;
@@ -58,7 +58,7 @@ export const DescriptionContainer = styled.div`
 export const NameWrapper = styled.div`
   margin: ${pixelToRem(20, 0)};
   font-weight: 500;
-  
+
   @media ${device.mobile} {
     font-size: ${pixelToRem(35)};
     line-height: 1;

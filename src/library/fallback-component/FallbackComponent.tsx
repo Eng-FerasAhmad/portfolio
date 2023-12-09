@@ -1,4 +1,3 @@
 export default function FallbackComponent() {
-  return (<></>
-  );
+  return <></>;
 }

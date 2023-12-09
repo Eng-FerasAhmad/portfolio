@@ -7,7 +7,6 @@ export default function Techstack() {
   return (
     <TechstackContainer>
       <div>{viewModel && viewModel.entityHeader}</div>
-    
     </TechstackContainer>
   );
 }
