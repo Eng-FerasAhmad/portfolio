@@ -14,10 +14,14 @@ import LanguageIcon from '../../library/icon/language-icon/LanguageIcon';
 export default function Header() {
   const { toggleTheme, isDarkTheme, toggleLanguage } = useContext(ThemeContext);
 
+  const clickHandler = () => {
+    window.open('https://github.com/Eng-FerasAhmad', '_blank');
+  };
+
   return (
     <HeaderContainer data-testid="header">
       <NavbarWrapper>
-        <LogoWrapper>Feras Ahmad</LogoWrapper>
+        <LogoWrapper onClick={clickHandler}>Feras Ahmad</LogoWrapper>
         <NavigationWrapper>
           <GithubIcon isDark={isDarkTheme!} />
           <ThemeIcon isDark={isDarkTheme!} clickHandler={() => toggleTheme()} />

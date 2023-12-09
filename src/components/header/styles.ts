@@ -21,6 +21,7 @@ export const LogoWrapper = styled.div`
   color: ${(props) => props.theme.color.page.font};
   font-family: 'Dancing Script', cursive;
   font-size: ${pixelToRem(32)};
+  cursor: pointer;
 `;
 
 export const NavigationWrapper = styled.div`
