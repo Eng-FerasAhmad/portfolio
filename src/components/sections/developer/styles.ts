@@ -58,12 +58,14 @@ export const DescriptionContainer = styled.div`
 export const NameWrapper = styled.div`
   margin: ${pixelToRem(20, 0)};
   font-weight: 500;
-  line-height: 2;
+  
   @media ${device.mobile} {
     font-size: ${pixelToRem(35)};
+    line-height: 1;
   }
   @media ${device.tablet} {
     font-size: ${pixelToRem(55)};
+    line-height: 2;
   }
 `;
 

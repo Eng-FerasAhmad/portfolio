@@ -2,7 +2,7 @@
   "entityHeader": "Developer",
   "title": "Frontend Engineer",
   "name": "Hi, I'm Feras Ahmad",
-  "about": "I'm a Frontend Engineer, I build professional and modern Web Application with most modern web Technologies",
+  "about": "I'm a Frontend Engineer, I build professional and modern Web Application with most modern web Technologies.",
   "socialAccount": [{ "name": "LinkedIn", "url": "", "visible": false }],
   "language": ["German", "English", "Arabic"]
 }

@@ -1,9 +1,11 @@
 import { FooterWrapper } from './styles';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <FooterWrapper>
-      <div>footer</div>
+      &copy; {currentYear} Feras Ahmad
     </FooterWrapper>
   );
 }
