@@ -4,54 +4,42 @@ import { device } from '../../../style/screenSize';
 
 export const DeveloperContainer = styled.div`
   font-size: ${pixelToRem(24)};
-  margin-bottom: ${pixelToRem(48)};
-  height: fit-content;
   display: flex;
   justify-content: center;
+
+  @media ${device.mobile} {
+    height: calc(100vh - ${pixelToRem(110)});
+  }
+
+  @media ${device.tablet} {
+    height: calc(100vh - ${pixelToRem(180)});
+  }
+
+  @media ${device.desktop} {
+    height: calc(100vh - ${pixelToRem(180)});
+  }
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
-  flex-direction: row;
-
-  @media ${device.mobile} {
-    flex-direction: column;
-  }
-
-  @media ${device.tablet} {
-    flex-direction: row;
-  }
-
-  @media ${device.desktop} {
-    flex-direction: row;
-  }
+  flex-direction: column;
 `; 
 
 export const ImageContainer = styled.div`
-  border-width: ${pixelToRem(1)};
-  border-style: solid;
-  border-color: ${(props) => props.theme.color.page.font};
+  flex-shrink: 0;
+  margin: ${pixelToRem(20)} auto;
+  background-image: 'url(profile.jpg)';
+`;
+
+export const ProfileWrapper = styled.img`
+  width: ${pixelToRem(250)};
+  height: ${pixelToRem(265)};
   border-radius: 50%;
-  width: ${pixelToRem(150)};
-  height: ${pixelToRem(150)};
-  flex-shrink: 0;  
-
-  @media ${device.mobile} {
-    margin: auto;
-  }
-
-  @media ${device.tablet} {
-    margin: ${pixelToRem(0, 25)};
-  }
-
-  @media ${device.desktop} {
-    margin: ${pixelToRem(0, 25)};
-  }
 `;
 
 export const DescriptionContainer = styled.div`
   white-space: pre-line;
-  text-align: left;
+  text-align: center;
   line-height:  ${pixelToRem(32)};
 
   @media ${device.mobile} {
@@ -67,3 +55,25 @@ export const DescriptionContainer = styled.div`
   }
 `;
 
+export const NameWrapper = styled.div`
+  margin: ${pixelToRem(20, 0)};
+  font-weight: 500;
+  line-height: 2;
+  @media ${device.mobile} {
+    font-size: ${pixelToRem(35)};
+  }
+  @media ${device.tablet} {
+    font-size: ${pixelToRem(55)};
+  }
+`;
+
+export const AboutWrapper = styled.div`
+  line-height: 1.5;
+
+  @media ${device.mobile} {
+    font-size: ${pixelToRem(24)};
+  }
+  @media ${device.tablet} {
+    font-size: ${pixelToRem(32)};
+  }
+`;

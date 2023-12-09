@@ -1,5 +1,5 @@
 import FallbackComponent from '../../../library/fallback-component/FallbackComponent';
-import { ContentContainer, DescriptionContainer, DeveloperContainer, ImageContainer } from './styles';
+import { AboutWrapper, ContentContainer, DescriptionContainer, DeveloperContainer, ImageContainer, NameWrapper, ProfileWrapper } from './styles';
 import useDeveloper from './useDeveloper';
 
 export default function Developer() {
@@ -12,9 +12,10 @@ export default function Developer() {
   return (
     <DeveloperContainer data-testid="developer">
       <ContentContainer>
-        <ImageContainer />
+        <ImageContainer><ProfileWrapper src="profile.jpg" alt="image" /></ImageContainer>
         <DescriptionContainer>
-          <div>{viewModel.about}</div>
+          <NameWrapper>{viewModel.name}</NameWrapper>
+          <AboutWrapper>{viewModel.about}</AboutWrapper>
         </DescriptionContainer>
       </ContentContainer>
     </DeveloperContainer>

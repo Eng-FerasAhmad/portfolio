@@ -20,11 +20,11 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
-    letter-spacing: 1px;
+    letter-spacing: ${pixelToRem(1)};
   }
 
   p {
     font-weight: 200;
-    letter-spacing: 1px;
+    letter-spacing: ${pixelToRem(1)};
   }
 `;
