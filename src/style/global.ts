@@ -9,12 +9,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    padding: 0;
+    padding: ${pixelToRem(50, 0, 0, 0)};
     margin: 0;
     border: none;
-    outine: 0;
- 
-    height: 100vh;
+    outline: 0;
     background-image: ${(props) => props.theme.color.page.backgroundImage};
     font-family: 'Rubik', sans-serif;
     font-weight: 200;

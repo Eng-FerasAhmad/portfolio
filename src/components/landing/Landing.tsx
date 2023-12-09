@@ -6,13 +6,13 @@ import { LandingContainer, LandingWrapper } from './styles';
 
 export default function Landing() {
   return (
-    <LandingContainer data-testid="entry">
-      <LandingWrapper>
+    <LandingContainer data-testid="landing">
+      <LandingWrapper data-testid="landing-wrapper">
         <Developer />
         <Techstack />
         <Project />
         <Contact />
       </LandingWrapper>
-      </LandingContainer>
+    </LandingContainer>
   );
 }

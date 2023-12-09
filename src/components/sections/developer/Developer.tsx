@@ -10,16 +10,13 @@ export default function Developer() {
   }
 
   return (
-    <DeveloperContainer>
+    <DeveloperContainer data-testid="developer">
       <ContentContainer>
-        <ImageContainer>
-
-        </ImageContainer>
+        <ImageContainer />
         <DescriptionContainer>
           <div>{viewModel.about}</div>
         </DescriptionContainer>
       </ContentContainer>
-
     </DeveloperContainer>
   );
 }
