@@ -1,4 +1,4 @@
-export const baseUrl = '/src/models/';
+export const baseUrl = '/src/models';
 
 export enum DataModel {
   CONTACT = 'CONTACT',

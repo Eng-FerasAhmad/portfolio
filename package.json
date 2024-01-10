@@ -12,7 +12,7 @@
     "lint:fix": "npx prettier --write . ",
     "preview": "vite preview",
     "test": "vitest",
-    "predeploy": "npm install && vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
