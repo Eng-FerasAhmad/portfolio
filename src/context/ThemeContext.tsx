@@ -12,7 +12,7 @@ interface ContextValue {
   toggleLanguage: () => void;
 }
 
-export const ThemeContext = createContext<ContextValue>({
+export const  ThemeContext = createContext<ContextValue>({
   toggleTheme: () => undefined,
   isDarkTheme: undefined,
   language: undefined,

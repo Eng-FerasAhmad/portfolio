@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "author": "Feras Ahmad",
   "homepage": "http://eng-ferasahmad.github.io/portfolio",
@@ -12,7 +12,7 @@
     "lint:fix": "npx prettier --write . ",
     "preview": "vite preview",
     "test": "vitest",
-    "predeploy": "npm run build",
+    "predeploy": "npm install && vite build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
