@@ -1,4 +1,4 @@
-import { DataModel, Language, baseUrl } from './types';
+import { DataModel, Language } from './types';
 
 const modelData = new Map<DataModel, string>([
   [DataModel.CONTACT, 'contact'],
@@ -19,7 +19,9 @@ export default async function dataModelService<T>(
 ): Promise<T> {
   const model = modelData.get(dataModel);
   const language = lang ? languageData.get(lang) : languageData.get(Language.EN);
-  const response = await fetch(`${baseUrl}/${model!}/${language}.json`);
-  const data = response.json() as T;
+  const data = await fetch(`/portfolio/data/${model!}/${language}.json`).then((res) => {
+    return res.json() as T;
+  });
+
   return data;
 }

@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
-import { DeveloperViewModel } from '../../../models/developer/types';
-import { DataModel } from '../../../service/types';
-import dataModelService from '../../../service/DataModelService';
+import { DeveloperViewModel } from '../../../../public/data/developer/types';
 import { ThemeContext } from '../../../context/ThemeContext';
+import dataModelService from '../../../service/DataModelService';
+import { DataModel } from '../../../service/types';
 
 interface UseDeveloper {
   viewModel: DeveloperViewModel | undefined;
