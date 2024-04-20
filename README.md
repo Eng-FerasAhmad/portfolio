@@ -21,3 +21,12 @@ This template provides a minimal setup to get React working in Vite with HMR and
 | Axios    |  1.5.1  |
 | eslint   | 8.45.0  |
 | prettier |  3.0.3  |
+
+## Deployment
+run scripts locally
+- `npm run predeploy`
+- `npm run deploy`
+
+repo setting
+- choose repo pages from setting
+- choose `gh-pages` branch or change to `none` and again to `gh-pages` and deployment will start, see actions.
