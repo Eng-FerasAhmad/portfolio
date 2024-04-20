@@ -18,7 +18,7 @@ export default async function dataModelService<T>(
   lang: Language
 ): Promise<T> {
   const model = modelData.get(dataModel);
-  const language = languageData.get(lang);
+  const language = lang ? languageData.get(lang) : languageData.get(Language.EN);
   const response = await fetch(`${baseUrl}/${model!}/${language}.json`);
   const data = response.json() as T;
   return data;

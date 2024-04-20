@@ -8,14 +8,14 @@ import { Language } from '../service/types';
 interface ContextValue {
   toggleTheme: () => void;
   isDarkTheme: boolean | undefined;
-  language: Language | undefined;
+  language: Language;
   toggleLanguage: () => void;
 }
 
 export const  ThemeContext = createContext<ContextValue>({
   toggleTheme: () => undefined,
   isDarkTheme: undefined,
-  language: undefined,
+  language: Language.EN,
   toggleLanguage: () => undefined,
 });
 
@@ -32,7 +32,7 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
   const [isDarkTheme, setIsDarkTheme] = useState<boolean | undefined>(
     undefined
   );
-  const [language, setLanguage] = useState<Language | undefined>(undefined);
+  const [language, setLanguage] = useState<Language>(Language.EN);
 
   const toggleTheme = useCallback(() => {
     const darkTheme = getItemToLocalStorage<boolean>(
@@ -58,7 +58,9 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
     setIsDarkTheme(
       getItemToLocalStorage<boolean>(LocalStorageKey.PAGE_THEME_DARK)
     );
-    setLanguage(getItemToLocalStorage<Language>(LocalStorageKey.LANGUAGE));
+
+    const lng = getItemToLocalStorage<Language>(LocalStorageKey.LANGUAGE);
+    setLanguage(lng === undefined ? Language.EN : lng );
   }, [getItemToLocalStorage]);
 
   return (

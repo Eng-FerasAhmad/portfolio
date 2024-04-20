@@ -15,8 +15,6 @@ export default function useDeveloper(): UseDeveloper {
   );
 
   useEffect(() => {
-    if (!language) return;
-
     dataModelService<DeveloperViewModel>(DataModel.DEVELOPER, language).then(
       (data) => {
         setViewModel(data);
