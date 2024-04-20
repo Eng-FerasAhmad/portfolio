@@ -1,4 +1,3 @@
-import FallbackComponent from '../../../library/fallback-component/FallbackComponent';
 import {
   AboutWrapper,
   ContentContainer,
@@ -13,10 +12,6 @@ import useDeveloper from './useDeveloper';
 export default function Developer() {
   const { viewModel } = useDeveloper();
 
-  if (!viewModel) {
-    return <FallbackComponent />;
-  }
-
   return (
     <DeveloperContainer data-testid="developer">
       <ContentContainer>
@@ -24,8 +19,8 @@ export default function Developer() {
           <ProfileWrapper src="profile.jpg" alt="image" />
         </ImageContainer>
         <DescriptionContainer>
-          <NameWrapper>{viewModel.name}</NameWrapper>
-          <AboutWrapper>{viewModel.about}</AboutWrapper>
+          {viewModel && <NameWrapper>{viewModel.name}</NameWrapper>}
+          {viewModel && <AboutWrapper>{viewModel.about}</AboutWrapper>}
         </DescriptionContainer>
       </ContentContainer>
     </DeveloperContainer>

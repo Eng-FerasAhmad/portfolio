@@ -29,4 +29,5 @@ run scripts locally
 
 repo setting
 - choose repo pages from setting
-- choose `gh-pages` branch or change to `none` and again to `gh-pages` and deployment will start, see actions.
+- choose `gh-pages` branch.
+- wait until finish the deployment in `actions` tab.

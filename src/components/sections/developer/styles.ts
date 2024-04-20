@@ -8,15 +8,15 @@ export const DeveloperContainer = styled.div`
   justify-content: center;
 
   @media ${device.mobile} {
-    height: calc(100vh - ${pixelToRem(110)});
+    min-height: calc(100vh - ${pixelToRem(110)});
   }
 
   @media ${device.tablet} {
-    height: calc(100vh - ${pixelToRem(180)});
+    min-height: calc(100vh - ${pixelToRem(180)});
   }
 
   @media ${device.desktop} {
-    height: calc(100vh - ${pixelToRem(180)});
+    min-height: calc(100vh - ${pixelToRem(180)});
   }
 `;
 
