@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
-import { TechstackViewModel } from '../../../../public/data/techstack/types';
 import { ThemeContext } from '../../../context/ThemeContext';
 import dataModelService from '../../../service/DataModelService';
 import { DataModel } from '../../../service/types';
+import { TechstackViewModel } from '../../../types/techstackTypes';
 
 interface UseTechstack {
     viewModel: TechstackViewModel | undefined;

@@ -1,12 +1,12 @@
-import { Category } from '../../../../public/data/techstack/types';
 import IconSelector from '../../../library/icon/icon-selector/IconSelector';
 import ProgressBarComponent from '../../../library/progressbar/ProgressBar';
+import { Category } from '../../../types/techstackTypes';
 import {
+    ExpertLabelWrapper,
     ItemContentWrapper,
+    ItemNameWrapper,
     ItemWrapper,
     TechstackItemContainer,
-    ItemNameWrapper,
-    ExpertLabelWrapper,
 } from './styles';
 
 interface Props {
