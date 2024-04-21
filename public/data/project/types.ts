@@ -1,10 +1,8 @@
-import { SkillsId } from '../techstack/types';
-
 export interface ProjectViewModel {
   company: string;
   projectName: string;
   projectLink: string;
-  skills: Array<SkillsId>;
+  skills: Array<string>;
   role: string;
   start: string;
   end: string;

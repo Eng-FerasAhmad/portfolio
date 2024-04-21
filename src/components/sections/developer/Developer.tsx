@@ -1,3 +1,4 @@
+import ProgressBarComponent from '../../../library/progressbar/ProgressBar';
 import {
   AboutWrapper,
   ContentContainer,
@@ -23,6 +24,7 @@ export default function Developer() {
           {viewModel && <AboutWrapper>{viewModel.about}</AboutWrapper>}
         </DescriptionContainer>
       </ContentContainer>
+      
     </DeveloperContainer>
   );
 }

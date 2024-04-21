@@ -12,7 +12,7 @@ const exchangeToRem = (pixel: number, base = 16): string =>
   `${pixel / base}rem`;
 
 export const pixelToRem = (...pixel: Array<number>): string =>
-  pixel.map((pixel: number) => exchangeToRem(pixel)).join(' ');
+  pixel.map((px: number) => exchangeToRem(px)).join(' ');
 
 export const stringNumberPattern = (text: string): boolean => {
   return /^[a-zA-Z0-9_.-]*$/.test(text);

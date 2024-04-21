@@ -1,3 +1,4 @@
+import TechstackItem from './TechstackItem';
 import { TechstackContainer } from './styles';
 import useTechstack from './useTechstack';
 
@@ -5,8 +6,13 @@ export default function Techstack() {
   const { viewModel } = useTechstack();
 
   return (
-    <TechstackContainer>
+    <TechstackContainer data-testid="techstack">
       <div>{viewModel && viewModel.entityHeader}</div>
+      {viewModel?.categories.map((category, index) => {
+        return (
+           <TechstackItem key={index} category={category} />
+        )
+      })}
     </TechstackContainer>
   );
 }

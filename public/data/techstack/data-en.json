@@ -1,15 +1,52 @@
 {
   "entityHeader": "Techstack",
-  "techstack": [
+  "categories": [
     {
-      "category": "Frameworks",
-      "skills": {
-        "name": "React",
-        "logo": "React logo",
-        "level": "Senior",
-        "percent": 100,
-        "homepage": ""
-      }
+      "name": "Frameworks",
+      "skills": [
+        {
+          "id": "react",
+          "name": "React",
+          "icon": "react",
+          "level": "Expert",
+          "percent": 100,
+          "homepage": "",
+          "color": "#61DBFB"
+        },
+        {
+          "id": "vue",
+          "name": "Vue",
+          "icon": "vue",
+          "level": "Professional",
+          "percent": 80,
+          "homepage": "",
+          "color": "#4FC08D"
+        }
+      ]
+    },
+    {
+      "name": "Build Tools",
+      "skills": [
+        {
+          "id": "Webpack",
+          "name": "Webpack",
+          "icon": "webpack",
+          "level": "Beginner",
+          "percent": 70,
+          "homepage": "",
+          "color": "#8dd6f9"
+        },
+        {
+          "id": "Vite",
+          "name": "Vite",
+          "icon": "vite",
+          "level": "Professional",
+          "percent": 65,
+          "homepage": "",
+          "color": "#af45fe"
+        }
+      ]
     }
   ]
+
 }

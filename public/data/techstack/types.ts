@@ -1,25 +1,21 @@
 export interface TechstackViewModel {
   entityHeader: string;
-  techstack: Techstack;
+  categories: Array<Category>;
 }
 
-export interface Techstack {
-  category: string;
+export interface Category {
+  name: string;
   skills: Array<Skills>;
 }
 
 export interface Skills {
-  id: SkillsId;
+  id: string;
   name: string;
-  log: string;
+  icon: string;
   level: SkillLevel;
   percent: number;
   homepage: string;
+  color: string;
 }
 
-export type SkillLevel = 'Senior' | 'Professional' | 'Junior';
-
-export enum SkillsId {
-  REACT = 'react',
-  VUE = 'vue',
-}
+export type SkillLevel = 'Expert' | 'Professional' | 'Beginner';
