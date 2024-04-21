@@ -88,6 +88,8 @@ export default function IconSelector({ iconName, color }: Props): JSX.Element {
             return <CssIcon fill={isDarkTheme ? color : ''} />;
         case 'git':
             return <GitIcon fill={isDarkTheme ? color : ''} />;
+        case 'github':
+            return <GitIcon fill={isDarkTheme ? color : ''} />;
         case 'gitbook':
             return <GitBookIcon fill={isDarkTheme ? color : ''} />;
         case 'gitlab':
