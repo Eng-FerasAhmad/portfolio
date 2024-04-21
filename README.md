@@ -4,12 +4,12 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ### checkout and install
 
-- clone the repo
-- `npm install`
-- `npm run dev`
-- run all tests: `npm run test`
-- run one test: `npm run test App.test.tsx`
-- run fix prettier: `npx prettier . --write`
+-   clone the repo
+-   `npm install`
+-   `npm run dev`
+-   run all tests: `npm run test`
+-   run one test: `npm run test App.test.tsx`
+-   run fix prettier: `npx prettier . --write`
 
 ## Installed libraries
 
@@ -26,11 +26,11 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 run scripts locally
 
-- `npm run predeploy`
-- `npm run deploy`
+-   `npm run predeploy`
+-   `npm run deploy`
 
 repo setting
 
-- choose repo pages from setting
-- choose `gh-pages` branch.
-- wait until finish the deployment in `actions` tab.
+-   choose repo pages from setting
+-   choose `gh-pages` branch.
+-   wait until finish the deployment in `actions` tab.
