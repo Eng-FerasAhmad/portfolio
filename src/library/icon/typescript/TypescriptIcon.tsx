@@ -1,5 +1,5 @@
 // icon:language-typescript | Material Design Icons https://materialdesignicons.com/ | Austin Andrews
-import * as React from "react";
+import * as React from 'react';
 
 export default function TypescriptIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

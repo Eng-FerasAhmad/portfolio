@@ -1,16 +1,16 @@
-import ProgressBar from "@ramonak/react-progress-bar";
-import {ProgressContainer} from './styles';
-import {color} from '../../style/color';
+import ProgressBar from '@ramonak/react-progress-bar';
+import { ProgressContainer } from './styles';
+import { color } from '../../style/color';
 
 interface Props {
-    color: string;
-    completed: number;
+  color: string;
+  completed: number;
 }
 
-export default function ProgressBarComponent(props: Props):JSX.Element {
+export default function ProgressBarComponent(props: Props): JSX.Element {
   return (
-      <ProgressContainer>
-      <ProgressBar 
+    <ProgressContainer>
+      <ProgressBar
         completed={props.completed}
         bgColor={props.color}
         height="15px"
@@ -21,6 +21,6 @@ export default function ProgressBarComponent(props: Props):JSX.Element {
         transitionTimingFunction="ease"
         animateOnRender
       />
-      </ProgressContainer>
+    </ProgressContainer>
   );
-};
+}

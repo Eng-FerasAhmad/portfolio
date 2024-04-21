@@ -24,7 +24,6 @@ export default function Developer() {
           {viewModel && <AboutWrapper>{viewModel.about}</AboutWrapper>}
         </DescriptionContainer>
       </ContentContainer>
-      
     </DeveloperContainer>
   );
 }

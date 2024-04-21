@@ -12,7 +12,7 @@ interface ContextValue {
   toggleLanguage: () => void;
 }
 
-export const  ThemeContext = createContext<ContextValue>({
+export const ThemeContext = createContext<ContextValue>({
   toggleTheme: () => undefined,
   isDarkTheme: undefined,
   language: Language.EN,
@@ -60,7 +60,7 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
     );
 
     const lng = getItemToLocalStorage<Language>(LocalStorageKey.LANGUAGE);
-    setLanguage(lng === undefined ? Language.EN : lng );
+    setLanguage(lng === undefined ? Language.EN : lng);
   }, [getItemToLocalStorage]);
 
   return (

@@ -20,6 +20,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "public/data/education", "public/data/developer", "public/data/project", "public/data/techstack"],
+  "include": [
+    "src",
+    "public/data/education",
+    "public/data/developer",
+    "public/data/project",
+    "public/data/techstack"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

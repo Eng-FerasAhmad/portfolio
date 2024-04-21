@@ -1,5 +1,5 @@
 // icon:react | Material Design Icons https://materialdesignicons.com/ | Austin Andrews
-import * as React from "react";
+import * as React from 'react';
 
 export default function ReactIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

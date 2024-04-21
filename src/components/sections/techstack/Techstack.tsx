@@ -9,9 +9,7 @@ export default function Techstack() {
     <TechstackContainer data-testid="techstack">
       <div>{viewModel && viewModel.entityHeader}</div>
       {viewModel?.categories.map((category, index) => {
-        return (
-           <TechstackItem key={index} category={category} />
-        )
+        return <TechstackItem key={index} category={category} />;
       })}
     </TechstackContainer>
   );
