@@ -5,22 +5,23 @@ import dataModelService from '../../../service/DataModelService';
 import { DataModel } from '../../../service/types';
 
 interface UseDeveloper {
-  viewModel: DeveloperViewModel | undefined;
+    viewModel: DeveloperViewModel | undefined;
 }
 
 export default function useDeveloper(): UseDeveloper {
-  const { language } = useContext(ThemeContext);
-  const [viewModel, setViewModel] = useState<DeveloperViewModel | undefined>(
-    undefined
-  );
-
-  useEffect(() => {
-    dataModelService<DeveloperViewModel>(DataModel.DEVELOPER, language).then(
-      (data) => {
-        setViewModel(data);
-      }
+    const { language } = useContext(ThemeContext);
+    const [viewModel, setViewModel] = useState<DeveloperViewModel | undefined>(
+        undefined
     );
-  }, [language]);
 
-  return { viewModel };
+    useEffect(() => {
+        dataModelService<DeveloperViewModel>(
+            DataModel.DEVELOPER,
+            language
+        ).then((data) => {
+            setViewModel(data);
+        });
+    }, [language]);
+
+    return { viewModel };
 }

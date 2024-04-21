@@ -1,3 +1,3 @@
-export default function FallbackComponent() {
-  return <></>;
+export default function FallbackComponent(): JSX.Element {
+    return <></>;
 }

@@ -1,10 +1,10 @@
 import { ProjectContainer } from './styles';
 
-export default function Project() {
-  return (
-    <ProjectContainer>
-      Project
-      <></>
-    </ProjectContainer>
-  );
+export default function Project(): JSX.Element {
+    return (
+        <ProjectContainer>
+            Project
+            <></>
+        </ProjectContainer>
+    );
 }

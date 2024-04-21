@@ -1,14 +1,14 @@
 export const baseUrl = '/src/models';
 
 export enum DataModel {
-  CONTACT = 'CONTACT',
-  DEVELOPER = 'DEVELOPER',
-  EDUCATION = 'EDUCATION',
-  PROJECT = 'PROJECT',
-  TECHSTACK = 'TECHSTACK',
+    CONTACT = 'CONTACT',
+    DEVELOPER = 'DEVELOPER',
+    EDUCATION = 'EDUCATION',
+    PROJECT = 'PROJECT',
+    TECHSTACK = 'TECHSTACK',
 }
 
 export enum Language {
-  DE = 'DE',
-  EN = 'EN',
+    DE = 'DE',
+    EN = 'EN',
 }

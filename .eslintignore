@@ -3,3 +3,5 @@ node_module
 target
 static
 vite.config.ts
+*.css
+*.svg
