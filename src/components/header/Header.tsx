@@ -7,9 +7,9 @@ import {
   NavigationWrapper,
 } from './styles';
 import { ThemeContext } from '../../context/ThemeContext';
-import ThemeIcon from '../../library/icon/theme-icon/ThemeIcon';
-import GithubIcon from '../../library/icon/github-icon/GithubIcon';
-import LanguageIcon from '../../library/icon/language-icon/LanguageIcon';
+import ThemeIcon from '../../library/icon/theme/ThemeIcon';
+import GithubIcon from '../../library/icon/github/GithubIcon';
+import LanguageIcon from '../../library/icon/language/LanguageIcon';
 
 export default function Header() {
   const { toggleTheme, isDarkTheme, toggleLanguage } = useContext(ThemeContext);
