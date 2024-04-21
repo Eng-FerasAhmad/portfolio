@@ -9,6 +9,12 @@ import ReduxIcon from '../redux/ReduxIcon';
 import TypescriptIcon from '../typescript/TypescriptIcon';
 import JavascriptIcon from '../javascript/TypescriptIcon';
 import JestIcon from '../jest/JestIcon';
+import NodeIcon from '../node/NodeIcon';
+import TailwindIcon from '../tailwind/TailwindIcon';
+import { Rollup } from 'vite';
+import RollupIcon from '../rollup/RollupIcon';
+import HtmlIcon from '../html/HtmlIcon';
+import CssIcon from '../css/CssIcon';
 
 interface Props {
   iconName: string;
@@ -37,6 +43,16 @@ export default function IconSelector({ iconName, color }: Props): JSX.Element {
       return <JavascriptIcon fill={isDarkTheme ? color : ''} />;
     case 'jest':
       return <JestIcon fill={isDarkTheme ? color : ''} />;
+    case 'node':
+      return <NodeIcon fill={isDarkTheme ? color : ''} />;
+    case 'tailwind':
+      return <TailwindIcon fill={isDarkTheme ? color : ''} />;
+    case 'rollup':
+      return <RollupIcon fill={isDarkTheme ? color : ''} />;
+    case 'html':
+      return <HtmlIcon fill={isDarkTheme ? color : ''} />;
+    case 'css':
+      return <CssIcon fill={isDarkTheme ? color : ''} />;
     default:
       return <></>;
   }
