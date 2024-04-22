@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
 import { ThemeContext } from '../../context/ThemeContext';
-import GithubIcon from '../../library/icon/github/GithubIcon';
+import GithubNavigation from '../../library/icon/github-navigation/GithubNavigation';
 import LanguageIcon from '../../library/icon/language/LanguageIcon';
 import ThemeIcon from '../../library/icon/theme/ThemeIcon';
 import {
@@ -24,7 +24,7 @@ export default function Header(): JSX.Element {
             <NavbarWrapper>
                 <LogoWrapper onClick={clickHandler}>Feras Ahmad</LogoWrapper>
                 <NavigationWrapper>
-                    <GithubIcon isDark={isDarkTheme!} />
+                    <GithubNavigation isDark={isDarkTheme!} />
                     <ThemeIcon
                         isDark={isDarkTheme!}
                         clickHandler={() => toggleTheme()}

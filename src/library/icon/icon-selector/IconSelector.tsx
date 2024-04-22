@@ -13,11 +13,12 @@ import EsLintIcon from '../eslint/EsLintIcon';
 import FigmaIcon from '../figma/FigmaIcon';
 import GitIcon from '../git/GitIcon';
 import GitBookIcon from '../gitbook/GitBookIcon';
+import GitHubIcon from '../github/GithubIcon';
 import GitLabIcon from '../gitLab/GitLabIcon';
 import HtmlIcon from '../html/HtmlIcon';
 import IntellijIcon from '../intellij/IntellijIcon';
 import JasmineIcon from '../jasmine/JasmineIcon';
-import JavascriptIcon from '../javascript/TypescriptIcon';
+import JavascriptIcon from '../javascript/JavascriptIcon';
 import JenkinsIcon from '../jenkins/JenkinsIcon';
 import JestIcon from '../jest/JestIcon';
 import JiraIcon from '../jira/JiraIcon';
@@ -35,6 +36,7 @@ import ScrumIcon from '../scrum/ScrumIcon';
 import SentryIcon from '../sentry/SentryIcon';
 import SlackIcon from '../slack/SlackIcon';
 import SonarLintIcon from '../sonar-lint/SonarLintIcon';
+import StyleLintIcon from '../style-lint/StyleLintIcon';
 import StyledComponentIcon from '../styled-component/StyledComponentIcon';
 import SwaggerIcon from '../swagger/SwaggerIcon';
 import TailwindIcon from '../tailwind/TailwindIcon';
@@ -89,7 +91,7 @@ export default function IconSelector({ iconName, color }: Props): JSX.Element {
         case 'git':
             return <GitIcon fill={isDarkTheme ? color : ''} />;
         case 'github':
-            return <GitIcon fill={isDarkTheme ? color : ''} />;
+            return <GitHubIcon fill={isDarkTheme ? color : ''} />;
         case 'gitbook':
             return <GitBookIcon fill={isDarkTheme ? color : ''} />;
         case 'gitlab':
@@ -136,6 +138,8 @@ export default function IconSelector({ iconName, color }: Props): JSX.Element {
             return <CypressIcon fill={isDarkTheme ? color : ''} />;
         case 'eslint':
             return <EsLintIcon fill={isDarkTheme ? color : ''} />;
+        case 'stylelint':
+            return <StyleLintIcon fill={isDarkTheme ? color : ''} />;
         case 'jasmine':
             return <JasmineIcon fill={isDarkTheme ? color : ''} />;
         case 'kanban':

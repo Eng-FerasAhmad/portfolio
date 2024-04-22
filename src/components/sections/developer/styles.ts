@@ -32,7 +32,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const ProfileWrapper = styled.img`
-    width: ${pixelToRem(250)};
+    width: ${pixelToRem(265)};
     height: ${pixelToRem(265)};
     border-radius: 50%;
 `;

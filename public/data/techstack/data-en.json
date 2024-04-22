@@ -323,6 +323,107 @@
                     "color": "#6a9500"
                 }
             ]
+        },
+        {
+            "name": "Log Tools",
+            "skills": [
+                {
+                    "id": "sentry",
+                    "name": "sentry",
+                    "icon": "sentry",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
+                }
+            ]
+        },
+        {
+            "name": "Language",
+            "skills": [
+                {
+                    "id": "typescript",
+                    "name": "Typescript",
+                    "icon": "typescript",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#2f74c0"
+                },
+                {
+                    "id": "javascript",
+                    "name": "Javascript",
+                    "icon": "javascript",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#efd71e"
+                }
+            ]
+        },
+        {
+            "name": "Linter",
+            "skills": [
+                {
+                    "id": "eslint",
+                    "name": "EsLint",
+                    "icon": "eslint",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#7c7cea"
+                },
+                {
+                    "id": "prettier",
+                    "name": "Prettier",
+                    "icon": "prettier",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#53adae"
+                },
+                {
+                    "id": "stylelint",
+                    "name": "StyleLint",
+                    "icon": "stylelint",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#9d27af"
+                },
+                {
+                    "id": "sonar-lint",
+                    "name": "SonarLint",
+                    "icon": "sonar-lint",
+                    "level": "beginner",
+                    "percent": 40,
+                    "homepage": "",
+                    "color": "#c51f28"
+                }
+            ]
+        },
+        {
+            "name": "Agile Methods",
+            "skills": [
+                {
+                    "id": "scrum",
+                    "name": "Scrum",
+                    "icon": "scrum",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
+                },
+                {
+                    "id": "kanban",
+                    "name": "Kanban",
+                    "icon": "kanban",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
+                }
+            ]
         }
     ]
 }
