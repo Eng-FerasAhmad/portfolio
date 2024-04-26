@@ -5,8 +5,8 @@ export default function TestingLibraryIcon(
 ): JSX.Element {
     return (
         <svg
-                width="24px"
-    height="24px"
+            width="24px"
+            height="24px"
             viewBox="0 0 24 24"
             fill="#e11b26"
             {...props}

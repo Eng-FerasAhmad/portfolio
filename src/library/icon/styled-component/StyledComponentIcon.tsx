@@ -6,7 +6,7 @@ export default function StyledComponentIcon(
     return (
         <svg
             width="24px"
-    height="24px"
+            height="24px"
             viewBox="0 0 22 22"
             fill="#e29472"
             {...props}
