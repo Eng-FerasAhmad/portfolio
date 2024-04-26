@@ -2,7 +2,7 @@
     "entityHeader": "Techstack",
     "categories": [
         {
-            "name": "Frameworks",
+            "name": "Frameworks & Libraries",
             "skills": [
                 {
                     "id": "react",
@@ -21,29 +21,416 @@
                     "percent": 80,
                     "homepage": "",
                     "color": "#4FC08D"
+                },
+                {
+                    "id": "angular",
+                    "name": "Angular",
+                    "icon": "angular",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#dd0031"
                 }
             ]
         },
         {
-            "name": "Build Tools",
+            "name": "Build & bundler",
             "skills": [
                 {
-                    "id": "Webpack",
+                    "id": "webpack",
                     "name": "Webpack",
                     "icon": "webpack",
-                    "level": "Beginner",
-                    "percent": 70,
+                    "level": "Expert",
+                    "percent": 100,
                     "homepage": "",
                     "color": "#8dd6f9"
                 },
                 {
-                    "id": "Vite",
+                    "id": "vite",
                     "name": "Vite",
                     "icon": "vite",
-                    "level": "Professional",
-                    "percent": 65,
+                    "level": "Expert",
+                    "percent": 100,
                     "homepage": "",
                     "color": "#af45fe"
+                },
+                {
+                    "id": "Rollup",
+                    "name": "Rollup",
+                    "icon": "rollup",
+                    "level": "beginner",
+                    "percent": 40,
+                    "homepage": "",
+                    "color": "#ff3333"
+                }
+            ]
+        },
+        {
+            "name": "Automated Testing",
+            "skills": [
+                {
+                    "id": "cypress",
+                    "name": "Cypress",
+                    "icon": "cypress",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#36a680"
+                },
+                {
+                    "id": "jest",
+                    "name": "Jest",
+                    "icon": "jest",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#944058"
+                },
+                {
+                    "id": "testing-library",
+                    "name": "Testing Library",
+                    "icon": "testing-library",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#e11b26"
+                },
+                {
+                    "id": "chai",
+                    "name": "Chai",
+                    "icon": "chai",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#7e4038"
+                },
+                {
+                    "id": "mocha",
+                    "name": "Mocha",
+                    "icon": "mocha",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#866041"
+                },
+                {
+                    "id": "karma",
+                    "name": "Karma",
+                    "icon": "karma",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#3bb9a9"
+                },
+                {
+                    "id": "jasmine",
+                    "name": "Jasmine",
+                    "icon": "jasmine",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#945c42"
+                }
+            ]
+        },
+        {
+            "name": "State Management",
+            "skills": [
+                {
+                    "id": "redux",
+                    "name": "Redux",
+                    "icon": "redux",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#7d42bf"
+                },
+                {
+                    "id": "vuex",
+                    "name": "Vuex",
+                    "icon": "vuex",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#4cbb89"
+                },
+                {
+                    "id": "context-api",
+                    "name": "Context API",
+                    "icon": "react",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#61DBFB"
+                }
+            ]
+        },
+        {
+            "name": "Styling",
+            "skills": [
+                {
+                    "id": "css",
+                    "name": "CSS",
+                    "icon": "css",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#146eb0"
+                },
+                {
+                    "id": "sass",
+                    "name": "SASS",
+                    "icon": "sass",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#c66394"
+                },
+                {
+                    "id": "tailwind",
+                    "name": "Tailwind",
+                    "icon": "tailwind",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#15b8c5"
+                },
+                {
+                    "id": "material",
+                    "name": "Material UI",
+                    "icon": "material",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#00aaf7"
+                },
+                {
+                    "id": "vuetify",
+                    "name": "Vuetify",
+                    "icon": "vuetify",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#aeddff"
+                },
+                {
+                    "id": "bootstrap",
+                    "name": "Bootstrap",
+                    "icon": "bootstrap",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#7410f0"
+                },
+                {
+                    "id": "styled-component",
+                    "name": "Styled Comp.",
+                    "icon": "styled-component",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#e29472"
+                }
+            ]
+        },
+        {
+            "name": "UX Design Tools",
+            "skills": [
+                {
+                    "id": "figma",
+                    "name": "Figma",
+                    "icon": "figma",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#ea4c1d"
+                },
+                {
+                    "id": "zeplin",
+                    "name": "Zeplin",
+                    "icon": "zeplin",
+                    "level": "beginner",
+                    "percent": 40,
+                    "homepage": "",
+                    "color": "#f5b737"
+                }
+            ]
+        },
+        {
+            "name": "Configuration Management",
+            "skills": [
+                {
+                    "id": "git",
+                    "name": "Git",
+                    "icon": "git",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#e84e31"
+                },
+                {
+                    "id": "github",
+                    "name": "GitHub",
+                    "icon": "github",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
+                },
+                {
+                    "id": "gitlab",
+                    "name": "GitLab",
+                    "icon": "gitlab",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#db4128"
+                },
+                {
+                    "id": "bitBucket",
+                    "name": "bitBucket",
+                    "icon": "bitbucket",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#2580f7"
+                },
+                {
+                    "id": "jira",
+                    "name": "Jira",
+                    "icon": "jira",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#2580f7"
+                },
+                {
+                    "id": "azure",
+                    "name": "Azure Devops",
+                    "icon": "azure",
+                    "level": "beginner",
+                    "percent": 40,
+                    "homepage": "",
+                    "color": "#0074d0"
+                },
+                {
+                    "id": "confluence",
+                    "name": "Confluence",
+                    "icon": "confluence",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#217cf4"
+                },
+                {
+                    "id": "swagger",
+                    "name": "Swagger",
+                    "icon": "swagger",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#6a9500"
+                }
+            ]
+        },
+        {
+            "name": "Log Tools",
+            "skills": [
+                {
+                    "id": "sentry",
+                    "name": "sentry",
+                    "icon": "sentry",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
+                }
+            ]
+        },
+        {
+            "name": "Language",
+            "skills": [
+                {
+                    "id": "typescript",
+                    "name": "Typescript",
+                    "icon": "typescript",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#2f74c0"
+                },
+                {
+                    "id": "javascript",
+                    "name": "Javascript",
+                    "icon": "javascript",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#efd71e"
+                }
+            ]
+        },
+        {
+            "name": "Linter",
+            "skills": [
+                {
+                    "id": "eslint",
+                    "name": "EsLint",
+                    "icon": "eslint",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#7c7cea"
+                },
+                {
+                    "id": "prettier",
+                    "name": "Prettier",
+                    "icon": "prettier",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#53adae"
+                },
+                {
+                    "id": "stylelint",
+                    "name": "StyleLint",
+                    "icon": "stylelint",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#9d27af"
+                },
+                {
+                    "id": "sonar-lint",
+                    "name": "SonarLint",
+                    "icon": "sonar-lint",
+                    "level": "beginner",
+                    "percent": 40,
+                    "homepage": "",
+                    "color": "#c51f28"
+                }
+            ]
+        },
+        {
+            "name": "Agile Methods",
+            "skills": [
+                {
+                    "id": "scrum",
+                    "name": "Scrum",
+                    "icon": "scrum",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
+                },
+                {
+                    "id": "kanban",
+                    "name": "Kanban",
+                    "icon": "kanban",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
                 }
             ]
         }

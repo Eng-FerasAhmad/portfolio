@@ -123,9 +123,9 @@
                     "color": "#3bb9a9"
                 },
                 {
-                    "id": "sinon",
-                    "name": "Sinon",
-                    "icon": "sinon",
+                    "id": "jasmine",
+                    "name": "Jasmine",
+                    "icon": "jasmine",
                     "level": "Professional",
                     "percent": 80,
                     "homepage": "",
@@ -205,6 +205,15 @@
                     "color": "#00aaf7"
                 },
                 {
+                    "id": "vuetify",
+                    "name": "Vuetify",
+                    "icon": "vuetify",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#aeddff"
+                },
+                {
                     "id": "bootstrap",
                     "name": "Bootstrap",
                     "icon": "bootstrap",
@@ -215,7 +224,7 @@
                 },
                 {
                     "id": "styled-component",
-                    "name": "Styled Comp",
+                    "name": "Styled Comp.",
                     "icon": "styled-component",
                     "level": "Expert",
                     "percent": 100,
@@ -239,7 +248,7 @@
                 {
                     "id": "zeplin",
                     "name": "Zeplin",
-                    "icon": "Zeplin",
+                    "icon": "zeplin",
                     "level": "beginner",
                     "percent": 40,
                     "homepage": "",
@@ -266,7 +275,7 @@
                     "level": "Expert",
                     "percent": 100,
                     "homepage": "",
-                    "color": "#000"
+                    "color": "#a6a6a6"
                 },
                 {
                     "id": "gitlab",

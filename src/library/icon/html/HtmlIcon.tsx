@@ -4,14 +4,24 @@ export default function HtmlIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            height="1em"
-            width="1em"
-            {...props}
-        >
-            <path d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302l-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402v-.001z" />
-        </svg>
+  <svg
+    height="24px"
+    width="24px"
+    aria-label="HTML5"
+    role="img"
+    viewBox="0 0 512 512"
+    {...props}
+  >
+    <path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52" />
+    <path fill="#ef652a" d="M256 472l149-41 35-394H256" />
+    <path
+      fill="#ebebeb"
+      d="M256 208h-75l-5-58h80V94H114l15 171h127zm-1 147l-63-17-4-45h-56l7 89 116 32z"
+    />
+    <path
+      fill="#ffffff"
+      d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z"
+    />
+  </svg>
     );
 }

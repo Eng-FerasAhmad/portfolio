@@ -5,7 +5,7 @@ export default function ScrumIcon(
 ): JSX.Element {
     return (
         <svg
-            viewBox="0 0 32 32"
+            viewBox="0 0 24 24"
             fill="currentColor"
             height="1em"
             width="1em"

@@ -4,14 +4,138 @@ export default function TeamsIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            height="1em"
-            width="1em"
-            {...props}
-        >
-            <path d="M19.19 8.77q-.46 0-.86-.17-.39-.17-.69-.47-.3-.3-.47-.69-.17-.4-.17-.86 0-.45.17-.85.17-.4.47-.69.3-.3.69-.47.4-.18.86-.17.45-.01.85.17.4.17.7.47.29.29.47.69.17.4.17.85 0 .46-.17.86-.17.39-.47.69-.3.3-.7.47-.4.17-.85.17m0-3.12q-.39 0-.69.27-.25.27-.25.66t.25.67q.3.25.69.25.39 0 .66-.25.28-.25.28-.67 0-.39-.28-.66-.27-.27-.66-.27M22 10.33V15q0 .63-.24 1.2-.26.57-.67.99-.43.43-1 .67-.59.25-1.21.25-.38 0-.76-.11-.39-.07-.71-.25-.24.79-.71 1.44-.47.65-1.1 1.11-.63.46-1.39.7-.76.27-1.58.27-.96 0-1.81-.33-.82-.33-1.5-.94-.66-.57-1.09-1.36-.44-.8-.57-1.74H2.83q-.33 0-.59-.25-.24-.24-.24-.58V7.73q0-.34.24-.59.26-.24.59-.24H10q-.29-.6-.29-1.25 0-.61.23-1.15.22-.5.62-.92.4-.39.94-.62.5-.23 1.12-.23.61 0 1.14.23.53.23.93.62.4.42.62.92.23.54.23 1.15 0 .6-.23 1.14-.22.53-.62.92-.4.4-.93.63-.53.23-1.14.23-.15 0-.31-.02-.15-.02-.31-.05v.9h9.06q.39 0 .67.27.27.27.27.66M12.63 4q-.35 0-.63.11-.33.13-.56.36-.22.23-.35.53-.13.31-.13.65 0 .35.13.65.13.3.35.53.23.22.56.36.28.13.63.13.34 0 .64-.13.3-.14.53-.36.23-.23.36-.53.14-.3.14-.65 0-.34-.14-.65-.13-.3-.36-.53-.23-.23-.53-.36-.3-.11-.64-.11m-4.85 6.18h1.88V8.62H4.34v1.56h1.88v5h1.56m8.6 1.09v-5.62H12v5.42q0 .34-.24.58-.26.25-.59.25H8.92q.13.67.47 1.25.34.57.82.99.48.41 1.1.65.61.21 1.32.21.77 0 1.45-.27.68-.3 1.2-.81.51-.51.8-1.19.3-.68.3-1.46M20.75 15v-4.35h-3.12v5.71q.25.25.57.38.3.12.68.12.39 0 .73-.15.34-.15.59-.4.26-.25.4-.6.15-.34.15-.71z" />
-        </svg>
+  <svg
+    width="24px"
+    height="24px"
+    viewBox="0 0 32 32"
+    fill="none"
+    {...props}
+  >
+    <path
+      d="M19 13.9032C19 13.4044 19.4044 13 19.9032 13H31.0968C31.5956 13 32 13.4044 32 13.9032V20.5C32 24.0899 29.0899 27 25.5 27C21.9101 27 19 24.0899 19 20.5V13.9032Z"
+      fill="url(#paint0_linear_87_7777)"
+    />
+    <path
+      d="M9 12.2258C9 11.5488 9.54881 11 10.2258 11H23.7742C24.4512 11 25 11.5488 25 12.2258V22C25 26.4183 21.4183 30 17 30C12.5817 30 9 26.4183 9 22V12.2258Z"
+      fill="url(#paint1_linear_87_7777)"
+    />
+    <circle cx={27} cy={8} r={3} fill="#34439E" />
+    <circle cx={27} cy={8} r={3} fill="url(#paint2_linear_87_7777)" />
+    <circle cx={18} cy={6} r={4} fill="url(#paint3_linear_87_7777)" />
+    <mask
+      id="mask0_87_7777"
+      style={{
+        maskType: "alpha",
+      }}
+      maskUnits="userSpaceOnUse"
+      x={9}
+      y={0}
+      width={16}
+      height={30}
+    >
+      <path
+        d="M17 10C19.7615 10 22 7.76147 22 5C22 2.23853 19.7615 0 17 0C14.2385 0 12 2.23853 12 5C12 7.76147 14.2385 10 17 10Z"
+        fill="url(#paint4_linear_87_7777)"
+      />
+      <path
+        d="M10.2258 11C9.54883 11 9 11.5488 9 12.2258V22C9 26.4183 12.5817 30 17 30C21.4183 30 25 26.4183 25 22V12.2258C25 11.5488 24.4512 11 23.7742 11H10.2258Z"
+        fill="url(#paint5_linear_87_7777)"
+      />
+    </mask>
+    <g mask="url(#mask0_87_7777)">
+      <path
+        d="M7 12C7 10.3431 8.34315 9 10 9H17C18.6569 9 20 10.3431 20 12V24C20 25.6569 18.6569 27 17 27H7V12Z"
+        fill="#000000"
+        fillOpacity={0.3}
+      />
+    </g>
+    <rect
+      y={7}
+      width={18}
+      height={18}
+      rx={2}
+      fill="url(#paint6_linear_87_7777)"
+    />
+    <path d="M13 11H5V12.8347H7.99494V21H10.0051V12.8347H13V11Z" fill="white" />
+    <defs>
+      <linearGradient
+        id="paint0_linear_87_7777"
+        x1={19}
+        y1={13.7368}
+        x2={32.1591}
+        y2={22.3355}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#364088" />
+        <stop offset={1} stopColor="#6E7EE1" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_87_7777"
+        x1={9}
+        y1={19.4038}
+        x2={25}
+        y2={19.4038}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#515FC4" />
+        <stop offset={1} stopColor="#7084EA" />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_87_7777"
+        x1={24}
+        y1={5.31579}
+        x2={29.7963}
+        y2={9.39469}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#364088" />
+        <stop offset={1} stopColor="#6E7EE1" />
+      </linearGradient>
+      <linearGradient
+        id="paint3_linear_87_7777"
+        x1={15.1429}
+        y1={3.14286}
+        x2={20.2857}
+        y2={9.14286}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#4858AE" />
+        <stop offset={1} stopColor="#4E60CE" />
+      </linearGradient>
+      <linearGradient
+        id="paint4_linear_87_7777"
+        x1={13.4286}
+        y1={1.42857}
+        x2={19.8571}
+        y2={8.92857}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#4858AE" />
+        <stop offset={1} stopColor="#4E60CE" />
+      </linearGradient>
+      <linearGradient
+        id="paint5_linear_87_7777"
+        x1={13.4286}
+        y1={1.42857}
+        x2={19.8571}
+        y2={8.92857}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#4858AE" />
+        <stop offset={1} stopColor="#4E60CE" />
+      </linearGradient>
+      <linearGradient
+        id="paint6_linear_87_7777"
+        x1={-5.21539e-8}
+        y1={16}
+        x2={18}
+        y2={16}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#2A3887" />
+        <stop offset={1} stopColor="#4C56B9" />
+      </linearGradient>
+    </defs>
+  </svg>
     );
 }

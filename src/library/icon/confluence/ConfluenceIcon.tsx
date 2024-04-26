@@ -5,7 +5,7 @@ export default function ConfluenceIcon(
 ): JSX.Element {
     return (
         <svg
-            viewBox="0 0 24 24"
+            viewBox="0 0 25 25"
             fill="currentColor"
             height="1em"
             width="1em"
