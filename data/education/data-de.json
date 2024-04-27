@@ -1,9 +1,9 @@
 [
-  {
-    "title": "Diplom Informatik Ingenieur",
-    "start": "01-09-2004",
-    "end": "01-05-2010",
-    "country": "Aleppo-Syrien",
-    "visible": true
-  }
+    {
+        "title": "Diplom Informatik Ingenieur",
+        "start": "01-09-2004",
+        "end": "01-05-2010",
+        "country": "Aleppo-Syrien",
+        "visible": true
+    }
 ]
