@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color } from '../../../style/color';
 import { pixelToRem } from '../../../utils/utils';
 
 export const TechstackContainer = styled.div``;
@@ -7,35 +8,26 @@ export const TechstackItemContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    margin: ${pixelToRem(30, 0)};
+    justify-content: center;
+    margin: ${pixelToRem(30, 0, 70, 0)};
 `;
 export const ItemWrapper = styled.div`
-    width: 100%;
-    margin: ${pixelToRem(10, 30)};
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-`;
-
-export const ItemContentWrapper = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-`;
-
-export const ItemNameWrapper = styled.div`
+    width: ${pixelToRem(215)};;
     font-size: ${pixelToRem(24)};
-    width: ${pixelToRem(200)};
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: ${pixelToRem(10)};
+    padding: ${pixelToRem(20, 0)};
 `;
 
-export const ExpertLabelWrapper = styled.div`
-    font-size: ${pixelToRem(18)};
-    margin: ${pixelToRem(5, 0, 0, 10)};
+
+export const ItemsGroupTitleWrapper = styled.div`
+    border-bottom: ${pixelToRem(2)} solid ${color.green};
+    padding-bottom: ${pixelToRem(8)};
+    width: ${pixelToRem(400)};
+    margin: ${pixelToRem(20)} auto;
+`;
+
+export const ItemsGroupWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
 `;

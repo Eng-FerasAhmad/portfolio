@@ -4,7 +4,7 @@ import { pixelToRem } from '../utils/utils';
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    font-size: ${pixelToRem(14)};
+    font-size: ${pixelToRem(16)};
     color: ${(props) => props.theme.color.page.background};
   }
 

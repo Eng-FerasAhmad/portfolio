@@ -1,13 +1,6 @@
-import IconSelector from '../../../library/icon/icon-selector/IconSelector';
-import ProgressBarComponent from '../../../library/progressbar/ProgressBar';
+import IconSelector from '../../../library/icon-selector/IconSelector';
 import { Category } from '../../../types/techstackTypes';
-import {
-    ExpertLabelWrapper,
-    ItemContentWrapper,
-    ItemNameWrapper,
-    ItemWrapper,
-    TechstackItemContainer,
-} from './styles';
+import { ItemWrapper, ItemsGroupTitleWrapper, ItemsGroupWrapper, TechstackItemContainer } from './styles';
 
 interface Props {
     category: Category | undefined;
@@ -16,33 +9,19 @@ interface Props {
 export default function TechstackItem({ category }: Props): JSX.Element {
     return (
         <TechstackItemContainer>
-            <div>{category?.name}</div>
+            <ItemsGroupTitleWrapper>{category?.name}</ItemsGroupTitleWrapper>
+            <ItemsGroupWrapper>
             {category &&
                 category.skills &&
                 category.skills.map((ts) => {
                     return (
-                        <ItemWrapper key={ts.id}>
-                            <ItemContentWrapper>
-                                <ItemNameWrapper>
-                                    <div>{ts.name}</div>
-                                    <div>
-                                        <IconSelector
-                                            iconName={ts.icon}
-                                            color={ts.color}
-                                        />
-                                    </div>
-                                </ItemNameWrapper>
-                                <ProgressBarComponent
-                                    color={ts.color}
-                                    completed={ts.percent}
-                                />
-                                <ExpertLabelWrapper>
-                                    {ts.level}
-                                </ExpertLabelWrapper>
-                            </ItemContentWrapper>
+                        <ItemWrapper key={ts.id} data-testid="item-wrapper">
+                            <div><IconSelector iconName={ts.icon}/></div>
+                            <div>{ts.name}</div>
                         </ItemWrapper>
                     );
                 })}
+            </ItemsGroupWrapper>
         </TechstackItemContainer>
     );
 }
