@@ -1,6 +1,7 @@
 import { ReactNode, useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import { color } from '../../style/color';
+import AdobeXdIcon from '../icon/adobe-xd/AdobeXdIcon';
 import AngularIcon from '../icon/angular/AngularIcon';
 import AzureIcon from '../icon/azure/AzureIcon';
 import BitBucketIcon from '../icon/bitbucket/BitBucketIcon';
@@ -14,9 +15,9 @@ import DockerIcon from '../icon/docker/DockerIcon';
 import EsLintIcon from '../icon/eslint/EsLintIcon';
 import FigmaIcon from '../icon/figma/FigmaIcon';
 import GitIcon from '../icon/git/GitIcon';
-import GitLabIcon from '../icon/gitLab/GitLabIcon';
 import GitBookIcon from '../icon/gitbook/GitBookIcon';
 import GitHubIcon from '../icon/github/GithubIcon';
+import GitLabIcon from '../icon/gitLab/GitLabIcon';
 import HtmlIcon from '../icon/html/HtmlIcon';
 import IntellijIcon from '../icon/intellij/IntellijIcon';
 import JasmineIcon from '../icon/jasmine/JasmineIcon';
@@ -58,16 +59,14 @@ import YarnIcon from '../icon/yarn/YarnIcon';
 import ZeplinIcon from '../icon/zeplin/ZeplinIcon';
 import ZoomIcon from '../icon/zoom/ZoomIcon';
 import { IconSelectorContainer } from './style';
-import AdobeXdIcon from '../icon/adobe-xd/AdobeXdIcon';
 
 interface Props {
     iconName: string;
 }
 
 export default function IconSelector({ iconName }: Props): JSX.Element {
-    const { isDarkTheme } =
-        useContext(ThemeContext);
-    
+    const { isDarkTheme } = useContext(ThemeContext);
+
     const iconSelector = (): ReactNode => {
         switch (iconName) {
             case 'react':
@@ -149,7 +148,13 @@ export default function IconSelector({ iconName }: Props): JSX.Element {
             case 'eslint':
                 return <EsLintIcon width="50px" height="50px" />;
             case 'stylelint':
-                return <StyleLintIcon width="50px" height="50px" fill={isDarkTheme ? color.light : color.dark} />;
+                return (
+                    <StyleLintIcon
+                        width="50px"
+                        height="50px"
+                        fill={isDarkTheme ? color.light : color.dark}
+                    />
+                );
             case 'jasmine':
                 return <JasmineIcon width="50px" height="50px" />;
             case 'kanban':

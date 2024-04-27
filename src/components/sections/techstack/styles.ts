@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { color } from '../../../style/color';
 import { pixelToRem } from '../../../utils/utils';
 
 export const TechstackContainer = styled.div``;
@@ -12,11 +11,10 @@ export const TechstackItemContainer = styled.div`
     margin: ${pixelToRem(30, 0, 70, 0)};
 `;
 export const ItemWrapper = styled.div`
-    width: ${pixelToRem(215)};;
+    width: ${pixelToRem(215)};
     font-size: ${pixelToRem(24)};
     padding: ${pixelToRem(20, 0)};
 `;
-
 
 export const ItemsGroupTitleWrapper = styled.div`
     padding-bottom: ${pixelToRem(8)};
