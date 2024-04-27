@@ -1,5 +1,6 @@
 import { ReactNode, useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
+import { color } from '../../style/color';
 import AngularIcon from '../icon/angular/AngularIcon';
 import AzureIcon from '../icon/azure/AzureIcon';
 import BitBucketIcon from '../icon/bitbucket/BitBucketIcon';
@@ -57,12 +58,16 @@ import YarnIcon from '../icon/yarn/YarnIcon';
 import ZeplinIcon from '../icon/zeplin/ZeplinIcon';
 import ZoomIcon from '../icon/zoom/ZoomIcon';
 import { IconSelectorContainer } from './style';
+import AdobeXdIcon from '../icon/adobe-xd/AdobeXdIcon';
 
 interface Props {
     iconName: string;
 }
 
 export default function IconSelector({ iconName }: Props): JSX.Element {
+    const { isDarkTheme } =
+        useContext(ThemeContext);
+    
     const iconSelector = (): ReactNode => {
         switch (iconName) {
             case 'react':
@@ -144,7 +149,7 @@ export default function IconSelector({ iconName }: Props): JSX.Element {
             case 'eslint':
                 return <EsLintIcon width="50px" height="50px" />;
             case 'stylelint':
-                return <StyleLintIcon width="50px" height="50px" />;
+                return <StyleLintIcon width="50px" height="50px" fill={isDarkTheme ? color.light : color.dark} />;
             case 'jasmine':
                 return <JasmineIcon width="50px" height="50px" />;
             case 'kanban':
@@ -177,6 +182,8 @@ export default function IconSelector({ iconName }: Props): JSX.Element {
                 return <VuexIcon width="50px" height="50px" />;
             case 'zeplin':
                 return <ZeplinIcon width="50px" height="50px" />;
+            case 'adobeXd':
+                return <AdobeXdIcon width="50px" height="50px" />;
             default:
                 return <></>;
         }

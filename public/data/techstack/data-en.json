@@ -253,6 +253,15 @@
                     "percent": 40,
                     "homepage": "",
                     "color": "#f5b737"
+                },
+                                {
+                    "id": "adobeXd",
+                    "name": "Adobe Xd",
+                    "icon": "adobeXd",
+                    "level": "beginner",
+                    "percent": 40,
+                    "homepage": "",
+                    "color": "#f5b737"
                 }
             ]
         },
@@ -286,19 +295,30 @@
                     "homepage": "",
                     "color": "#db4128"
                 },
+            
                 {
-                    "id": "bitBucket",
-                    "name": "bitBucket",
-                    "icon": "bitbucket",
+                    "id": "jira",
+                    "name": "Jira",
+                    "icon": "jira",
                     "level": "Expert",
                     "percent": 100,
                     "homepage": "",
                     "color": "#2580f7"
                 },
+                
                 {
-                    "id": "jira",
-                    "name": "Jira",
-                    "icon": "jira",
+                    "id": "confluence",
+                    "name": "Confluence",
+                    "icon": "confluence",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#217cf4"
+                },
+                {
+                    "id": "bitBucket",
+                    "name": "bitBucket",
+                    "icon": "bitbucket",
                     "level": "Expert",
                     "percent": 100,
                     "homepage": "",
@@ -314,15 +334,6 @@
                     "color": "#0074d0"
                 },
                 {
-                    "id": "confluence",
-                    "name": "Confluence",
-                    "icon": "confluence",
-                    "level": "Expert",
-                    "percent": 100,
-                    "homepage": "",
-                    "color": "#217cf4"
-                },
-                {
                     "id": "swagger",
                     "name": "Swagger",
                     "icon": "swagger",
@@ -330,43 +341,6 @@
                     "percent": 80,
                     "homepage": "",
                     "color": "#6a9500"
-                }
-            ]
-        },
-        {
-            "name": "Log Tools",
-            "skills": [
-                {
-                    "id": "sentry",
-                    "name": "sentry",
-                    "icon": "sentry",
-                    "level": "Expert",
-                    "percent": 100,
-                    "homepage": "",
-                    "color": "#a6a6a6"
-                }
-            ]
-        },
-        {
-            "name": "Language",
-            "skills": [
-                {
-                    "id": "typescript",
-                    "name": "Typescript",
-                    "icon": "typescript",
-                    "level": "Expert",
-                    "percent": 100,
-                    "homepage": "",
-                    "color": "#2f74c0"
-                },
-                {
-                    "id": "javascript",
-                    "name": "Javascript",
-                    "icon": "javascript",
-                    "level": "Expert",
-                    "percent": 100,
-                    "homepage": "",
-                    "color": "#efd71e"
                 }
             ]
         },
@@ -427,6 +401,44 @@
                     "id": "kanban",
                     "name": "Kanban",
                     "icon": "kanban",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#a6a6a6"
+                }
+            ]
+        },
+
+        {
+            "name": "Language",
+            "skills": [
+                {
+                    "id": "typescript",
+                    "name": "Typescript",
+                    "icon": "typescript",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#2f74c0"
+                },
+                {
+                    "id": "javascript",
+                    "name": "Javascript",
+                    "icon": "javascript",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#efd71e"
+                }
+            ]
+        },
+                        {
+            "name": "Log Tools",
+            "skills": [
+                {
+                    "id": "sentry",
+                    "name": "sentry",
+                    "icon": "sentry",
                     "level": "Expert",
                     "percent": 100,
                     "homepage": "",

@@ -5,7 +5,6 @@ export default function JenkinsIcon(
 ): JSX.Element {
     return (
         <svg width="24px" height="24px" viewBox="0 0 32 32" {...props}>
-            <title>{'file_type_jenkins'}</title>
             <path
                 d="M19.513,25.173c-.068,0-.136,0-.2-.01C19.378,25.169,19.445,25.173,19.513,25.173Z"
                 style={{

@@ -5,7 +5,6 @@ export default function CssIcon(
 ): JSX.Element {
     return (
         <svg width="24px" height="24px" viewBox="0 0 32 32" {...props}>
-            <title>{'file_type_css'}</title>
             <polygon
                 points="5.902 27.201 3.656 2 28.344 2 26.095 27.197 15.985 30 5.902 27.201"
                 style={{

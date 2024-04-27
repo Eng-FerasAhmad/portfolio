@@ -5,7 +5,6 @@ export default function KanbanIcon(
 ): JSX.Element {
     return (
         <svg width="24px" height="24px" viewBox="0 0 73 73" {...props}>
-            <title>{'team-collaboration/management/kanban'}</title>
             <desc>{'Created with Sketch.'}</desc>
             <defs />
             <g

@@ -19,7 +19,6 @@ export const ItemWrapper = styled.div`
 
 
 export const ItemsGroupTitleWrapper = styled.div`
-    border-bottom: ${pixelToRem(2)} solid ${color.green};
     padding-bottom: ${pixelToRem(8)};
     width: ${pixelToRem(400)};
     margin: ${pixelToRem(20)} auto;

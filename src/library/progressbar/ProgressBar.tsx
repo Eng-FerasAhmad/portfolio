@@ -13,8 +13,8 @@ export default function ProgressBarComponent(props: Props): JSX.Element {
             <ProgressBar
                 completed={props.completed}
                 bgColor={props.color}
-                height="15px"
-                // isLabelVisible={false}
+                height="3px"
+                isLabelVisible={false}
                 labelSize="12px"
                 baseBgColor="#d8d8cd"
                 labelColor={color.dark}

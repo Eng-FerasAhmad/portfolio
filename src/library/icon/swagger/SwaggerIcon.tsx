@@ -5,7 +5,6 @@ export default function SwaggerIcon(
 ): JSX.Element {
     return (
         <svg width="24px" height="24px" viewBox="0 0 32 32" {...props}>
-            <title>{'file_type_swagger'}</title>
             <path
                 d="M30,16a14,14,0,1,1-4.1-9.9A13.956,13.956,0,0,1,30,16Z"
                 style={{
