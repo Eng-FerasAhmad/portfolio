@@ -4,6 +4,7 @@ import { color } from '../../style/color';
 import AdobeXdIcon from '../icon/adobe-xd/AdobeXdIcon';
 import AngularIcon from '../icon/angular/AngularIcon';
 import AzureIcon from '../icon/azure/AzureIcon';
+import BabelIcon from '../icon/babel/BabelIcon';
 import BitBucketIcon from '../icon/bitbucket/BitBucketIcon';
 import BootstrapIcon from '../icon/bootstrap/BootstrapIcon';
 import ChaiIcon from '../icon/chai/ChaiIcon';
@@ -12,6 +13,7 @@ import ConfluenceIcon from '../icon/confluence/ConfluenceIcon';
 import CssIcon from '../icon/css/CssIcon';
 import CypressIcon from '../icon/cypress/Cypress';
 import DockerIcon from '../icon/docker/DockerIcon';
+import DrawioIcon from '../icon/drawio/DrawioIcon';
 import EsLintIcon from '../icon/eslint/EsLintIcon';
 import FigmaIcon from '../icon/figma/FigmaIcon';
 import GitIcon from '../icon/git/GitIcon';
@@ -189,6 +191,10 @@ export default function IconSelector({ iconName }: Props): JSX.Element {
                 return <ZeplinIcon width="50px" height="50px" />;
             case 'adobeXd':
                 return <AdobeXdIcon width="50px" height="50px" />;
+            case 'babel':
+                return <BabelIcon width="50px" height="50px" />;
+            case 'drawio':
+                return <DrawioIcon width="50px" height="50px" />;
             default:
                 return <></>;
         }

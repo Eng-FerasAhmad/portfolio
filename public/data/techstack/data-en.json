@@ -30,6 +30,15 @@
                     "percent": 80,
                     "homepage": "",
                     "color": "#dd0031"
+                },
+                {
+                    "id": "nodejs",
+                    "name": "Nodejs",
+                    "icon": "node",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#dd0031"
                 }
             ]
         },
@@ -60,6 +69,15 @@
                     "icon": "rollup",
                     "level": "beginner",
                     "percent": 40,
+                    "homepage": "",
+                    "color": "#ff3333"
+                },
+                {
+                    "id": "babel",
+                    "name": "Babel",
+                    "icon": "babel",
+                    "level": "Expert",
+                    "percent": 100,
                     "homepage": "",
                     "color": "#ff3333"
                 }
@@ -254,10 +272,19 @@
                     "homepage": "",
                     "color": "#f5b737"
                 },
-                                {
+                {
                     "id": "adobeXd",
                     "name": "Adobe Xd",
                     "icon": "adobeXd",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#f5b737"
+                },
+                {
+                    "id": "drawio",
+                    "name": "Drawio",
+                    "icon": "drawio",
                     "level": "beginner",
                     "percent": 40,
                     "homepage": "",
@@ -295,7 +322,7 @@
                     "homepage": "",
                     "color": "#db4128"
                 },
-            
+
                 {
                     "id": "jira",
                     "name": "Jira",
@@ -305,7 +332,7 @@
                     "homepage": "",
                     "color": "#2580f7"
                 },
-                
+
                 {
                     "id": "confluence",
                     "name": "Confluence",
@@ -432,7 +459,7 @@
                 }
             ]
         },
-                        {
+        {
             "name": "Log Tools",
             "skills": [
                 {
