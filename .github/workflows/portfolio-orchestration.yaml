@@ -11,6 +11,7 @@ on:
     - workflow_dispatch
 
 jobs:
+<<<<<<< HEAD
     retrieve-project:
         name: check readiness
         runs-on: ubuntu-latest
@@ -26,6 +27,24 @@ jobs:
                   service-host: api-eu.ionos.space
                   project-id: 6cda14d7-5d82-4532-94d2-bb60868ed613
                   action: retrieve-info
+=======
+  retrieve-project:
+    name: check readiness
+    runs-on: ubuntu-latest
+    outputs:
+      deployment-enabled: ${{ fromJson(steps.project.outputs.info).deployment-enabled }}
+      branch-id: ${{ fromJson(steps.project.outputs.info).branch-id }}
+    steps:
+      - name: Fetch project data
+        uses: ionos-deploy-now/project-action@v1
+        id: project
+        with:
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          service-host: api-eu.ionos.space
+          project-id: c7b73489-fbae-4a28-b574-f9a66fdcbbc3
+          action: retrieve-info
+
+>>>>>>> 3f2d986c4a0324a376c5cde396cd69170780bbee
 
     build:
         name: build
@@ -33,6 +52,7 @@ jobs:
         if: ${{ needs.retrieve-project.outputs.deployment-enabled == 'true' }}
         uses: ./.github/workflows/portfolio-build.yaml
         with:
+<<<<<<< HEAD
             site-url: https://IONOS_DEPLOY_NOW_SITE_URL
             branch-id: ${{ needs.retrieve-project.outputs.branch-id }}
         secrets: inherit
@@ -52,3 +72,10 @@ jobs:
                   project-id: 6cda14d7-5d82-4532-94d2-bb60868ed613
                   branch-id: ${{ needs.retrieve-project.outputs.branch-id }}
                   action: dispatch-deployments
+=======
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          service-host: api-eu.ionos.space
+          project-id: c7b73489-fbae-4a28-b574-f9a66fdcbbc3
+          branch-id: ${{ needs.retrieve-project.outputs.branch-id }}
+          action: dispatch-deployments
+>>>>>>> 3f2d986c4a0324a376c5cde396cd69170780bbee

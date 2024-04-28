@@ -40,6 +40,7 @@ jobs:
                   npm ci
                   npm run build
 
+<<<<<<< HEAD
             # Please do not touch the following action
             - name: Store deployment content
               uses: ionos-deploy-now/artifact-action@v1
@@ -52,3 +53,17 @@ jobs:
                   folder: ${{ env.DEPLOYMENT_FOLDER }}
                   config-file: .deploy-now/portfolio/config.yaml
                   action: upload
+=======
+# Please do not touch the following action
+      - name: Store deployment content
+        uses: ionos-deploy-now/artifact-action@v1
+        with:
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          service-host: api-eu.ionos.space
+          project-id: c7b73489-fbae-4a28-b574-f9a66fdcbbc3
+          branch-id: ${{ inputs.branch-id }}
+          version: ${{ github.sha }}
+          folder: ${{ env.DEPLOYMENT_FOLDER }}
+          config-file: .deploy-now/portfolio/config.yaml
+          action: upload
+>>>>>>> 3f2d986c4a0324a376c5cde396cd69170780bbee
