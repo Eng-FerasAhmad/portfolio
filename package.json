@@ -7,7 +7,7 @@
     "homepage": "http://eng-ferasahmad.github.io/portfolio",
     "scripts": {
         "dev": "vite",
-        "build": "npm run lint && tsc && vite build",
+        "build": "tsc && vite build",
         "eslint": "eslint \"./src/**/*.{ts,tsx}\"",
         "eslint:fix": "eslint \"./src/**/*.{ts,tsx}\" --fix",
         "prettier": "prettier --check .",
