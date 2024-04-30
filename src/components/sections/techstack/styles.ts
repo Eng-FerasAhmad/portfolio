@@ -2,11 +2,20 @@ import styled from 'styled-components';
 import { color } from '../../../style/color';
 import { pixelToRem } from '../../../utils/utils';
 
-export const TechstackContainer = styled.div``;
+export const TechstackContainer = styled.div`
+    margin: ${pixelToRem(0, 0, 30, 0)};
+`;
 
 export const TechstackTitleWrapper = styled.div`
     border: ${pixelToRem(3)} solid ${color.green};
     border-radius: ${pixelToRem(50)};
+    padding: ${pixelToRem(5, 0)};
+
+    &:hover {
+        background-color: ${color.green};
+        color: ${(props) => props.theme.color.page.fontHover};
+        cursor: pointer;
+    }
 `;
 
 export const TechstackItemContainer = styled.div`

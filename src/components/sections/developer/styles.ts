@@ -14,7 +14,7 @@ export const DeveloperContainer = styled.div`
     }
 
     @media ${device.tablet} {
-        min-height: calc(100vh - ${pixelToRem(20)});
+        min-height: calc(100vh - ${pixelToRem(140)});
         margin-bottom: 0;
     }
 `;
@@ -66,7 +66,6 @@ export const NameWrapper = styled.h1`
     margin: ${pixelToRem(20, 0)};
     font-weight: 500;
 
-    text-decoration-style: wavy;
     @media ${device.mobile} {
         font-size: ${pixelToRem(35)};
     }
