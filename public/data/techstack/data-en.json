@@ -232,6 +232,15 @@
                     "color": "#aeddff"
                 },
                 {
+                    "id": "react-suite",
+                    "name": "React Suite",
+                    "icon": "react-suite",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#aeddff"
+                },
+                {
                     "id": "bootstrap",
                     "name": "Bootstrap",
                     "icon": "bootstrap",

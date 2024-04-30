@@ -8,15 +8,14 @@ export const DeveloperContainer = styled.div`
     justify-content: center;
 
     @media ${device.mobile} {
-        min-height: calc(100vh - ${pixelToRem(110)});
+        height: fit-content;
+        min-height: fit-content;
+        margin-bottom: ${pixelToRem(40)};
     }
 
     @media ${device.tablet} {
-        min-height: calc(100vh - ${pixelToRem(180)});
-    }
-
-    @media ${device.desktop} {
-        min-height: calc(100vh - ${pixelToRem(180)});
+        min-height: calc(100vh - ${pixelToRem(20)});
+        margin-bottom: 0;
     }
 `;
 
@@ -32,9 +31,17 @@ export const ImageContainer = styled.div`
 `;
 
 export const ProfileWrapper = styled.img`
-    width: ${pixelToRem(265)};
-    height: ${pixelToRem(265)};
     border-radius: 50%;
+
+    @media ${device.mobile} {
+        width: ${pixelToRem(225)};
+        height: ${pixelToRem(225)};
+    }
+
+    @media ${device.tablet} {
+        width: ${pixelToRem(265)};
+        height: ${pixelToRem(265)};
+    }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -55,17 +62,16 @@ export const DescriptionContainer = styled.div`
     }
 `;
 
-export const NameWrapper = styled.div`
+export const NameWrapper = styled.h1`
     margin: ${pixelToRem(20, 0)};
     font-weight: 500;
 
+    text-decoration-style: wavy;
     @media ${device.mobile} {
         font-size: ${pixelToRem(35)};
-        line-height: 1;
     }
     @media ${device.tablet} {
         font-size: ${pixelToRem(55)};
-        line-height: 2;
     }
 `;
 

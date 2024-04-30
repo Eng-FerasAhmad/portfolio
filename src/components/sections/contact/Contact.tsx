@@ -1,10 +1,9 @@
-import { ContactContainer } from './styles';
+import { ContactContainer, ContactTitleWrapper } from './styles';
 
 export default function Contact(): JSX.Element {
     return (
         <ContactContainer>
-            Contact
-            <></>
+            <ContactTitleWrapper>Contact</ContactTitleWrapper>
         </ContactContainer>
     );
 }

@@ -36,6 +36,7 @@ import NodeIcon from '../icon/node/NodeIcon';
 import NpmIcon from '../icon/npm/NpmIcon';
 import PrettierIcon from '../icon/prettier/PrettierIcon';
 import ReactIcon from '../icon/react/ReactIcon';
+import ReactSuiteIcon from '../icon/react-suite/ReactSuiteIcon';
 import ReduxIcon from '../icon/redux/ReduxIcon';
 import RollupIcon from '../icon/rollup/RollupIcon';
 import SassIcon from '../icon/sass/SassIcon';
@@ -195,6 +196,8 @@ export default function IconSelector({ iconName }: Props): JSX.Element {
                 return <BabelIcon width="50px" height="50px" />;
             case 'drawio':
                 return <DrawioIcon width="50px" height="50px" />;
+            case 'react-suite':
+                return <ReactSuiteIcon width="50px" height="50px" />;
             default:
                 return <></>;
         }

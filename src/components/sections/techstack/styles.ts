@@ -1,7 +1,14 @@
 import styled from 'styled-components';
+import { color } from '../../../style/color';
 import { pixelToRem } from '../../../utils/utils';
 
 export const TechstackContainer = styled.div``;
+
+export const TechstackTitleWrapper = styled.div`
+    border: ${pixelToRem(3)} solid ${color.green};
+    border-radius: ${pixelToRem(50)};
+`;
+
 export const TechstackItemContainer = styled.div`
     font-size: ${pixelToRem(32)};
     width: 100%;

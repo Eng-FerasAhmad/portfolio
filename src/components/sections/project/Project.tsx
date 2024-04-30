@@ -1,10 +1,9 @@
-import { ProjectContainer } from './styles';
+import { ProjectContainer, ProjectTitleWrapper } from './styles';
 
 export default function Project(): JSX.Element {
     return (
         <ProjectContainer>
-            Project
-            <></>
+            <ProjectTitleWrapper>Project</ProjectTitleWrapper>
         </ProjectContainer>
     );
 }

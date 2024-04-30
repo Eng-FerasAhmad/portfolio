@@ -4,21 +4,22 @@ import { pixelToRem } from '../../utils/utils';
 
 export const LandingContainer = styled.div`
     color: ${(props) => props.theme.color.page.font};
-    margin: auto;
 
     @media ${device.mobile} {
         max-width: 100%;
-        padding: ${pixelToRem(30, 40)};
+        padding: ${pixelToRem(0, 20)};
+        margin-top: ${pixelToRem(-90)};
     }
 
     @media ${device.tablet} {
         max-width: ${pixelToRem(contentWidth.tablet)};
-        padding: ${pixelToRem(100, 40)};
+        padding: ${pixelToRem(50, 40)};
+        margin: auto;
     }
 
     @media ${device.desktop} {
         max-width: ${pixelToRem(contentWidth.desktop)};
-        padding: ${pixelToRem(100, 0)};
+        padding: ${pixelToRem(50, 0)};
     }
 `;
 

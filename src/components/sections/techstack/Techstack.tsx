@@ -1,4 +1,4 @@
-import { TechstackContainer } from './styles';
+import { TechstackContainer, TechstackTitleWrapper } from './styles';
 import TechstackItem from './TechstackItem';
 import useTechstack from './useTechstack';
 
@@ -7,7 +7,9 @@ export default function Techstack(): JSX.Element {
 
     return (
         <TechstackContainer data-testid="techstack">
-            <div>{viewModel && viewModel.entityHeader}</div>
+            <TechstackTitleWrapper>
+                {viewModel && viewModel.entityHeader}
+            </TechstackTitleWrapper>
             {viewModel?.categories.map((category, index) => {
                 return <TechstackItem key={index} category={category} />;
             })}

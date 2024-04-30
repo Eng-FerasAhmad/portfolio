@@ -19,7 +19,11 @@ export default function Developer(): JSX.Element {
                     <ProfileWrapper src="profile.jpg" alt="image" />
                 </ImageContainer>
                 <DescriptionContainer>
-                    {viewModel && <NameWrapper>{viewModel.name}</NameWrapper>}
+                    {viewModel && (
+                        <NameWrapper>
+                            <span>{viewModel.name}</span>
+                        </NameWrapper>
+                    )}
                     {viewModel && (
                         <AboutWrapper>{viewModel.about}</AboutWrapper>
                     )}

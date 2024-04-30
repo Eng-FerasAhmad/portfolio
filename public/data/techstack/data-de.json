@@ -30,6 +30,15 @@
                     "percent": 80,
                     "homepage": "",
                     "color": "#dd0031"
+                },
+                {
+                    "id": "nodejs",
+                    "name": "Nodejs",
+                    "icon": "node",
+                    "level": "Professional",
+                    "percent": 80,
+                    "homepage": "",
+                    "color": "#dd0031"
                 }
             ]
         },
@@ -60,6 +69,15 @@
                     "icon": "rollup",
                     "level": "beginner",
                     "percent": 40,
+                    "homepage": "",
+                    "color": "#ff3333"
+                },
+                {
+                    "id": "babel",
+                    "name": "Babel",
+                    "icon": "babel",
+                    "level": "Expert",
+                    "percent": 100,
                     "homepage": "",
                     "color": "#ff3333"
                 }
@@ -214,6 +232,15 @@
                     "color": "#aeddff"
                 },
                 {
+                    "id": "react-suite",
+                    "name": "React Suite",
+                    "icon": "react-suite",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#aeddff"
+                },
+                {
                     "id": "bootstrap",
                     "name": "Bootstrap",
                     "icon": "bootstrap",
@@ -258,6 +285,15 @@
                     "id": "adobeXd",
                     "name": "Adobe Xd",
                     "icon": "adobeXd",
+                    "level": "Expert",
+                    "percent": 100,
+                    "homepage": "",
+                    "color": "#f5b737"
+                },
+                {
+                    "id": "drawio",
+                    "name": "Drawio",
+                    "icon": "drawio",
                     "level": "beginner",
                     "percent": 40,
                     "homepage": "",
