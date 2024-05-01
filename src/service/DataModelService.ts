@@ -21,7 +21,7 @@ export default function dataModelService<T>(
     const language = lang
         ? languageData.get(lang)
         : languageData.get(Language.EN);
-    const data = fetch(`/portfolio/data/${model!}/${language}.json`).then(
+    const data = fetch(`/data/${model!}/${language}.json`).then(
         (res) => {
             return res.json() as T;
         }
