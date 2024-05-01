@@ -21,7 +21,7 @@ export default function Developer(): JSX.Element {
                 <DescriptionContainer>
                     {viewModel && (
                         <NameWrapper>
-                            <span>{viewModel.name}</span>
+                            {viewModel.name}
                         </NameWrapper>
                     )}
                     {viewModel && (

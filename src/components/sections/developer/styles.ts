@@ -70,7 +70,7 @@ export const NameWrapper = styled.h1`
         font-size: ${pixelToRem(26)};
     }
     @media ${device.tablet} {
-        font-size: ${pixelToRem(50)};
+        font-size: ${pixelToRem(48)};
     }
 `;
 

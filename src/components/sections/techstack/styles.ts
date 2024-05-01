@@ -4,13 +4,28 @@ import { pixelToRem } from '../../../utils/utils';
 import {device} from '../../../style/screenSize';
 
 export const TechstackContainer = styled.div`
-    margin: ${pixelToRem(0, 0, 30, 0)};
+        width: 80%;
+        
+    @media ${device.mobile} {
+        margin: 0 auto  ${pixelToRem(15)} auto;
+
+    }
+    @media ${device.tablet} {
+        margin: 0 auto  ${pixelToRem(30)} auto;
+    }
 `;
 
 export const TechstackTitleWrapper = styled.div`
     border: ${pixelToRem(3)} solid ${color.green};
     border-radius: ${pixelToRem(50)};
     padding: ${pixelToRem(5, 0)};
+
+    @media ${device.mobile} {
+        font-size: ${pixelToRem(26)};
+    }
+    @media ${device.tablet} {
+        font-size: ${pixelToRem(43)};
+    }
 
     &:hover {
         background-color: ${color.green};
