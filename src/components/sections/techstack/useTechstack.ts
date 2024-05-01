@@ -15,7 +15,7 @@ export default function useTechstack(): UseTechstack {
     );
 
     useEffect(() => {
-        //if (!language) return;
+        // if (!language) return;
 
         dataModelService<TechstackViewModel>(
             DataModel.TECHSTACK,

@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 import { color } from '../../../style/color';
+import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
-import {device} from '../../../style/screenSize';
 
 export const TechstackContainer = styled.div`
-        width: 80%;
-        
-    @media ${device.mobile} {
-        margin: 0 auto  ${pixelToRem(15)} auto;
+    width: 80%;
 
+    @media ${device.mobile} {
+        margin: 0 auto ${pixelToRem(15)} auto;
     }
     @media ${device.tablet} {
-        margin: 0 auto  ${pixelToRem(30)} auto;
+        margin: 0 auto ${pixelToRem(30)} auto;
     }
 `;
 
