@@ -4,7 +4,6 @@
     "version": "0.0.2",
     "type": "module",
     "author": "Feras Ahmad",
-    "homepage": "http://eng-ferasahmad.github.io/portfolio",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
