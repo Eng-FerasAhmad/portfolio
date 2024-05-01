@@ -32,3 +32,18 @@ export const ProjectTitleWrapper = styled.div`
         font-size: ${pixelToRem(43)};
     }
 `;
+
+export const ProjectItemContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: ${pixelToRem(30, 0, 70, 0)};
+
+    @media ${device.mobile} {
+        font-size: ${pixelToRem(26)};
+    }
+    @media ${device.tablet} {
+        font-size: ${pixelToRem(32)};
+    }
+`;

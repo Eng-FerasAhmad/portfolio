@@ -1,3 +1,4 @@
+import Article from '../sections/article/Article';
 import Contact from '../sections/contact/Contact';
 import Developer from '../sections/developer/Developer';
 import Project from '../sections/project/Project';
@@ -11,6 +12,7 @@ export default function Landing(): JSX.Element {
                 <Developer />
                 <Techstack />
                 <Project />
+                <Article />
                 <Contact />
             </LandingWrapper>
         </LandingContainer>
