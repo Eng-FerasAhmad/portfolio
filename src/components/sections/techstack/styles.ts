@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { color } from '../../../style/color';
 import { pixelToRem } from '../../../utils/utils';
+import {device} from '../../../style/screenSize';
 
 export const TechstackContainer = styled.div`
     margin: ${pixelToRem(0, 0, 30, 0)};
@@ -19,22 +20,33 @@ export const TechstackTitleWrapper = styled.div`
 `;
 
 export const TechstackItemContainer = styled.div`
-    font-size: ${pixelToRem(32)};
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: ${pixelToRem(30, 0, 70, 0)};
+
+    @media ${device.mobile} {
+        font-size: ${pixelToRem(26)};
+    }
+    @media ${device.tablet} {
+        font-size: ${pixelToRem(32)};
+    }
 `;
 export const ItemWrapper = styled.div`
-    width: ${pixelToRem(215)};
-    font-size: ${pixelToRem(24)};
+    width: ${pixelToRem(140)};
     padding: ${pixelToRem(20, 0)};
+
+    @media ${device.mobile} {
+        font-size: ${pixelToRem(18)};
+    }
+    @media ${device.tablet} {
+        font-size: ${pixelToRem(24)};
+    }
 `;
 
 export const ItemsGroupTitleWrapper = styled.div`
     padding-bottom: ${pixelToRem(8)};
-    width: ${pixelToRem(400)};
     margin: ${pixelToRem(20)} auto;
 `;
 

@@ -34,8 +34,8 @@ export const ProfileWrapper = styled.img`
     border-radius: 50%;
 
     @media ${device.mobile} {
-        width: ${pixelToRem(225)};
-        height: ${pixelToRem(225)};
+        width: ${pixelToRem(180)};
+        height: ${pixelToRem(180)};
     }
 
     @media ${device.tablet} {
@@ -67,10 +67,10 @@ export const NameWrapper = styled.h1`
     font-weight: 500;
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(35)};
+        font-size: ${pixelToRem(26)};
     }
     @media ${device.tablet} {
-        font-size: ${pixelToRem(55)};
+        font-size: ${pixelToRem(50)};
     }
 `;
 
@@ -78,9 +78,9 @@ export const AboutWrapper = styled.div`
     line-height: 1.5;
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(24)};
+        font-size: ${pixelToRem(18)};
     }
     @media ${device.tablet} {
-        font-size: ${pixelToRem(32)};
+        font-size: ${pixelToRem(30)};
     }
 `;
