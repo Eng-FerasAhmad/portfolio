@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { device } from '../../style/screenSize';
 
 export const ButtonContainer = styled.div`
     width: fit-content;
