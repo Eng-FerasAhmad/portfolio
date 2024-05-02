@@ -1,3 +1,4 @@
+import ScrollButton from '../../library/scroll-button/ScrollButton';
 import Article from '../sections/article/Article';
 import Contact from '../sections/contact/Contact';
 import Developer from '../sections/developer/Developer';
@@ -14,6 +15,7 @@ export default function Landing(): JSX.Element {
                 <Project />
                 <Article />
                 <Contact />
+                <ScrollButton />
             </LandingWrapper>
         </LandingContainer>
     );
