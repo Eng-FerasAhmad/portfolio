@@ -8,7 +8,7 @@ interface Props {
 export default function Button({ label, clickHandler }: Props): JSX.Element {
     return (
         <ButtonContainer onClick={clickHandler} data-testid="button">
-            {label}
+            <span>{label}</span>
         </ButtonContainer>
     );
 }

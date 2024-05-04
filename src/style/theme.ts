@@ -9,8 +9,8 @@ export const themeDark = {
             fontHover: color.dark,
         },
         button: {
-            background: darkThemeColor.customBlack,
-            font: darkThemeColor.fontPrimary,
+            background: color.green,
+            font: color.dark,
         },
     },
 };
@@ -24,8 +24,8 @@ export const themeLight = {
             fontHover: color.light,
         },
         button: {
-            background: lightThemeColor.customWhite,
-            font: lightThemeColor.fontPrimary,
+            background: color.green,
+            font: color.light,
         },
     },
 };

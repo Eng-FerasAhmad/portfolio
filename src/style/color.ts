@@ -14,7 +14,11 @@ export const color = {
     light: '#fff',
     dark: '#22272e',
     green: '#5ed4a5',
+    greenDark: '#36c98e',
     red: '#fca5a5',
     blue: '#66a3ff',
-    yellow: '#ffbf80',
+    yellow: '#ffa64d',
+    yellowDark: '#ff8c1a',
+    gray: '#cccccc',
+    grayDarker: '#595959',
 };

@@ -1,0 +1,18 @@
+{
+    "title": "Social Media",
+    "description": "This is contact",
+    "form": {
+        "name": "Name",
+        "subject": "Subject",
+        "email": "E-Mail",
+        "message": "Message",
+        "send": "Send" 
+    },
+    "media": [
+        {
+            "name": "LinkedIn",
+            "icon": "LinkedIn",
+            "link": ""
+        }
+    ]
+}

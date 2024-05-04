@@ -9,16 +9,20 @@ export const InputTextContainer = styled.div`
     padding: ${pixelToRem(0, 0, 30, 0)};
 `;
 
-export const InputWrapper = styled.input`
+export const InputWrapper = styled.textarea`
     font-size: ${pixelToRem(20)};
     color: ${color.grayDarker};
     margin: 0;
     width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     display: inline-block;
     box-sizing: border-box;
     padding: ${pixelToRem(10, 30)};
-    border-radius: ${pixelToRem(50)};
-    height: ${pixelToRem(45)};
+    border-radius: ${pixelToRem(20)};
+    height: ${pixelToRem(145)};
+    min-height: ${pixelToRem(145)};
+    max-height: ${pixelToRem(245)};
     border-color: ${color.gray};
     border-style: solid;
     border-width: thin;
@@ -31,7 +35,7 @@ export const InputWrapper = styled.input`
         outline: none;
     }
     &:active {
-        border-color: ${color.yellow};
+        border-color: ${color.yellow  };
     }
 `;
 

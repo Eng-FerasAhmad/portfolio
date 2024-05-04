@@ -34,11 +34,11 @@ export const ContactTitleWrapper = styled.div`
 `;
 
 export const ContactItemContainer = styled.div`
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: ${pixelToRem(30, 0, 70, 0)};
+    padding: ${pixelToRem(0, 50)};
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};

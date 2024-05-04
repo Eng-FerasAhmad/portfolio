@@ -4,17 +4,15 @@ import { InputTextContainer, InputWrapper, LabelWrapper } from './styles';
 interface Props {
     label: string;
     placeholder?: string;
-    type?: 'email' | 'text';
-    changeHandler: (e: ChangeEvent<HTMLInputElement> | undefined) => void;
+    changeHandler: (e: ChangeEvent<HTMLTextAreaElement> | undefined) => void;
 }
 
-export default function InputText({
+export default function InputTextArea({
     label,
     placeholder,
-    type = 'text',
     changeHandler,
 }: Props): JSX.Element {
-    const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    const handleChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
         if (event?.target && event.target.value.length > 0) {
             changeHandler(event);
         } else {
@@ -26,11 +24,13 @@ export default function InputText({
         <InputTextContainer data-testid="input">
             <LabelWrapper htmlFor={label}>{label}</LabelWrapper>
             <InputWrapper
-                type={type}
                 required
                 id={label}
                 placeholder={placeholder}
-                onChange={handleChange}
+                onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                    handleChange(e)
+                }
+                rows={9}
             />
         </InputTextContainer>
     );

@@ -1,0 +1,18 @@
+{
+    "title": "Social Media",
+    "description": "Das Sind die contact",
+    "form": {
+        "name": "Name",
+        "subject": "Betreff",
+        "email": "E-Mail",
+        "message": "Nachricht",
+        "send": "Senden" 
+    },
+    "media": [
+        {
+            "name": "LinkedIn",
+            "icon": "LinkedIn",
+            "link": ""
+        }
+    ]
+}
