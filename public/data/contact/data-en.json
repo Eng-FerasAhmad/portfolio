@@ -1,13 +1,13 @@
 {
-    "entityHeader": "Kontakt",
+    "entityHeader": "Contact",
     "title": "Social Media",
     "description": "Contact Form",
     "form": {
         "name": "Name",
-        "subject": "Betreff",
+        "subject": "Subject",
         "email": "E-Mail",
-        "message": "Nachricht",
-        "send": "Senden"
+        "message": "Message",
+        "send": "Send"
     },
     "media": [
         {
