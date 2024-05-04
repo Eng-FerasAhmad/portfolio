@@ -84,10 +84,10 @@ export const ItemWrapper = styled.a`
     width: ${pixelToRem(200)};
     padding: ${pixelToRem(20, 0)};
     text-decoration: none;
-    color: ${color.grayDarker};
+    color: ${(props) => props.theme.color.page.font};
 
     &:visited {
-        color: ${color.grayDarker};
+        color: ${(props) => props.theme.color.page.font};
         text-decoration: none;
     }
 

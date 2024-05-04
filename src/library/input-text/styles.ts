@@ -47,6 +47,5 @@ export const LabelWrapper = styled.label`
     width: fit-content;
     margin: ${pixelToRem(0, 0, 7, 30)};
     font-size: ${pixelToRem(23)};
-    color: ${color.yellow};
-    font-weight: 600;
+    color: ${(props) => props.theme.color.page.font};
 `;
