@@ -1,7 +1,8 @@
 export interface ContactViewModel {
+    entityHeader: string;
     title: string;
     description: string;
-    form: Array<FormViewModel>;
+    form: FormViewModel;
     media: Array<MediaViewModel>;
 }
 

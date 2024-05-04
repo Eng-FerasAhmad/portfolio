@@ -1,18 +1,29 @@
 {
+    "entityHeader": "Kontakt",
     "title": "Social Media",
-    "description": "Das Sind die contact",
+    "description": "Kontakt Formular",
     "form": {
         "name": "Name",
         "subject": "Betreff",
         "email": "E-Mail",
         "message": "Nachricht",
-        "send": "Senden" 
+        "send": "Senden"
     },
     "media": [
         {
             "name": "LinkedIn",
-            "icon": "LinkedIn",
-            "link": ""
+            "icon": "linked-in",
+            "link": "https://www.linkedin.com/in/feras-j-ahmad/"
+        },
+        {
+            "name": "gitHub",
+            "icon": "github",
+            "link": "https://github.com/Eng-FerasAhmad"
+        },
+        {
+            "name": "Frontend Masters",
+            "icon": "frontend-masters",
+            "link": "https://frontendmasters.com/u/FerasAhmad/"
         }
     ]
 }

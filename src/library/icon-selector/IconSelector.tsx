@@ -16,6 +16,7 @@ import DockerIcon from '../icon/docker/DockerIcon';
 import DrawioIcon from '../icon/drawio/DrawioIcon';
 import EsLintIcon from '../icon/eslint/EsLintIcon';
 import FigmaIcon from '../icon/figma/FigmaIcon';
+import FrontendMastersIcon from '../icon/frontend-masters/FrontendMastersIcon';
 import GitIcon from '../icon/git/GitIcon';
 import GitBookIcon from '../icon/gitbook/GitBookIcon';
 import GitHubIcon from '../icon/github/GithubIcon';
@@ -30,6 +31,7 @@ import JiraIcon from '../icon/jira/JiraIcon';
 import KanbanIcon from '../icon/kanban/KanbanIcon';
 import KarmaIcon from '../icon/karma/KarmaIcon';
 import KubernetesIcon from '../icon/kubernetes/KubernetesIcon';
+import LinkedInIcon from '../icon/linkedin/LinkedinIcon';
 import MaterialIcon from '../icon/material/MaterialIcon';
 import MochaIcon from '../icon/mocha/MochaIcon';
 import NodeIcon from '../icon/node/NodeIcon';
@@ -198,6 +200,12 @@ export default function IconSelector({ iconName }: Props): JSX.Element {
                 return <DrawioIcon width="50px" height="50px" />;
             case 'react-suite':
                 return <ReactSuiteIcon width="50px" height="50px" />;
+
+            case 'linked-in':
+                return <LinkedInIcon width="50px" height="50px" />;
+
+            case 'frontend-masters':
+                return <FrontendMastersIcon width="140px" height="50px" />;
             default:
                 return <></>;
         }

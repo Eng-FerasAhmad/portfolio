@@ -35,7 +35,7 @@ export const InputWrapper = styled.textarea`
         outline: none;
     }
     &:active {
-        border-color: ${color.yellow  };
+        border-color: ${color.yellow};
     }
 `;
 

@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { color } from '../../style/color';
+import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
 
 export const InputTextContainer = styled.div`
@@ -16,7 +17,7 @@ export const InputWrapper = styled.input`
     width: 100%;
     display: inline-block;
     box-sizing: border-box;
-    padding: ${pixelToRem(10, 30)};
+
     border-radius: ${pixelToRem(50)};
     height: ${pixelToRem(45)};
     border-color: ${color.gray};
@@ -32,6 +33,13 @@ export const InputWrapper = styled.input`
     }
     &:active {
         border-color: ${color.yellow};
+    }
+
+    @media ${device.mobile} {
+        padding: ${pixelToRem(10, 5)};
+    }
+    @media ${device.tablet} {
+        padding: ${pixelToRem(10, 30)};
     }
 `;
 
