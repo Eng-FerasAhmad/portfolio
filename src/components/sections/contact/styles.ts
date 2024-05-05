@@ -56,7 +56,7 @@ export const SocialMediaWrapper = styled.div`
     margin: auto;
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(20)};
+        font-size: ${pixelToRem(23)};
     }
     @media ${device.tablet} {
         font-size: ${pixelToRem(32)};

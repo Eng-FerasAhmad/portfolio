@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { color } from '../../style/color';
+import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
 
 export const InputTextContainer = styled.div`
@@ -36,6 +37,13 @@ export const InputWrapper = styled.textarea`
     }
     &:active {
         border-color: ${color.yellow};
+    }
+
+    @media ${device.mobile} {
+        padding: ${pixelToRem(10, 20)};
+    }
+    @media ${device.tablet} {
+        padding: ${pixelToRem(10, 30)};
     }
 `;
 

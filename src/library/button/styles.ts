@@ -15,7 +15,6 @@ export const ButtonContainer = styled.div`
     cursor: pointer;
     margin: 0;
     background-color: ${color.yellow};
-    font-weight: 600;
     &:hover {
         background-color: ${color.yellowDark};
         color: ${(props) => props.theme.color.button.font};

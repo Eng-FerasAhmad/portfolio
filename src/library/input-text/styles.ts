@@ -36,7 +36,7 @@ export const InputWrapper = styled.input`
     }
 
     @media ${device.mobile} {
-        padding: ${pixelToRem(10, 5)};
+        padding: ${pixelToRem(10, 20)};
     }
     @media ${device.tablet} {
         padding: ${pixelToRem(10, 30)};
