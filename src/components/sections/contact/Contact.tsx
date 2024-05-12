@@ -34,52 +34,44 @@ export default function Contact(): JSX.Element {
     const changeNameHandler = (
         event: ChangeEvent<HTMLInputElement> | undefined
     ): void => {
-        if (event?.target && event.target.value.length > 0) {
-            setFormData({
-                name: event.target.value,
-                subject: formData?.subject || '',
-                email: formData?.email || '',
-                message: formData?.message || '',
-            });
-        }
+        setFormData({
+            name: event?.target.value || '',
+            subject: formData?.subject || '',
+            email: formData?.email || '',
+            message: formData?.message || '',
+        });
     };
 
     const changeSubjectHandler = (
         event: ChangeEvent<HTMLInputElement> | undefined
     ): void => {
-        if (event?.target && event.target.value.length > 0) {
-            setFormData({
-                name: formData?.name || '',
-                subject: event.target.value,
-                email: formData?.email || '',
-                message: formData?.message || '',
-            });
-        }
+        setFormData({
+            name: formData?.name || '',
+            subject: event?.target.value || '',
+            email: formData?.email || '',
+            message: formData?.message || '',
+        });
     };
 
     const changeEmailHandler = (
         event: ChangeEvent<HTMLInputElement> | undefined
     ): void => {
-        if (event?.target && event.target.value.length > 0) {
-            setFormData({
-                name: formData?.name || '',
-                subject: formData?.subject || '',
-                email: event.target.value,
-                message: formData?.message || '',
-            });
-        }
+        setFormData({
+            name: formData?.name || '',
+            subject: formData?.subject || '',
+            email: event?.target.value || '',
+            message: formData?.message || '',
+        });
     };
     const changeMessageHandler = (
         event: ChangeEvent<HTMLTextAreaElement> | undefined
     ): void => {
-        if (event?.target && event.target.value.length > 0) {
-            setFormData({
-                name: formData?.name || '',
-                subject: formData?.subject || '',
-                email: formData?.email || '',
-                message: event.target.value,
-            });
-        }
+        setFormData({
+            name: formData?.name || '',
+            subject: formData?.subject || '',
+            email: formData?.email || '',
+            message: event?.target.value || '',
+        });
     };
 
     const submitHandler = (): void => {
