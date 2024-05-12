@@ -1,5 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import flushPromises from 'flush-promises';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, test, vitest } from 'vitest';
 import InputText from './InputText';
 
@@ -23,10 +22,6 @@ describe('<Input />', () => {
             },
         });
 
-        waitFor(() => {
-            flushPromises();
-        });
-
         expect(changeHandlerSpy).toBeCalled();
         expect(screen.getByRole('textbox')).toHaveValue('Max');
     });
@@ -48,10 +43,6 @@ describe('<Input />', () => {
             target: {
                 value: '',
             },
-        });
-
-        waitFor(() => {
-            flushPromises();
         });
 
         expect(changeHandlerSpy).not.toBeCalled();
