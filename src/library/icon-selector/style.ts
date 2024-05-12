@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const IconSelectorContainer = styled.div`
-    animation: fadeIn 5s;
+    width: fit-content;
+    margin: auto;
 `;

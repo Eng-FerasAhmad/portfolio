@@ -20,11 +20,18 @@ export const HeaderContainer = styled.div`
 `;
 
 export const NavbarWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
+
+    @media ${device.mobile} {
+        display: block;
+    }
+
+    @media ${device.tablet} {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 `;
 
 export const LogoWrapper = styled.div`
@@ -32,14 +39,7 @@ export const LogoWrapper = styled.div`
     font-family: 'Dancing Script', cursive;
     font-size: ${pixelToRem(32)};
     cursor: pointer;
-
-    @media ${device.mobile} {
-        display: none;
-    }
-
-    @media ${device.tablet} {
-        display: block;
-    }
+    display: flex;
 `;
 
 export const NavigationWrapper = styled.div`
@@ -51,5 +51,16 @@ export const NavigationWrapper = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+`;
+
+export const NameWrapper = styled.div`
+    margin-left: ${pixelToRem(10)};
+    @media ${device.mobile} {
+        display: none;
+    }
+
+    @media ${device.tablet} {
+        display: block;
     }
 `;

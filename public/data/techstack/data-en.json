@@ -473,7 +473,7 @@
             "skills": [
                 {
                     "id": "sentry",
-                    "name": "sentry",
+                    "name": "Sentry",
                     "icon": "sentry",
                     "level": "Expert",
                     "percent": 100,
