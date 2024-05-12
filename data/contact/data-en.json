@@ -1,0 +1,29 @@
+{
+    "entityHeader": "Contact",
+    "title": "Social Media",
+    "description": "Contact Form",
+    "form": {
+        "name": "Name",
+        "subject": "Subject",
+        "email": "E-Mail",
+        "message": "Message",
+        "send": "Send"
+    },
+    "media": [
+        {
+            "name": "LinkedIn",
+            "icon": "linked-in",
+            "link": "https://www.linkedin.com/in/feras-j-ahmad/"
+        },
+        {
+            "name": "gitHub",
+            "icon": "github",
+            "link": "https://github.com/Eng-FerasAhmad"
+        },
+        {
+            "name": "Frontend Masters",
+            "icon": "frontend-masters",
+            "link": "https://frontendmasters.com/u/FerasAhmad/"
+        }
+    ]
+}
