@@ -53,14 +53,6 @@ export const DescriptionContainer = styled.div`
         width: 100%;
         margin: ${pixelToRem(0, 10)};
     }
-
-    @media ${device.tablet} {
-        width: fit-content;
-    }
-
-    @media ${device.desktop} {
-        width: fit-content;
-    }
 `;
 
 export const NameWrapper = styled.h1`
@@ -70,6 +62,7 @@ export const NameWrapper = styled.h1`
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(48)};
     }
@@ -81,6 +74,7 @@ export const AboutWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(18)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(30)};
     }

@@ -10,6 +10,7 @@ export const ContactContainer = styled.div`
     @media ${device.mobile} {
         margin: 0 auto ${pixelToRem(15)} auto;
     }
+
     @media ${device.tablet} {
         margin: 0 auto ${pixelToRem(30)} auto;
     }
@@ -29,6 +30,7 @@ export const ContactTitleWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(43)};
     }
@@ -44,6 +46,7 @@ export const ContactItemContainer = styled.form`
         margin: ${pixelToRem(30, 0, 70, 0)};
         padding: 0;
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(32)};
         margin: ${pixelToRem(30, 0, 70, 0)};
@@ -58,6 +61,7 @@ export const SocialMediaWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(23)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(32)};
     }
@@ -66,7 +70,6 @@ export const SocialMediaWrapper = styled.div`
 export const ItemsContainer = styled.div`
     width: 100%;
     display: flex;
-
     justify-content: center;
     margin: ${pixelToRem(30, 0, 70, 0)};
 
@@ -75,6 +78,7 @@ export const ItemsContainer = styled.div`
         flex-direction: column;
         align-items: center;
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(32)};
         flex-direction: row;
@@ -94,13 +98,13 @@ export const ItemWrapper = styled.a`
     @media ${device.mobile} {
         font-size: ${pixelToRem(18)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(24)};
     }
 
     &:hover {
-        background-color: ${color.yellowLight};
         cursor: pointer;
-        border-radius: 10px;
+        box-shadow: rgb(0 0 0 / 45%) 0 15px 20px -20px;
     }
 `;

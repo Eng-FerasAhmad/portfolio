@@ -35,6 +35,7 @@ export const InputWrapper = styled.textarea`
         border-width: thin;
         outline: none;
     }
+
     &:active {
         border-color: ${color.yellow};
     }
@@ -42,6 +43,7 @@ export const InputWrapper = styled.textarea`
     @media ${device.mobile} {
         padding: ${pixelToRem(10, 20)};
     }
+
     @media ${device.tablet} {
         padding: ${pixelToRem(10, 30)};
     }
@@ -52,4 +54,12 @@ export const LabelWrapper = styled.label`
     margin: ${pixelToRem(0, 0, 7, 30)};
     font-size: ${pixelToRem(23)};
     color: ${(props) => props.theme.color.page.font};
+
+    @media ${device.mobile} {
+        font-size: ${pixelToRem(18)};
+    }
+
+    @media ${device.tablet} {
+        font-size: ${pixelToRem(23)};
+    }
 `;

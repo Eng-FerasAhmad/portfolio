@@ -9,6 +9,7 @@ export const TechstackContainer = styled.div`
     @media ${device.mobile} {
         margin: 0 auto ${pixelToRem(15)} auto;
     }
+
     @media ${device.tablet} {
         margin: 0 auto ${pixelToRem(30)} auto;
     }
@@ -22,6 +23,7 @@ export const TechstackTitleWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(43)};
     }
@@ -43,6 +45,7 @@ export const TechstackItemContainer = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(32)};
     }
@@ -54,6 +57,7 @@ export const ItemWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(18)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(24)};
     }

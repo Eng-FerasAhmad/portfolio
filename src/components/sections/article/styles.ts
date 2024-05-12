@@ -9,6 +9,7 @@ export const ArticleContainer = styled.div`
     @media ${device.mobile} {
         margin: 0 auto ${pixelToRem(15)} auto;
     }
+
     @media ${device.tablet} {
         margin: 0 auto ${pixelToRem(30)} auto;
     }
@@ -28,6 +29,7 @@ export const ArticleTitleWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(43)};
     }
@@ -43,6 +45,7 @@ export const ArticleItemContainer = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(32)};
     }

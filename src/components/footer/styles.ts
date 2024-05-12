@@ -4,7 +4,6 @@ import { pixelToRem } from '../../utils/utils';
 
 export const FooterWrapper = styled.div`
     color: ${(props) => props.theme.color.page.font};
-
     line-height: ${pixelToRem(32)};
     width: fit-content;
 

@@ -6,17 +6,17 @@ export const ButtonContainer = styled.div`
     margin: auto;
     height: fit-content;
     position: fixed;
-
-    animation: fadeIn 3s;
+    animation: fade-in 3s;
 
     &:hover {
         cursor: pointer;
     }
 
-    @keyframes fadeIn {
+    @keyframes fade-in {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }

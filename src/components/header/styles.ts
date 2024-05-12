@@ -3,8 +3,7 @@ import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
 
 export const HeaderContainer = styled.div`
-    height: ${pixelToRem(80)};
-
+    height: ${pixelToRem(45)};
     line-height: ${pixelToRem(32)};
     position: fixed;
     top: 0;
@@ -16,6 +15,7 @@ export const HeaderContainer = styled.div`
 
     @media ${device.tablet} {
         padding: ${pixelToRem(16, 40)};
+        background-image: ${(props) => props.theme.color.page.backgroundImage};
     }
 `;
 
@@ -56,6 +56,7 @@ export const NavigationWrapper = styled.div`
 
 export const NameWrapper = styled.div`
     margin-left: ${pixelToRem(10)};
+
     @media ${device.mobile} {
         display: none;
     }

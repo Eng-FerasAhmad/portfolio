@@ -31,6 +31,7 @@ export const LandingWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(35)};
     }
+
     @media ${device.tablet} {
         font-size: ${pixelToRem(55)};
     }

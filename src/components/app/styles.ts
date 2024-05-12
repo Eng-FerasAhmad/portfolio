@@ -7,6 +7,7 @@ export const AppContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @media ${device.mobile} {
         margin: ${pixelToRem(0)};
     }

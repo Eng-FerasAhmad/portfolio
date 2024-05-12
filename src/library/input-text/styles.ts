@@ -17,7 +17,6 @@ export const InputWrapper = styled.input`
     width: 100%;
     display: inline-block;
     box-sizing: border-box;
-
     border-radius: ${pixelToRem(50)};
     height: ${pixelToRem(45)};
     border-color: ${color.gray};
@@ -31,6 +30,7 @@ export const InputWrapper = styled.input`
         border-width: thin;
         outline: none;
     }
+
     &:active {
         border-color: ${color.yellow};
     }
@@ -38,6 +38,7 @@ export const InputWrapper = styled.input`
     @media ${device.mobile} {
         padding: ${pixelToRem(10, 20)};
     }
+
     @media ${device.tablet} {
         padding: ${pixelToRem(10, 30)};
     }
@@ -46,6 +47,13 @@ export const InputWrapper = styled.input`
 export const LabelWrapper = styled.label`
     width: fit-content;
     margin: ${pixelToRem(0, 0, 7, 30)};
-    font-size: ${pixelToRem(23)};
     color: ${(props) => props.theme.color.page.font};
+
+    @media ${device.mobile} {
+        font-size: ${pixelToRem(18)};
+    }
+
+    @media ${device.tablet} {
+        font-size: ${pixelToRem(23)};
+    }
 `;
