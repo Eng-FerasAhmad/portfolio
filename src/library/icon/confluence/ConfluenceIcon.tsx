@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function ConfluenceIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 -5 256 256"
@@ -43,6 +44,6 @@ export default function ConfluenceIcon(
                     fill="#2684FF"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

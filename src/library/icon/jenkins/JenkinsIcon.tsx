@@ -1,10 +1,16 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function JenkinsIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg width="24px" height="24px" viewBox="0 0 32 32" {...props}>
+        <SvgTechContainer
+            width="24px"
+            height="24px"
+            viewBox="0 0 32 32"
+            {...props}
+        >
             <path
                 d="M19.513,25.173c-.068,0-.136,0-.2-.01C19.378,25.169,19.445,25.173,19.513,25.173Z"
                 style={{
@@ -329,6 +335,6 @@ export default function JenkinsIcon(
                     fill: '#231f20',
                 }}
             />
-        </svg>
+        </SvgTechContainer>
     );
 }

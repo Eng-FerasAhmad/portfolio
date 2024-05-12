@@ -75,137 +75,135 @@ export default function IconSelector({ iconName }: Props): JSX.Element {
     const iconSelector = (): ReactNode => {
         switch (iconName) {
             case 'react':
-                return <ReactIcon width="50px" height="50px" />;
+                return <ReactIcon />;
             case 'vue':
-                return <VueIcon width="50px" height="50px" />;
+                return <VueIcon />;
             case 'webpack':
-                return <WebpackIcon width="50px" height="50px" />;
+                return <WebpackIcon />;
             case 'vite':
-                return <ViteIcon width="50px" height="50px" />;
+                return <ViteIcon />;
             case 'angular':
-                return <AngularIcon width="50px" height="50px" />;
+                return <AngularIcon />;
             case 'redux':
-                return <ReduxIcon width="50px" height="50px" />;
+                return <ReduxIcon />;
             case 'typescript':
-                return <TypescriptIcon width="50px" height="50px" />;
+                return <TypescriptIcon />;
             case 'javascript':
-                return <JavascriptIcon width="50px" height="50px" />;
+                return <JavascriptIcon />;
             case 'jest':
-                return <JestIcon width="50px" height="50px" />;
+                return <JestIcon />;
             case 'node':
-                return <NodeIcon width="50px" height="50px" />;
+                return <NodeIcon />;
             case 'tailwind':
-                return <TailwindIcon width="50px" height="50px" />;
+                return <TailwindIcon />;
             case 'rollup':
-                return <RollupIcon width="50px" height="50px" />;
+                return <RollupIcon />;
             case 'html':
-                return <HtmlIcon width="50px" height="50px" />;
+                return <HtmlIcon />;
             case 'css':
-                return <CssIcon width="50px" height="50px" />;
+                return <CssIcon />;
             case 'git':
-                return <GitIcon width="50px" height="50px" />;
+                return <GitIcon />;
             case 'github':
-                return <GitHubIcon width="50px" height="50px" />;
+                return <GitHubIcon />;
             case 'gitbook':
-                return <GitBookIcon width="50px" height="50px" />;
+                return <GitBookIcon />;
             case 'gitlab':
-                return <GitLabIcon width="50px" height="50px" />;
+                return <GitLabIcon />;
             case 'jira':
-                return <JiraIcon width="50px" height="50px" />;
+                return <JiraIcon />;
             case 'azure':
-                return <AzureIcon width="50px" height="50px" />;
+                return <AzureIcon />;
             case 'bitbucket':
-                return <BitBucketIcon width="50px" height="50px" />;
+                return <BitBucketIcon />;
             case 'bootstrap':
-                return <BootstrapIcon width="50px" height="50px" />;
+                return <BootstrapIcon />;
             case 'confluence':
-                return <ConfluenceIcon width="50px" height="50px" />;
+                return <ConfluenceIcon />;
             case 'docker':
-                return <DockerIcon width="50px" height="50px" />;
+                return <DockerIcon />;
             case 'figma':
-                return <FigmaIcon width="50px" height="50px" />;
+                return <FigmaIcon />;
             case 'intellij':
-                return <IntellijIcon width="50px" height="50px" />;
+                return <IntellijIcon />;
             case 'jenkins':
-                return <JenkinsIcon width="50px" height="50px" />;
+                return <JenkinsIcon />;
             case 'kubernetes':
-                return <KubernetesIcon width="50px" height="50px" />;
+                return <KubernetesIcon />;
             case 'material':
-                return <MaterialIcon width="50px" height="50px" />;
+                return <MaterialIcon />;
             case 'sass':
-                return <SassIcon width="50px" height="50px" />;
+                return <SassIcon />;
             case 'slack':
-                return <SlackIcon width="50px" height="50px" />;
+                return <SlackIcon />;
             case 'styled-component':
-                return <StyledComponentIcon width="50px" height="50px" />;
+                return <StyledComponentIcon />;
             case 'teams':
-                return <TeamsIcon width="50px" height="50px" />;
+                return <TeamsIcon />;
             case 'visual-studio':
-                return <VisualStudioIcon width="50px" height="50px" />;
+                return <VisualStudioIcon />;
             case 'vscode':
-                return <VsCodeIcon width="50px" height="50px" />;
+                return <VsCodeIcon />;
             case 'zoom':
-                return <ZoomIcon width="50px" height="50px" />;
+                return <ZoomIcon />;
             case 'chartjs':
-                return <ChartJsIcon width="50px" height="50px" />;
+                return <ChartJsIcon />;
             case 'cypress':
-                return <CypressIcon width="50px" height="50px" />;
+                return <CypressIcon />;
             case 'eslint':
-                return <EsLintIcon width="50px" height="50px" />;
+                return <EsLintIcon />;
             case 'stylelint':
                 return (
                     <StyleLintIcon
-                        width="50px"
-                        height="50px"
                         fill={isDarkTheme ? color.light : color.dark}
                     />
                 );
             case 'jasmine':
-                return <JasmineIcon width="50px" height="50px" />;
+                return <JasmineIcon />;
             case 'kanban':
-                return <KanbanIcon width="50px" height="50px" />;
+                return <KanbanIcon />;
             case 'npm':
-                return <NpmIcon width="50px" height="50px" />;
+                return <NpmIcon />;
             case 'prettier':
-                return <PrettierIcon width="50px" height="50px" />;
+                return <PrettierIcon />;
             case 'scrum':
-                return <ScrumIcon width="50px" height="50px" />;
+                return <ScrumIcon />;
             case 'sentry':
-                return <SentryIcon width="50px" height="50px" />;
+                return <SentryIcon />;
             case 'sonar-lint':
-                return <SonarLintIcon width="50px" height="50px" />;
+                return <SonarLintIcon />;
             case 'swagger':
-                return <SwaggerIcon width="50px" height="50px" />;
+                return <SwaggerIcon />;
             case 'testing-library':
-                return <TestingLibraryIcon width="50px" height="50px" />;
+                return <TestingLibraryIcon />;
             case 'yarn':
-                return <YarnIcon width="50px" height="50px" />;
+                return <YarnIcon />;
             case 'vuetify':
-                return <VuetifyIcon width="50px" height="50px" />;
+                return <VuetifyIcon />;
             case 'chai':
-                return <ChaiIcon width="50px" height="50px" />;
+                return <ChaiIcon />;
             case 'mocha':
-                return <MochaIcon width="50px" height="50px" />;
+                return <MochaIcon />;
             case 'karma':
-                return <KarmaIcon width="50px" height="50px" />;
+                return <KarmaIcon />;
             case 'vuex':
-                return <VuexIcon width="50px" height="50px" />;
+                return <VuexIcon />;
             case 'zeplin':
-                return <ZeplinIcon width="50px" height="50px" />;
+                return <ZeplinIcon />;
             case 'adobeXd':
-                return <AdobeXdIcon width="50px" height="50px" />;
+                return <AdobeXdIcon />;
             case 'babel':
-                return <BabelIcon width="50px" height="50px" />;
+                return <BabelIcon />;
             case 'drawio':
-                return <DrawioIcon width="50px" height="50px" />;
+                return <DrawioIcon />;
             case 'react-suite':
-                return <ReactSuiteIcon width="50px" height="50px" />;
+                return <ReactSuiteIcon />;
 
             case 'linked-in':
-                return <LinkedInIcon width="50px" height="50px" />;
+                return <LinkedInIcon />;
 
             case 'frontend-masters':
-                return <FrontendMastersIcon width="140px" height="50px" />;
+                return <FrontendMastersIcon />;
             default:
                 return <></>;
         }

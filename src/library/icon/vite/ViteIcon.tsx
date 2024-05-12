@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function ViteIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 0 32 32"
@@ -46,6 +47,6 @@ export default function ViteIcon(
                     <stop offset={1} stopColor="#FFA800" id="stop47" />
                 </linearGradient>
             </defs>
-        </svg>
+        </SvgTechContainer>
     );
 }

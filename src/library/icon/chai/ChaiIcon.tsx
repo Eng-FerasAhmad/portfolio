@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function ChaiIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="-20 0 296 296"
@@ -37,6 +38,6 @@ export default function ChaiIcon(
                     fill="#A1070C"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

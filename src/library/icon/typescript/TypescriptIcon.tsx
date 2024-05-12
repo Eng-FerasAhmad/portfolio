@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function TypescriptIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24x"
             height="24px"
             viewBox="0 0 256 256"
@@ -28,6 +29,6 @@ export default function TypescriptIcon(
                     transform="translate(194.578507, 176.190240) scale(1, -1) translate(-194.578507, -176.190240) "
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

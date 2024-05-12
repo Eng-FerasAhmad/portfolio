@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function VuetifyIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="-18.5 0 293 293"
@@ -23,6 +24,6 @@ export default function VuetifyIcon(
                     points="128 182.746214 128 292.461921 256 42.5600014 188.95096 42.5600014"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

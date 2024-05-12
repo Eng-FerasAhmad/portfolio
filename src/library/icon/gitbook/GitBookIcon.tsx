@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function GitBookIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             height="24px"
             width="24px"
             viewBox="0 0 70 70"
@@ -22,6 +23,6 @@ export default function GitBookIcon(
                     />
                 </g>
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

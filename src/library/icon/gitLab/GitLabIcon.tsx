@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function GitLabIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 0 16 16"
@@ -34,6 +35,6 @@ export default function GitLabIcon(
                 fill="#E24329"
                 d="M14.19 6.549H10.58l1.551-4.667a.267.267 0 01.255-.18c.115 0 .217.073.254.18l1.552 4.667z"
             />
-        </svg>
+        </SvgTechContainer>
     );
 }

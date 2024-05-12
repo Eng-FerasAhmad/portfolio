@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function PrettierIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 0 256 256"
@@ -359,6 +360,6 @@ export default function PrettierIcon(
                     rx={5}
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

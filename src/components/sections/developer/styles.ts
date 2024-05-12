@@ -51,6 +51,7 @@ export const DescriptionContainer = styled.div`
 
     @media ${device.mobile} {
         width: 100%;
+        margin: ${pixelToRem(0, 10)};
     }
 
     @media ${device.tablet} {

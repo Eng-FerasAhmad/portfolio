@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function WebpackIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="-17 0 290 290"
@@ -25,6 +26,6 @@ export default function WebpackIcon(
                     fill="#1C78C0"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

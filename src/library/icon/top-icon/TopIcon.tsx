@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function TopIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="45px"
             height="45px"
             viewBox="0 0 32 32"
@@ -27,6 +28,6 @@ export default function TopIcon(
                     />
                 </g>
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

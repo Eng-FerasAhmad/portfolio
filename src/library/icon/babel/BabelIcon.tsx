@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function BabelIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 -156 512 512"
@@ -21,6 +22,6 @@ export default function BabelIcon(
                     fill="#F9DC3E"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

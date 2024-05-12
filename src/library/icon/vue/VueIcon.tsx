@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function VueIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 0 64 64"
@@ -90,6 +91,6 @@ export default function VueIcon(
                 <g id="clipboard-copy" />
                 <g id="Layer1" />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

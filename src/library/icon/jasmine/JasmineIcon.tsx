@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function JasmineIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 -0.5 256 256"
@@ -27,6 +28,6 @@ export default function JasmineIcon(
                 <path d="M50.608,100.093107 L48.0718182,107.858079 L86.4061818,120.240452 L88.9425455,112.47548 L50.608,100.093107" />
                 <path d="M123.807273,46.8411299 L132.018218,46.8411299 L132.018218,86.9259209 L123.807273,86.9259209 L123.807273,46.8411299 L123.807273,46.8411299 Z" />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

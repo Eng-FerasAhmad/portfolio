@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function MochaIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="-17.5 0 291 291"
@@ -21,6 +22,6 @@ export default function MochaIcon(
                     fill="#FFFFFF"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

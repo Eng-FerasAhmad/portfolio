@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function ReactSuiteIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             viewBox="0 0 120 138"
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -88,6 +89,6 @@ export default function ReactSuiteIcon(
                     <circle fill="#6594ED" cx={111} cy={31} r={3} />
                 </g>
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

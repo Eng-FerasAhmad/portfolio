@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function JiraIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 0 16 16"
@@ -48,6 +49,6 @@ export default function JiraIcon(
                     <stop offset={1} stopColor="#2684FF" />
                 </linearGradient>
             </defs>
-        </svg>
+        </SvgTechContainer>
     );
 }

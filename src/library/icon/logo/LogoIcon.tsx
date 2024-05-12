@@ -1,10 +1,12 @@
 import * as React from 'react';
+import { SvgContainer } from './style';
 
 export default function LogoIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgContainer
+            id="logo"
             width={46}
             height={46}
             viewBox="0 0 46 46"
@@ -28,6 +30,6 @@ export default function LogoIcon(
                 d="M14.1421 29.6986C12.1895 31.6512 9.02369 31.6512 7.07106 29.6986L-3.63588e-06 22.6275L7.07106 15.5565C9.02369 13.6038 12.1895 13.6038 14.1421 15.5565L21.2132 22.6275L14.1421 29.6986Z"
                 fill="#FFA64D"
             />
-        </svg>
+        </SvgContainer>
     );
 }

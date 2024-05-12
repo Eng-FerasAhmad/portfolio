@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function MaterialIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 -26 256 256"
@@ -29,6 +30,6 @@ export default function MaterialIcon(
                     fill="#0081CB"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

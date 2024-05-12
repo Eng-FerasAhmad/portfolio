@@ -1,10 +1,16 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function GitHubIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg width="24px" height="24px" viewBox="0 -0.5 48 48" {...props}>
+        <SvgTechContainer
+            width="24px"
+            height="24px"
+            viewBox="0 -0.5 48 48"
+            {...props}
+        >
             <desc>{'Created with Sketch.'}</desc>
             <defs />
             <g
@@ -25,6 +31,6 @@ export default function GitHubIcon(
                     />
                 </g>
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

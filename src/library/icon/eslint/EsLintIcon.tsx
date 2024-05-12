@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function EsLintIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 -15.5 256 256"
@@ -21,6 +22,6 @@ export default function EsLintIcon(
                     fill="#4B32C3"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

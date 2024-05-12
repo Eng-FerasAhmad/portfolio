@@ -63,6 +63,7 @@ export default function Contact(): JSX.Element {
                     <ContactItemContainer data-testid="contact-item">
                         <InputText
                             label={viewModel?.form.name || ''}
+                            required={true}
                             changeHandler={changeHandler}
                         />
                         <InputText

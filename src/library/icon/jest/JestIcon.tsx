@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function JestIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="-13.5 0 283 283"
@@ -21,6 +22,6 @@ export default function JestIcon(
                     fill="#FFFFFF"
                 />
             </g>
-        </svg>
+        </SvgTechContainer>
     );
 }

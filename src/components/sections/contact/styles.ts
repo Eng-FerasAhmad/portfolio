@@ -34,7 +34,7 @@ export const ContactTitleWrapper = styled.div`
     }
 `;
 
-export const ContactItemContainer = styled.div`
+export const ContactItemContainer = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;

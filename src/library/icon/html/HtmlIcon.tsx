@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function HtmlIcon(
     props: React.SVGProps<SVGSVGElement>
 ): JSX.Element {
     return (
-        <svg
+        <SvgTechContainer
             height="24px"
             width="24px"
             aria-label="HTML5"
@@ -22,6 +23,6 @@ export default function HtmlIcon(
                 fill="#ffffff"
                 d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z"
             />
-        </svg>
+        </SvgTechContainer>
     );
 }

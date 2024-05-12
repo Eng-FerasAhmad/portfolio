@@ -4,6 +4,7 @@ import { InputTextContainer, InputWrapper, LabelWrapper } from './styles';
 interface Props {
     label: string;
     placeholder?: string;
+    required?: boolean;
     type?: 'email' | 'text';
     changeHandler: (e: ChangeEvent<HTMLInputElement> | undefined) => void;
 }
@@ -11,6 +12,7 @@ interface Props {
 export default function InputText({
     label,
     placeholder,
+    required,
     type = 'text',
     changeHandler,
 }: Props): JSX.Element {
@@ -27,7 +29,7 @@ export default function InputText({
             <LabelWrapper htmlFor={label}>{label}</LabelWrapper>
             <InputWrapper
                 type={type}
-                required
+                required={required}
                 id={label}
                 placeholder={placeholder}
                 onChange={handleChange}
