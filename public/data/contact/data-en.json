@@ -7,7 +7,8 @@
         "subject": "Subject",
         "email": "E-Mail",
         "message": "Message",
-        "send": "Send"
+        "send": "Send",
+        "error": "Please fill out the mandatory field"
     },
     "media": [
         {

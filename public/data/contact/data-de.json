@@ -7,7 +7,8 @@
         "subject": "Betreff",
         "email": "E-Mail",
         "message": "Nachricht",
-        "send": "Senden"
+        "send": "Senden",
+        "error": "Bitte Pflichtfeld ausfüllen"
     },
     "media": [
         {

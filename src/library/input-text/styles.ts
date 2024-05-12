@@ -57,3 +57,17 @@ export const LabelWrapper = styled.label`
         font-size: ${pixelToRem(23)};
     }
 `;
+
+export const ErrorLabelWrapper = styled.label`
+    color: ${color.red};
+    width: fit-content;
+    margin: ${pixelToRem(5, 0, 0, 30)};
+
+    @media ${device.mobile} {
+        font-size: ${pixelToRem(12)};
+    }
+
+    @media ${device.tablet} {
+        font-size: ${pixelToRem(14)};
+    }
+`;

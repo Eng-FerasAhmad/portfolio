@@ -1,10 +1,16 @@
 import { ChangeEvent } from 'react';
-import { InputTextContainer, InputWrapper, LabelWrapper } from './styles';
+import {
+    InputTextContainer,
+    InputWrapper,
+    LabelWrapper,
+    ErrorLabelWrapper,
+} from './styles';
 
 interface Props {
     label: string;
     placeholder?: string;
     required?: boolean;
+    error?: string;
     type?: 'email' | 'text';
     changeHandler: (e: ChangeEvent<HTMLInputElement> | undefined) => void;
 }
@@ -13,6 +19,7 @@ export default function InputText({
     label,
     placeholder,
     required,
+    error,
     type = 'text',
     changeHandler,
 }: Props): JSX.Element {
@@ -34,6 +41,7 @@ export default function InputText({
                 placeholder={placeholder}
                 onChange={handleChange}
             />
+            {error && <ErrorLabelWrapper>{error}</ErrorLabelWrapper>}
         </InputTextContainer>
     );
 }

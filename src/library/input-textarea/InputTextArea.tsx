@@ -1,15 +1,23 @@
 import { ChangeEvent } from 'react';
-import { InputTextContainer, InputWrapper, LabelWrapper } from './styles';
+import {
+    ErrorLabelWrapper,
+    InputTextContainer,
+    InputWrapper,
+    LabelWrapper,
+} from './styles';
 
 interface Props {
     label: string;
     placeholder?: string;
+    required?: boolean;
+    error?: string;
     changeHandler: (e: ChangeEvent<HTMLTextAreaElement> | undefined) => void;
 }
 
 export default function InputTextArea({
     label,
     placeholder,
+    error,
     changeHandler,
 }: Props): JSX.Element {
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
@@ -32,6 +40,7 @@ export default function InputTextArea({
                 }
                 rows={9}
             />
+            {error && <ErrorLabelWrapper>{error}</ErrorLabelWrapper>}
         </InputTextContainer>
     );
 }

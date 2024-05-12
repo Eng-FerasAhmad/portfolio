@@ -11,7 +11,8 @@ export interface FormViewModel {
     subject: string;
     email: string;
     message: string;
-    send: string;
+    send?: string;
+    error?: string;
 }
 
 export interface MediaViewModel {

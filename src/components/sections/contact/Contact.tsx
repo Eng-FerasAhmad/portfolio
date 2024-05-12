@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import Button from '../../../library/button/Button';
 import IconSelector from '../../../library/icon-selector/IconSelector';
 import InputText from '../../../library/input-text/InputText';
 import InputTextArea from '../../../library/input-textarea/InputTextArea';
 import ProgressBarComponent from '../../../library/progressbar/ProgressBar';
 import { color } from '../../../style/color';
+import { FormViewModel } from '../../../types/ContactTypes';
 import {
     ContactContainer,
     ContactItemContainer,
@@ -18,14 +19,82 @@ import useContact from './useContact';
 export default function Contact(): JSX.Element {
     const { viewModel } = useContact();
     const [show, setShow] = useState<boolean>(false);
+    const [isSubmit, setIsSubmit] = useState<boolean>(false);
+    const [formData, setFormData] = useState<FormViewModel>({
+        name: '',
+        subject: '',
+        email: '',
+        message: '',
+    });
 
     const clickHandler = (): void => {
         setShow(!show);
     };
 
-    const changeHandler = (): void => {};
+    const changeNameHandler = (
+        event: ChangeEvent<HTMLInputElement> | undefined
+    ): void => {
+        if (event?.target && event.target.value.length > 0) {
+            setFormData({
+                name: event.target.value,
+                subject: formData?.subject || '',
+                email: formData?.email || '',
+                message: formData?.message || '',
+            });
+        }
+    };
 
-    const submitHandler = (): void => {};
+    const changeSubjectHandler = (
+        event: ChangeEvent<HTMLInputElement> | undefined
+    ): void => {
+        if (event?.target && event.target.value.length > 0) {
+            setFormData({
+                name: formData?.name || '',
+                subject: event.target.value,
+                email: formData?.email || '',
+                message: formData?.message || '',
+            });
+        }
+    };
+
+    const changeEmailHandler = (
+        event: ChangeEvent<HTMLInputElement> | undefined
+    ): void => {
+        if (event?.target && event.target.value.length > 0) {
+            setFormData({
+                name: formData?.name || '',
+                subject: formData?.subject || '',
+                email: event.target.value,
+                message: formData?.message || '',
+            });
+        }
+    };
+    const changeMessageHandler = (
+        event: ChangeEvent<HTMLTextAreaElement> | undefined
+    ): void => {
+        if (event?.target && event.target.value.length > 0) {
+            setFormData({
+                name: formData?.name || '',
+                subject: formData?.subject || '',
+                email: formData?.email || '',
+                message: event.target.value,
+            });
+        }
+    };
+
+    const submitHandler = (): void => {
+        setIsSubmit(true);
+    };
+
+    const isError = isSubmit && viewModel && formData;
+    const nameError =
+        isError && formData?.name.length === 0 ? viewModel?.form.error : '';
+    const subjectError =
+        isError && formData?.subject.length === 0 ? viewModel?.form.error : '';
+    const emailError =
+        isError && formData?.email.length === 0 ? viewModel?.form.error : '';
+    const messageError =
+        isError && formData?.message.length === 0 ? viewModel?.form.error : '';
 
     return (
         <ContactContainer data-testid="contact">
@@ -64,20 +133,24 @@ export default function Contact(): JSX.Element {
                         <InputText
                             label={viewModel?.form.name || ''}
                             required={true}
-                            changeHandler={changeHandler}
+                            error={nameError}
+                            changeHandler={changeNameHandler}
                         />
                         <InputText
                             label={viewModel?.form.subject || ''}
-                            changeHandler={changeHandler}
+                            error={subjectError}
+                            changeHandler={changeSubjectHandler}
                         />
                         <InputText
                             label={viewModel?.form.email || ''}
-                            changeHandler={changeHandler}
+                            changeHandler={changeEmailHandler}
+                            error={emailError}
                             type="email"
                         />
                         <InputTextArea
                             label={viewModel?.form.message || ''}
-                            changeHandler={changeHandler}
+                            changeHandler={changeMessageHandler}
+                            error={messageError}
                         />
                         <Button
                             label={viewModel?.form.send || ''}
