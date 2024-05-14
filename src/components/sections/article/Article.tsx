@@ -4,8 +4,10 @@ import {
     ArticleTitleWrapper,
     ArticleItemContainer,
 } from './styles';
+import useArticle from './useArticle';
 
 export default function Article(): JSX.Element {
+    const { viewModel } = useArticle();
     const [show, setShow] = useState<boolean>(false);
 
     const clickHandler = (): void => {
@@ -15,7 +17,7 @@ export default function Article(): JSX.Element {
     return (
         <ArticleContainer>
             <ArticleTitleWrapper onClick={clickHandler}>
-                Articles
+                {viewModel?.entityHeader}
             </ArticleTitleWrapper>
             {show && <ArticleItemContainer>Coming soon!</ArticleItemContainer>}
         </ArticleContainer>

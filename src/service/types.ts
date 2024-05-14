@@ -6,6 +6,7 @@ export enum DataModel {
     EDUCATION = 'EDUCATION',
     PROJECT = 'PROJECT',
     TECHSTACK = 'TECHSTACK',
+    ARTICLE = 'ARTICLE',
 }
 
 export enum Language {

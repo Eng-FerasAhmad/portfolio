@@ -68,24 +68,23 @@ export const SocialMediaWrapper = styled.div`
 `;
 
 export const ItemsContainer = styled.div`
-    width: 100%;
     display: flex;
     justify-content: center;
     margin: ${pixelToRem(30, 0, 70, 0)};
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(26)};
-        flex-direction: column;
-        align-items: center;
+        flex-flow: row wrap-reverse;
+        justify-content: center;
     }
 
     @media ${device.tablet} {
         font-size: ${pixelToRem(32)};
         flex-direction: row;
+        width: 100%;
     }
 `;
 export const ItemWrapper = styled.a`
-    width: ${pixelToRem(200)};
     padding: ${pixelToRem(20, 0)};
     text-decoration: none;
     color: ${(props) => props.theme.color.page.font};
@@ -97,10 +96,12 @@ export const ItemWrapper = styled.a`
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(18)};
+        width: 50%;
     }
 
     @media ${device.tablet} {
         font-size: ${pixelToRem(24)};
+        width: ${pixelToRem(200)};
     }
 
     &:hover {
