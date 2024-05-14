@@ -1,0 +1,14 @@
+{
+    "entityHeader": "Artikel",
+    "title": "Artikel",
+    "description": "Artikel Studio",
+    "slides": [
+        {
+            "title": "First Artikel",
+            "textTop": "Text top",
+            "textMid": "Text Mid",
+            "textBottom": "Text bottom",
+            "image": "image"
+        }
+    ]
+}
