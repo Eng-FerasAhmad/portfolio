@@ -1,6 +1,5 @@
 import ThemeContextProvider from '../../context/ThemeContext';
 import { GlobalStyle } from '../../style/global';
-import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import Landing from '../landing/Landing';
 import { AppContainer } from './styles';
@@ -12,7 +11,6 @@ export default function App(): JSX.Element {
                 <GlobalStyle />
                 <Header />
                 <Landing />
-                <Footer />
             </ThemeContextProvider>
         </AppContainer>
     );

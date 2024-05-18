@@ -2,19 +2,22 @@ import { styled } from 'styled-components';
 import { color } from '../../style/color';
 import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
+interface Props {
+    color: string;
+} 
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div<Props>`
     font-size: ${pixelToRem(23)};
     border-radius: ${pixelToRem(23)};
-    border-color: ${color.yellow};
+    border-color: ${(props) => props.color};
     border-style: solid;
     border-width: thin;
     color: ${(props) => props.theme.color.button.font};
     height: fit-content;
-    padding: ${pixelToRem(10)};
+    padding: ${pixelToRem(10,30)};
     cursor: pointer;
-    margin: 0;
-    background-color: ${color.yellow};
+    margin: ${pixelToRem(10)};
+    background-color: ${(props) => props.color};
 
     &:hover {
         background-color: ${color.yellowDark};
@@ -27,5 +30,6 @@ export const ButtonContainer = styled.div`
 
     @media ${device.tablet} {
         font-size: ${pixelToRem(23)};
+        min-width: ${pixelToRem(160)};
     }
 `;

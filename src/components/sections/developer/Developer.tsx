@@ -1,16 +1,17 @@
-import {
-    AboutWrapper,
-    ContentContainer,
-    DescriptionContainer,
-    DeveloperContainer,
-    ImageContainer,
-    NameWrapper,
-    ProfileWrapper,
-} from './styles';
+import { useNavigate } from 'react-router';
+import Button from '../../../library/button/Button';
+import { routerPath } from '../../../router/constant';
+import { color } from '../../../style/color';
+import { AboutWrapper, ButtonsWrapper, ContentContainer, DescriptionContainer, DeveloperContainer, ImageContainer, NameWrapper, ProfileWrapper } from './styles';
 import useDeveloper from './useDeveloper';
 
 export default function Developer(): JSX.Element {
+    const navigate = useNavigate();
     const { viewModel } = useDeveloper();
+
+    const navigationHandler = (page: string): void => {
+        navigate(page);
+    }
 
     return (
         <DeveloperContainer data-testid="developer">
@@ -24,6 +25,11 @@ export default function Developer(): JSX.Element {
                         <AboutWrapper>{viewModel.about}</AboutWrapper>
                     )}
                 </DescriptionContainer>
+                <ButtonsWrapper>
+                    <Button label='Techstack' clickHandler={() => navigationHandler(routerPath.techstack)} color={color.green} />
+                    <Button label='Blog' clickHandler={() => navigationHandler(routerPath.blog)} color={color.blue} />
+                    <Button label='Contact' clickHandler={() => navigationHandler(routerPath.contact)} color={color.yellow} />
+                </ButtonsWrapper>
             </ContentContainer>
         </DeveloperContainer>
     );

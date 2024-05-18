@@ -3,17 +3,18 @@ import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
 
 export const HeaderContainer = styled.div`
-    height: ${pixelToRem(45)};
+    height: fit-content;
     line-height: ${pixelToRem(32)};
     position: fixed;
     top: 0;
-    width: -webkit-fill-available;
-
+    
     @media ${device.mobile} {
         padding: ${pixelToRem(16, 15)};
+        width: fit-content;
     }
 
     @media ${device.tablet} {
+        width: -webkit-fill-available;
         padding: ${pixelToRem(16, 40)};
         background-image: ${(props) => props.theme.color.page.backgroundImage};
     }

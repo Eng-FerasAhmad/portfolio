@@ -8,13 +8,13 @@ export const DeveloperContainer = styled.div`
     justify-content: center;
 
     @media ${device.mobile} {
-        height: fit-content;
-        min-height: fit-content;
+        //height: fit-content;
+        //min-height: fit-content;
         margin-bottom: ${pixelToRem(40)};
     }
 
     @media ${device.tablet} {
-        min-height: calc(100vh - ${pixelToRem(140)});
+        //min-height: calc(100vh - ${pixelToRem(140)});
         margin-bottom: 0;
     }
 `;
@@ -77,5 +77,21 @@ export const AboutWrapper = styled.div`
 
     @media ${device.tablet} {
         font-size: ${pixelToRem(30)};
+    }
+`;
+
+export const ButtonsWrapper = styled.div`
+    width: 100%;
+    margin: ${pixelToRem(20,0)};
+    @media ${device.mobile} {
+            display: flex;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    @media ${device.tablet} {
+            display: flex;
+    justify-content: center;
+    flex-direction: row;
     }
 `;

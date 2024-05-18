@@ -361,15 +361,6 @@
                     "color": "#2580f7"
                 },
                 {
-                    "id": "azure",
-                    "name": "Azure Devops",
-                    "icon": "azure",
-                    "level": "beginner",
-                    "percent": 40,
-                    "homepage": "",
-                    "color": "#0074d0"
-                },
-                {
                     "id": "swagger",
                     "name": "Swagger",
                     "icon": "swagger",
