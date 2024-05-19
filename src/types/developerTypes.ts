@@ -1,3 +1,5 @@
+import { Pages } from 'types/pageType';
+
 export interface DeveloperViewModel {
     entityHeader: string;
     title: string;
@@ -5,6 +7,7 @@ export interface DeveloperViewModel {
     about: string;
     socialAccount: Array<SocialAccount>;
     language: Array<string>;
+    pages: Pages;
 }
 
 export interface SocialAccount {

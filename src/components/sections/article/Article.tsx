@@ -11,8 +11,14 @@ export default function Article(): ReactElement {
 
     return (
         <ArticleContainer>
-            <ArticleTitleWrapper>{viewModel?.entityHeader}</ArticleTitleWrapper>
-            <ArticleItemContainer>Coming soon!</ArticleItemContainer>
+            {viewModel && (
+                <>
+                    <ArticleTitleWrapper>
+                        {viewModel.entityHeader}
+                    </ArticleTitleWrapper>
+                    <ArticleItemContainer>Coming soon!</ArticleItemContainer>
+                </>
+            )}
         </ArticleContainer>
     );
 }

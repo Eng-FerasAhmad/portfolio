@@ -78,20 +78,3 @@ export const AboutWrapper = styled.div`
         font-size: ${pixelToRem(fontSize.normalText)};
     }
 `;
-
-export const ButtonsWrapper = styled.div`
-    width: 100%;
-    margin: ${pixelToRem(20, 0)};
-
-    @media ${device.mobile} {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    @media ${device.tablet} {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
-`;

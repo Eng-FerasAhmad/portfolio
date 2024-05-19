@@ -1,19 +1,21 @@
 import { ReactElement, useContext } from 'react';
 
 import { useNavigate } from 'react-router';
-import { ThemeContext } from '../../context/ThemeContext';
-import GithubNavigation from '../../library/icon/github-navigation/GithubNavigation';
-import LanguageIcon from '../../library/icon/language/LanguageIcon';
-import LogoIcon from '../../library/icon/logo/LogoIcon';
-import ThemeIcon from '../../library/icon/theme/ThemeIcon';
-import { routerPath } from '../../router/constant';
 import {
     HeaderContainer,
     NavbarWrapper,
     LogoWrapper,
-    NavigationWrapper,
     NameWrapper,
+    IconsWrapper,
 } from './styles';
+import Navigation from 'components/navigation/Navigation';
+import { ThemeContext } from 'context/ThemeContext';
+import { routerPath } from 'router/constant';
+import GithubNavigation from 'src/library/icon/github-navigation/GithubNavigation';
+
+import LanguageIcon from 'src/library/icon/language/LanguageIcon';
+import LogoIcon from 'src/library/icon/logo/LogoIcon';
+import ThemeIcon from 'src/library/icon/theme/ThemeIcon';
 
 export default function Header(): ReactElement {
     const navigate = useNavigate();
@@ -32,7 +34,10 @@ export default function Header(): ReactElement {
                     <LogoIcon width={20} height={28} />
                     <NameWrapper>Feras Ahmad</NameWrapper>
                 </LogoWrapper>
-                <NavigationWrapper>
+
+                <Navigation />
+
+                <IconsWrapper>
                     <GithubNavigation isDark={isDarkTheme!} />
                     <ThemeIcon
                         isDark={isDarkTheme!}
@@ -42,7 +47,7 @@ export default function Header(): ReactElement {
                         isDark={isDarkTheme!}
                         clickHandler={() => toggleLanguage()}
                     />
-                </NavigationWrapper>
+                </IconsWrapper>
             </NavbarWrapper>
         </HeaderContainer>
     );

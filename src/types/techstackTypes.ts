@@ -1,6 +1,9 @@
+import { Pages } from 'types/pageType';
+
 export interface TechstackViewModel {
     entityHeader: string;
     categories: Array<Category>;
+    pages: Pages;
 }
 
 export interface Category {

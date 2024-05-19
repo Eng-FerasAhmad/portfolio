@@ -1,4 +1,11 @@
 {
+    "pages": {
+        "contact": "Contact",
+        "blog": "Blog",
+        "techstack": "Techstack",
+        "project": "Project",
+        "developer": "About me!"
+    },
     "entityHeader": "Developer",
     "title": "Senior Frontend Engineer",
     "name": "Hi, I'm Feras Ahmad",

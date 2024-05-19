@@ -7,6 +7,7 @@ export const themeDark = {
             background: darkThemeColor.customBlack,
             font: darkThemeColor.fontPrimary,
             fontHover: color.dark,
+            border: color.greenDark,
         },
         button: {
             background: color.green,
@@ -22,6 +23,7 @@ export const themeLight = {
             background: lightThemeColor.customWhite,
             font: lightThemeColor.fontPrimary,
             fontHover: color.light,
+            border: color.greenDark,
         },
         button: {
             background: color.green,

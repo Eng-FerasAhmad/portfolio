@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { fontSize } from '../../style/common';
-import { device } from '../../style/screenSize';
-import { pixelToRem } from '../../utils/utils';
+import { fontSize } from 'style/common';
+import { device } from 'style/screenSize';
+import { pixelToRem } from 'utils/utils';
 
 export const HeaderContainer = styled.div`
     height: fit-content;
@@ -44,7 +44,7 @@ export const LogoWrapper = styled.div`
     display: flex;
 `;
 
-export const NavigationWrapper = styled.div`
+export const IconsWrapper = styled.div`
     @media ${device.mobile} {
         display: block;
     }

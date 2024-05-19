@@ -20,6 +20,8 @@ export const ArticleContainer = styled.div`
 `;
 
 export const ArticleTitleWrapper = styled.div`
+    width: fit-content;
+    margin: auto;
     border-bottom: ${pixelToRem(3)} solid ${color.blue};
     padding: ${pixelToRem(5, 0)};
 `;

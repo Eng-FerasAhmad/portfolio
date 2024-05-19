@@ -1,3 +1,5 @@
+import { Pages } from 'types/pageType';
+
 export interface ProjectViewModel {
     company: string;
     projectName: string;
@@ -9,6 +11,7 @@ export interface ProjectViewModel {
     language: Array<string>;
     branch: Array<Branch>;
     task: Array<ProjectTasks>;
+    pages: Pages;
 }
 
 export interface ProjectTasks {

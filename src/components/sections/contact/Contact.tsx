@@ -1,10 +1,5 @@
 import { ChangeEvent, ReactElement, useState } from 'react';
-import Button from '../../../library/button/Button';
-import IconSelector from '../../../library/icon-selector/IconSelector';
-import InputText from '../../../library/input-text/InputText';
-import InputTextArea from '../../../library/input-textarea/InputTextArea';
-import { color } from '../../../style/color';
-import { FormViewModel } from '../../../types/ContactTypes';
+
 import {
     ContactContainer,
     ContactItemContainer,
@@ -14,6 +9,12 @@ import {
     SocialMediaWrapper,
 } from './styles';
 import useContact from './useContact';
+import Button from 'src/library/button/Button';
+import IconSelector from 'src/library/icon-selector/IconSelector';
+import InputText from 'src/library/input-text/InputText';
+import InputTextArea from 'src/library/input-textarea/InputTextArea';
+import { color } from 'style/color';
+import { FormViewModel } from 'types/ContactTypes';
 
 export default function Contact(): ReactElement {
     const { viewModel } = useContact();

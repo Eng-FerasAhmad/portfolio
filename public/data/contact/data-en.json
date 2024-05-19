@@ -1,4 +1,11 @@
 {
+    "pages": {
+        "contact": "Contact",
+        "blog": "Blog",
+        "techstack": "Techstack",
+        "project": "Project",
+        "developer": "About me!"
+    },
     "entityHeader": "Contact",
     "title": "Social Media",
     "description": "Get in touch",
