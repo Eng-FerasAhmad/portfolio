@@ -8,7 +8,7 @@ export const SvgContainer = styled.svg`
         height: ${pixelToRem(24)};
     }
     @media ${device.tablet} {
-        width: ${pixelToRem(30)};
-        height: ${pixelToRem(30)};
+        width: ${pixelToRem(28)};
+        height: ${pixelToRem(28)};
     }
 `;

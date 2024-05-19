@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
 import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function ViteIcon(
     props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+): ReactElement {
     return (
         <SvgTechContainer
             width="24px"

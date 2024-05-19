@@ -1,24 +1,22 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, ReactElement, useState } from 'react';
 import Button from '../../../library/button/Button';
 import IconSelector from '../../../library/icon-selector/IconSelector';
 import InputText from '../../../library/input-text/InputText';
 import InputTextArea from '../../../library/input-textarea/InputTextArea';
-import ProgressBarComponent from '../../../library/progressbar/ProgressBar';
 import { color } from '../../../style/color';
 import { FormViewModel } from '../../../types/ContactTypes';
 import {
     ContactContainer,
     ContactItemContainer,
-    ContactTitleWrapper,
-    ItemWrapper,
+    DescriptionWrapper,
     ItemsContainer,
+    ItemWrapper,
     SocialMediaWrapper,
 } from './styles';
 import useContact from './useContact';
 
-export default function Contact(): JSX.Element {
+export default function Contact(): ReactElement {
     const { viewModel } = useContact();
-    const [show, setShow] = useState<boolean>(false);
     const [isSubmit, setIsSubmit] = useState<boolean>(false);
     const [formData, setFormData] = useState<FormViewModel>({
         name: '',
@@ -26,10 +24,6 @@ export default function Contact(): JSX.Element {
         email: '',
         message: '',
     });
-
-    const clickHandler = (): void => {
-        setShow(!show);
-    };
 
     const changeNameHandler = (
         event: ChangeEvent<HTMLInputElement> | undefined
@@ -90,67 +84,62 @@ export default function Contact(): JSX.Element {
 
     return (
         <ContactContainer data-testid="contact">
-            <ContactTitleWrapper onClick={clickHandler}>
-                {viewModel?.entityHeader}
-            </ContactTitleWrapper>
+            <SocialMediaWrapper>
+                <DescriptionWrapper>
+                    {viewModel?.description}
+                </DescriptionWrapper>
+            </SocialMediaWrapper>
 
-            {show && (
-                <>
-                    <ItemsContainer>
-                        {viewModel?.media.map((item) => {
-                            return (
-                                <ItemWrapper
-                                    key={item.icon}
-                                    href={item.link}
-                                    target="_blank"
-                                >
-                                    <div>
-                                        <IconSelector iconName={item.icon} />
-                                    </div>
-                                    <div>{item.name}</div>
-                                </ItemWrapper>
-                            );
-                        })}
-                    </ItemsContainer>
+            <ContactItemContainer data-testid="contact-item">
+                <div>
+                    <InputText
+                        label={viewModel?.form.name || ''}
+                        required={true}
+                        error={nameError}
+                        changeHandler={changeNameHandler}
+                    />
+                    <InputText
+                        label={viewModel?.form.subject || ''}
+                        error={subjectError}
+                        changeHandler={changeSubjectHandler}
+                    />
+                    <InputText
+                        label={viewModel?.form.email || ''}
+                        changeHandler={changeEmailHandler}
+                        error={emailError}
+                        type="email"
+                    />
+                    <InputTextArea
+                        label={viewModel?.form.message || ''}
+                        changeHandler={changeMessageHandler}
+                        error={messageError}
+                    />
+                    <Button
+                        color={color.yellow}
+                        secondaryColor={color.yellowDark}
+                        label={viewModel?.form.send || ''}
+                        clickHandler={submitHandler}
+                    />
+                </div>
+            </ContactItemContainer>
+            <div>
+                <DescriptionWrapper>Check my Accounts</DescriptionWrapper>
+                <ItemsContainer>
+                    {viewModel?.media.map((item) => {
+                        return (
+                            <ItemWrapper
+                                key={item.icon}
+                                href={item.link}
+                                target="_blank"
+                            >
+                                <IconSelector iconName={item.icon} />
 
-                    <SocialMediaWrapper>
-                        <div>{viewModel?.description}</div>
-                        <ProgressBarComponent
-                            color={color.yellow}
-                            completed={100}
-                        />
-                    </SocialMediaWrapper>
-
-                    <ContactItemContainer data-testid="contact-item">
-                        <InputText
-                            label={viewModel?.form.name || ''}
-                            required={true}
-                            error={nameError}
-                            changeHandler={changeNameHandler}
-                        />
-                        <InputText
-                            label={viewModel?.form.subject || ''}
-                            error={subjectError}
-                            changeHandler={changeSubjectHandler}
-                        />
-                        <InputText
-                            label={viewModel?.form.email || ''}
-                            changeHandler={changeEmailHandler}
-                            error={emailError}
-                            type="email"
-                        />
-                        <InputTextArea
-                            label={viewModel?.form.message || ''}
-                            changeHandler={changeMessageHandler}
-                            error={messageError}
-                        />
-                        <Button
-                            label={viewModel?.form.send || ''}
-                            clickHandler={submitHandler}
-                        />
-                    </ContactItemContainer>
-                </>
-            )}
+                                <div>{item.name}</div>
+                            </ItemWrapper>
+                        );
+                    })}
+                </ItemsContainer>
+            </div>
         </ContactContainer>
     );
 }

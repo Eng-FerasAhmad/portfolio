@@ -1,10 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 import { pixelToRem } from '../utils/utils';
+import { fontSize } from './common';
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    font-size: ${pixelToRem(16)};
+    font-size: ${pixelToRem(fontSize.base)};
     color: ${(props) => props.theme.color.page.background};
   }
 

@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { IoLogoGithub } from 'react-icons/io5';
 import { color } from '../../../style/color';
 import { GithubIconWrapper } from './styles';
@@ -6,9 +7,9 @@ interface Props {
     isDark: boolean;
 }
 
-export default function GithubNavigation({ isDark }: Props): JSX.Element {
+export default function GithubNavigation({ isDark }: Props): ReactElement {
     const clickHandler = (): void => {
-        window.open('https://github.com/Eng-FerasAhmad/portfolio', '_blank');
+        window.open('https://github.com/Eng-FerasAhmad', '_blank');
     };
 
     return (

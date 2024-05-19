@@ -1,4 +1,5 @@
 import ProgressBar from '@ramonak/react-progress-bar';
+import { ReactElement } from 'react';
 import { color } from '../../style/color';
 import { ProgressContainer } from './styles';
 
@@ -7,7 +8,7 @@ interface Props {
     completed: number;
 }
 
-export default function ProgressBarComponent(props: Props): JSX.Element {
+export default function ProgressBarComponent(props: Props): ReactElement {
     return (
         <ProgressContainer>
             <ProgressBar

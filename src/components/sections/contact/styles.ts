@@ -1,38 +1,20 @@
 import styled from 'styled-components';
 import { color } from '../../../style/color';
+import { fontSize } from '../../../style/common';
 import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
 
 export const ContactContainer = styled.div`
-    font-size: ${pixelToRem(26)};
-    width: 80%;
+    padding: ${pixelToRem(0, 30)};
 
     @media ${device.mobile} {
+        font-size: ${pixelToRem(fontSize.normalMobileText)};
         margin: 0 auto ${pixelToRem(15)} auto;
     }
 
     @media ${device.tablet} {
+        font-size: ${pixelToRem(fontSize.normalText)};
         margin: 0 auto ${pixelToRem(30)} auto;
-    }
-`;
-
-export const ContactTitleWrapper = styled.div`
-    border: ${pixelToRem(3)} solid ${color.yellow};
-    border-radius: ${pixelToRem(50)};
-    padding: ${pixelToRem(5, 0)};
-
-    &:hover {
-        background-color: ${color.yellow};
-        color: ${(props) => props.theme.color.page.fontHover};
-        cursor: pointer;
-    }
-
-    @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
-    }
-
-    @media ${device.tablet} {
-        font-size: ${pixelToRem(43)};
     }
 `;
 
@@ -42,13 +24,11 @@ export const ContactItemContainer = styled.form`
     justify-content: center;
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
         margin: ${pixelToRem(30, 0, 70, 0)};
         padding: 0;
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(32)};
         margin: ${pixelToRem(30, 0, 70, 0)};
         padding: ${pixelToRem(0, 50)};
     }
@@ -57,14 +37,6 @@ export const ContactItemContainer = styled.form`
 export const SocialMediaWrapper = styled.div`
     width: fit-content;
     margin: auto;
-
-    @media ${device.mobile} {
-        font-size: ${pixelToRem(23)};
-    }
-
-    @media ${device.tablet} {
-        font-size: ${pixelToRem(32)};
-    }
 `;
 
 export const ItemsContainer = styled.div`
@@ -73,13 +45,11 @@ export const ItemsContainer = styled.div`
     margin: ${pixelToRem(30, 0, 70, 0)};
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
         flex-flow: row wrap-reverse;
         justify-content: center;
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(32)};
         flex-direction: row;
         width: 100%;
     }
@@ -95,12 +65,12 @@ export const ItemWrapper = styled.a`
     }
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(18)};
+        font-size: ${pixelToRem(fontSize.iconMobileLabel)};
         width: 50%;
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(24)};
+        font-size: ${pixelToRem(fontSize.iconLabel)};
         width: ${pixelToRem(200)};
     }
 
@@ -108,4 +78,10 @@ export const ItemWrapper = styled.a`
         cursor: pointer;
         box-shadow: rgb(0 0 0 / 45%) 0 15px 20px -20px;
     }
+`;
+
+export const DescriptionWrapper = styled.div`
+    border-bottom: ${pixelToRem(3)} solid ${color.yellow};
+    width: fit-content;
+    margin: auto;
 `;

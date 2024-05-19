@@ -1,20 +1,19 @@
 import styled from 'styled-components';
+import { fontSize } from '../../../style/common';
 import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
 
 export const DeveloperContainer = styled.div`
-    font-size: ${pixelToRem(24)};
     display: flex;
     justify-content: center;
 
     @media ${device.mobile} {
-        //height: fit-content;
-        //min-height: fit-content;
+        font-size: ${pixelToRem(fontSize.normalMobileText)};
         margin-bottom: ${pixelToRem(40)};
     }
 
     @media ${device.tablet} {
-        //min-height: calc(100vh - ${pixelToRem(140)});
+        font-size: ${pixelToRem(fontSize.normalText)};
         margin-bottom: 0;
     }
 `;
@@ -60,11 +59,11 @@ export const NameWrapper = styled.h1`
     font-weight: 500;
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
+        font-size: ${pixelToRem(fontSize.titleMobileText)};
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(48)};
+        font-size: ${pixelToRem(fontSize.titleText)};
     }
 `;
 
@@ -72,26 +71,27 @@ export const AboutWrapper = styled.div`
     line-height: 1.5;
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(18)};
+        font-size: ${pixelToRem(fontSize.descriptionMobileText)};
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(30)};
+        font-size: ${pixelToRem(fontSize.normalText)};
     }
 `;
 
 export const ButtonsWrapper = styled.div`
     width: 100%;
-    margin: ${pixelToRem(20,0)};
+    margin: ${pixelToRem(20, 0)};
+
     @media ${device.mobile} {
-            display: flex;
-    justify-content: center;
-    flex-direction: column;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     @media ${device.tablet} {
-            display: flex;
-    justify-content: center;
-    flex-direction: row;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
     }
 `;

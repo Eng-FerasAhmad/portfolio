@@ -1,18 +1,18 @@
 import App from '../components/app/App';
+import Article from '../components/sections/article/Article';
+import Contact from '../components/sections/contact/Contact';
+import Developer from '../components/sections/developer/Developer';
+import Project from '../components/sections/project/Project';
+import Techstack from '../components/sections/techstack/Techstack';
 import { routerPath } from './constant';
 import type { RouteObject } from 'react-router';
-import Developer from '../components/sections/developer/Developer';
-import Techstack from '../components/sections/techstack/Techstack';
-import Article from '../components/sections/article/Article';
-import Project from '../components/sections/project/Project';
-import Contact from '../components/sections/contact/Contact';
 
 export const createRouterElements = (): RouteObject[] => [
     {
         path: routerPath.home,
         element: <App />,
         children: [
-        {
+            {
                 path: routerPath.home,
                 element: <Developer />,
             },

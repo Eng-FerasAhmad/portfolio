@@ -13,26 +13,17 @@ export const LandingContainer = styled.div`
 
     @media ${device.tablet} {
         max-width: ${pixelToRem(contentWidth.tablet)};
-        padding: ${pixelToRem(50, 40)};
+        padding: ${pixelToRem(0, 40)};
         margin: auto;
     }
 
     @media ${device.desktop} {
         max-width: ${pixelToRem(contentWidth.desktop)};
-        padding: ${pixelToRem(50, 0)};
+        padding: ${pixelToRem(0)};
     }
 `;
 
 export const LandingWrapper = styled.div`
-    font-size: ${pixelToRem(55)};
     height: 100%;
     text-align: center;
-
-    @media ${device.mobile} {
-        font-size: ${pixelToRem(35)};
-    }
-
-    @media ${device.tablet} {
-        font-size: ${pixelToRem(55)};
-    }
 `;

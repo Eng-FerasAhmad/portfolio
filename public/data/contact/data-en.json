@@ -1,7 +1,7 @@
 {
     "entityHeader": "Contact",
     "title": "Social Media",
-    "description": "Contact Form",
+    "description": "Get in touch",
     "form": {
         "name": "Name",
         "subject": "Subject",

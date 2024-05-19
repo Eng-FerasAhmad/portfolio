@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fontSize } from '../../style/common';
 import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
 
@@ -7,7 +8,7 @@ export const HeaderContainer = styled.div`
     line-height: ${pixelToRem(32)};
     position: fixed;
     top: 0;
-    
+
     @media ${device.mobile} {
         padding: ${pixelToRem(16, 15)};
         width: fit-content;
@@ -38,7 +39,7 @@ export const NavbarWrapper = styled.div`
 export const LogoWrapper = styled.div`
     color: ${(props) => props.theme.color.page.font};
     font-family: 'Dancing Script', cursive;
-    font-size: ${pixelToRem(32)};
+    font-size: ${pixelToRem(fontSize.normalText)};
     cursor: pointer;
     display: flex;
 `;

@@ -1,10 +1,11 @@
 import { styled } from 'styled-components';
-import { color } from '../../style/color';
 import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
+
 interface Props {
     color: string;
-} 
+    secondaryColor: string;
+}
 
 export const ButtonContainer = styled.div<Props>`
     font-size: ${pixelToRem(23)};
@@ -14,13 +15,13 @@ export const ButtonContainer = styled.div<Props>`
     border-width: thin;
     color: ${(props) => props.theme.color.button.font};
     height: fit-content;
-    padding: ${pixelToRem(10,30)};
+    padding: ${pixelToRem(10, 30)};
     cursor: pointer;
     margin: ${pixelToRem(10)};
     background-color: ${(props) => props.color};
 
     &:hover {
-        background-color: ${color.yellowDark};
+        background-color: ${(props) => props.secondaryColor};
         color: ${(props) => props.theme.color.button.font};
     }
 

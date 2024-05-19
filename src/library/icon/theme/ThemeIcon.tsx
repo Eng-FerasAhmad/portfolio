@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { IoMoon, IoSunny } from 'react-icons/io5';
 import { color } from '../../../style/color';
 import { ThemeIconWrapper } from './styles';
@@ -10,7 +11,7 @@ interface Props {
 export default function ThemeIcon({
     isDark,
     clickHandler,
-}: Props): JSX.Element {
+}: Props): ReactElement {
     return (
         <ThemeIconWrapper onClick={clickHandler}>
             {isDark ? (

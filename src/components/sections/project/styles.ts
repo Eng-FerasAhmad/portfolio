@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { color } from '../../../style/color';
+import { fontSize } from '../../../style/common';
 import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
 
@@ -7,10 +8,12 @@ export const ProjectContainer = styled.div`
     width: 80%;
 
     @media ${device.mobile} {
+        font-size: ${pixelToRem(fontSize.normalMobileText)};
         margin: 0 auto ${pixelToRem(15)} auto;
     }
 
     @media ${device.tablet} {
+        font-size: ${pixelToRem(fontSize.normalText)};
         margin: 0 auto ${pixelToRem(30)} auto;
     }
 `;
@@ -25,14 +28,6 @@ export const ProjectTitleWrapper = styled.div`
         color: ${(props) => props.theme.color.page.fontHover};
         cursor: pointer;
     }
-
-    @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
-    }
-
-    @media ${device.tablet} {
-        font-size: ${pixelToRem(43)};
-    }
 `;
 
 export const ProjectItemContainer = styled.div`
@@ -41,12 +36,4 @@ export const ProjectItemContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: ${pixelToRem(30, 0, 70, 0)};
-
-    @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
-    }
-
-    @media ${device.tablet} {
-        font-size: ${pixelToRem(32)};
-    }
 `;

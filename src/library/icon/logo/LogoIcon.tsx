@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
 import { SvgContainer } from './style';
 
 export default function LogoIcon(
     props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+): ReactElement {
     return (
         <SvgContainer
             id="logo"

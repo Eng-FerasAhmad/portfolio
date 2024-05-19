@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { color } from '../../../style/color';
+import { fontSize } from '../../../style/common';
 import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
 
 export const TechstackContainer = styled.div`
-    width: 80%;
+    width: fit-content;
+    padding: ${pixelToRem(0, 30)};
 
     @media ${device.mobile} {
         margin: 0 auto ${pixelToRem(15)} auto;
@@ -15,39 +16,19 @@ export const TechstackContainer = styled.div`
     }
 `;
 
-export const TechstackTitleWrapper = styled.div`
-    border: ${pixelToRem(3)} solid ${color.green};
-    border-radius: ${pixelToRem(50)};
-    padding: ${pixelToRem(5, 0)};
-
-    @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
-    }
-
-    @media ${device.tablet} {
-        font-size: ${pixelToRem(43)};
-    }
-
-    &:hover {
-        background-color: ${color.green};
-        color: ${(props) => props.theme.color.page.fontHover};
-        cursor: pointer;
-    }
-`;
-
 export const TechstackItemContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: ${pixelToRem(30, 0, 70, 0)};
+    margin: ${pixelToRem(0, 0, 70, 0)};
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(26)};
+        font-size: ${pixelToRem(fontSize.normalMobileText)};
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(32)};
+        font-size: ${pixelToRem(fontSize.normalText)};
     }
 `;
 export const ItemWrapper = styled.div`
@@ -55,11 +36,11 @@ export const ItemWrapper = styled.div`
     padding: ${pixelToRem(20, 0)};
 
     @media ${device.mobile} {
-        font-size: ${pixelToRem(18)};
+        font-size: ${pixelToRem(fontSize.iconMobileLabel)};
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(24)};
+        font-size: ${pixelToRem(fontSize.iconLabel)};
     }
 `;
 

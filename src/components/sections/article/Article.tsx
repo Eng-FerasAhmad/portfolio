@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ReactElement } from 'react';
 import {
     ArticleContainer,
     ArticleTitleWrapper,
@@ -6,20 +6,13 @@ import {
 } from './styles';
 import useArticle from './useArticle';
 
-export default function Article(): JSX.Element {
+export default function Article(): ReactElement {
     const { viewModel } = useArticle();
-    const [show, setShow] = useState<boolean>(false);
-
-    const clickHandler = (): void => {
-        setShow(!show);
-    };
 
     return (
         <ArticleContainer>
-            <ArticleTitleWrapper onClick={clickHandler}>
-                {viewModel?.entityHeader}
-            </ArticleTitleWrapper>
-            {show && <ArticleItemContainer>Coming soon!</ArticleItemContainer>}
+            <ArticleTitleWrapper>{viewModel?.entityHeader}</ArticleTitleWrapper>
+            <ArticleItemContainer>Coming soon!</ArticleItemContainer>
         </ArticleContainer>
     );
 }
