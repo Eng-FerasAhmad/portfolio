@@ -1,9 +1,9 @@
-import * as React from 'react';
+import { ReactElement, SVGProps } from 'react';
 import { SvgMastersContainer } from './style';
 
 export default function FrontendMastersIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
         <SvgMastersContainer
             width={229}

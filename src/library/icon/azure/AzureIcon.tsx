@@ -1,16 +1,11 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
 export default function AzureIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 32 32"
-            {...props}
-        >
+        <SvgTechContainer viewBox="0 0 32 32" {...props}>
             <path
                 d="M14.98,25.994c3.57-.726,6.518-1.327,6.552-1.335l.062-.015-3.37-4.615c-1.854-2.538-3.37-4.625-3.37-4.637s3.48-11.056,3.5-11.095c.007-.013,2.375,4.694,5.741,11.411l5.774,11.521.044.088-10.711,0-10.711,0Z"
                 style={{

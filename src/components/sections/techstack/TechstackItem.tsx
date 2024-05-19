@@ -1,6 +1,4 @@
 import IconSelector from '../../../library/icon-selector/IconSelector';
-import ProgressBarComponent from '../../../library/progressbar/ProgressBar';
-import { color } from '../../../style/color';
 import { Category } from '../../../types/techstackTypes';
 import {
     ItemWrapper,
@@ -16,10 +14,7 @@ interface Props {
 export default function TechstackItem({ category }: Props): JSX.Element {
     return (
         <TechstackItemContainer>
-            <ItemsGroupTitleWrapper>
-                {category?.name}
-                <ProgressBarComponent color={color.green} completed={100} />
-            </ItemsGroupTitleWrapper>
+            <ItemsGroupTitleWrapper>{category?.name}</ItemsGroupTitleWrapper>
             <ItemsGroupWrapper>
                 {category &&
                     category.skills &&

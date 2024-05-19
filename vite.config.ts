@@ -13,4 +13,33 @@ export default defineConfig({
         environment: 'jsdom',
         setupFiles: ['./src/test/setup.ts'],
     },
+    resolve: {
+        alias: {
+            src: '/src',
+            components: '/src/components',
+            library: '/src/library',
+            style: '/src/style',
+            types: '/src/types',
+            utils: '/src/utils',
+            context: '/src/context',
+            router: '/src/router',
+            service: '/src/service',
+            test: '/src/test',
+        },
+    },
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        return id
+                            .toString()
+                            .split('node_modules/')[1]
+                            .split('/')[0]
+                            .toString();
+                    }
+                },
+            },
+        },
+    },
 });

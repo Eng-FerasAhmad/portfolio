@@ -1,9 +1,7 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
-export default function NodeIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+export default function NodeIcon(props: SVGProps<SVGSVGElement>): ReactElement {
     return (
         <SvgTechContainer
             width="24px"

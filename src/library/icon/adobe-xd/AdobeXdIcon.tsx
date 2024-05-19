@@ -1,18 +1,15 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
 export default function AdobeXdIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
         <SvgTechContainer
-            id="Layer_1"
             x="0px"
             y="0px"
             viewBox="0 0 2500 2437.5"
             xmlSpace="preserve"
-            width="24px"
-            height="24px"
             {...props}
         >
             <style type="text/css">

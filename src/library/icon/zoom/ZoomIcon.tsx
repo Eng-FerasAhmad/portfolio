@@ -1,9 +1,7 @@
-import * as React from 'react';
+import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from '../../icon-selector/style';
 
-export default function ZoomIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+export default function ZoomIcon(props: SVGProps<SVGSVGElement>): ReactElement {
     return (
         <SvgTechContainer
             width="24px"

@@ -8,13 +8,13 @@ export const GithubIconWrapper = styled.div`
     align-items: center;
 
     @media ${device.mobile} {
-        margin-top: ${pixelToRem(5)};
-        height: ${pixelToRem(40)};
-        width: ${pixelToRem(40)};
+        margin-top: ${pixelToRem(15)};
+        height: ${pixelToRem(24)};
+        width: ${pixelToRem(24)};
     }
 
     @media ${device.tablet} {
-        margin-top: ${pixelToRem(0)};
+        margin: 0;
         height: ${pixelToRem(50)};
         width: ${pixelToRem(50)};
     }

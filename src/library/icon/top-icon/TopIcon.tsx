@@ -1,9 +1,7 @@
-import * as React from 'react';
+import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from '../../icon-selector/style';
 
-export default function TopIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+export default function TopIcon(props: SVGProps<SVGSVGElement>): ReactElement {
     return (
         <SvgTechContainer
             width="45px"

@@ -10,7 +10,7 @@ interface Props {
 export const ButtonContainer = styled.div<Props>`
     font-size: ${pixelToRem(23)};
     border-radius: ${pixelToRem(23)};
-    border-color: ${(props) => props.color};
+    border-color: ${(props) => props.color || props.color};
     border-style: solid;
     border-width: thin;
     color: ${(props) => props.theme.color.button.font};
@@ -18,10 +18,11 @@ export const ButtonContainer = styled.div<Props>`
     padding: ${pixelToRem(10, 30)};
     cursor: pointer;
     margin: ${pixelToRem(10)};
-    background-color: ${(props) => props.color};
+    background-color: ${(props) => props.color || props.color};
 
     &:hover {
-        background-color: ${(props) => props.secondaryColor};
+        background-color: ${(props) =>
+            props.secondaryColor || props.secondaryColor};
         color: ${(props) => props.theme.color.button.font};
     }
 

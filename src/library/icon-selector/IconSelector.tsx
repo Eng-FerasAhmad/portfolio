@@ -1,4 +1,4 @@
-import { ReactNode, useContext } from 'react';
+import { ReactElement, ReactNode, useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import { color } from '../../style/color';
 import AdobeXdIcon from '../icon/adobe-xd/AdobeXdIcon';
@@ -69,7 +69,7 @@ interface Props {
     iconName: string;
 }
 
-export default function IconSelector({ iconName }: Props): JSX.Element {
+export default function IconSelector({ iconName }: Props): ReactElement {
     const { isDarkTheme } = useContext(ThemeContext);
 
     const iconSelector = (): ReactNode => {

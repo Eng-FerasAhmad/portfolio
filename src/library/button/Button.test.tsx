@@ -6,7 +6,14 @@ import Button from './Button';
 describe('<Button />', () => {
     test('Should render the component', () => {
         const clickHandlerSpy = vitest.fn();
-        render(<Button label="mock label" clickHandler={clickHandlerSpy} />);
+        render(
+            <Button
+                color={'red'}
+                secondaryColor={'red'}
+                label="mock label"
+                clickHandler={clickHandlerSpy}
+            />
+        );
 
         const button = screen.getByRole('button');
         expect(button).toBeInTheDocument();
@@ -15,7 +22,14 @@ describe('<Button />', () => {
 
     test('Should handle click button', async () => {
         const clickHandlerSpy = vitest.fn();
-        render(<Button label="mock label" clickHandler={clickHandlerSpy} />);
+        render(
+            <Button
+                color={'red'}
+                secondaryColor={'red'}
+                label="mock label"
+                clickHandler={clickHandlerSpy}
+            />
+        );
 
         const button = screen.getByRole('button');
         expect(button).toBeInTheDocument();

@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
-import { IoLogoGithub } from 'react-icons/io5';
-import { color } from '../../../style/color';
 import { GithubIconWrapper } from './styles';
+import GitHubIcon from 'src/library/icon/github/GithubIcon';
+import { color } from 'style/color';
 
 interface Props {
     isDark: boolean;
@@ -14,7 +14,11 @@ export default function GithubNavigation({ isDark }: Props): ReactElement {
 
     return (
         <GithubIconWrapper onClick={clickHandler}>
-            <IoLogoGithub size={24} color={isDark ? color.light : color.dark} />
+            <GitHubIcon
+                iconWidth={24}
+                iconHeight={24}
+                color={isDark ? color.light : color.dark}
+            />
         </GithubIconWrapper>
     );
 }

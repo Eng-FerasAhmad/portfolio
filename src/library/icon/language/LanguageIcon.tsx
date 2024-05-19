@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
-import { IoLanguage } from 'react-icons/io5';
-import { color } from '../../../style/color';
 import { LanguageIconWrapper } from './styles';
+import LangIcon from 'src/library/icon/lang/LangIcon';
+import { color } from 'style/color';
 
 interface Props {
     clickHandler: () => void;
@@ -14,7 +14,11 @@ export default function LanguageIcon({
 }: Props): ReactElement {
     return (
         <LanguageIconWrapper onClick={clickHandler}>
-            <IoLanguage size={24} color={isDark ? color.light : color.dark} />
+            <LangIcon
+                iconWidth={28}
+                iconHeight={28}
+                color={isDark ? color.light : color.dark}
+            />
         </LanguageIconWrapper>
     );
 }

@@ -18,8 +18,22 @@
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+        "baseUrl": ".",
+        "paths": {
+            "src/*": ["./src/*"],
+            "components/*": ["./src/components/*"],
+            "library/*": ["./src/library*/"],
+            "style/*": ["./src/style/*"],
+            "types/*": ["./src/types/*"],
+            "utils/*": ["./src/utils/*"],
+            "context/*": ["./src/context/*"],
+            "router/*": ["./src/router/*"],
+            "service/*": ["./src/service/*"],
+            "test/*": ["./src/test/*"]
+        }
     },
+
     "include": [
         "src",
         "public/data/education",

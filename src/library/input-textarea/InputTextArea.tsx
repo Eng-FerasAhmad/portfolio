@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, ReactElement } from 'react';
 import {
     ErrorLabelWrapper,
     InputTextContainer,
@@ -19,7 +19,7 @@ export default function InputTextArea({
     placeholder,
     error,
     changeHandler,
-}: Props): JSX.Element {
+}: Props): ReactElement {
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
         if (event?.target && event.target.value.length > 0) {
             changeHandler(event);

@@ -1,4 +1,6 @@
-export default function Slides(): JSX.Element {
+import { ReactElement } from 'react';
+
+export default function Slides(): ReactElement {
     return (
         <>
             <>Slides</>

@@ -8,11 +8,13 @@ export const ThemeIconWrapper = styled.div`
     align-items: center;
 
     @media ${device.mobile} {
+        margin-top: ${pixelToRem(10)};
         height: ${pixelToRem(40)};
         width: ${pixelToRem(40)};
     }
 
     @media ${device.tablet} {
+        margin: 0;
         height: ${pixelToRem(50)};
         width: ${pixelToRem(50)};
     }

@@ -1,16 +1,11 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
 export default function DrawioIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 32 32"
-            {...props}
-        >
+        <SvgTechContainer viewBox="0 0 32 32" {...props}>
             <rect
                 x={2}
                 y={2}

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 import TopIcon from '../icon/top-icon/TopIcon';
 import { ButtonContainer } from './styles';
 
-export default function ScrollButton(): JSX.Element {
+export default function ScrollButton(): ReactElement {
     const [showScrollButton, setShowScrollButton] = useState<boolean>(false);
 
     useEffect(() => {

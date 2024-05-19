@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { fontSize } from '../../../style/common';
-import { device } from '../../../style/screenSize';
-import { pixelToRem } from '../../../utils/utils';
+import { color } from 'style/color';
+import { fontSize } from 'style/common';
+import { device } from 'style/screenSize';
+import { pixelToRem } from 'utils/utils';
 
 export const TechstackContainer = styled.div`
     width: fit-content;
@@ -47,6 +48,7 @@ export const ItemWrapper = styled.div`
 export const ItemsGroupTitleWrapper = styled.div`
     padding-bottom: ${pixelToRem(8)};
     margin: ${pixelToRem(20)} auto;
+    border-bottom: ${pixelToRem(3)} solid ${color.green};
 `;
 
 export const ItemsGroupWrapper = styled.div`

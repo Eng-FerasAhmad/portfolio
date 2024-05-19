@@ -1,9 +1,9 @@
-import * as React from 'react';
+import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from '../../icon-selector/style';
 
 export default function VisualStudioIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
         <SvgTechContainer
             viewBox="0 0 24 24"

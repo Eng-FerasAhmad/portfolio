@@ -1,18 +1,11 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
 export default function CypressIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
-        <SvgTechContainer
-            fill="#4deaa9"
-            width="24px"
-            height="24px"
-            viewBox="0 0 24 24"
-            role="img"
-            {...props}
-        >
+        <SvgTechContainer fill="#4deaa9" viewBox="0 0 24 24" {...props}>
             <g id="SVGRepo_bgCarrier" strokeWidth={0} />
             <g
                 id="SVGRepo_tracerCarrier"

@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
-import { IoMoon, IoSunny } from 'react-icons/io5';
-import { color } from '../../../style/color';
 import { ThemeIconWrapper } from './styles';
+import MoonIcon from 'src/library/icon/moon/MoonIcon';
+import SunIcon from 'src/library/icon/sun/SunIcon';
 
 interface Props {
     clickHandler: () => void;
@@ -15,9 +15,9 @@ export default function ThemeIcon({
     return (
         <ThemeIconWrapper onClick={clickHandler}>
             {isDark ? (
-                <IoSunny size={24} color={color.light} />
+                <SunIcon iconHeight={28} iconWidth={28} />
             ) : (
-                <IoMoon size={24} color={color.dark} />
+                <MoonIcon iconHeight={28} iconWidth={28} />
             )}
         </ThemeIconWrapper>
     );

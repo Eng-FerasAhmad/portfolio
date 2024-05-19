@@ -1,13 +1,11 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
 export default function AngularIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
         <SvgTechContainer
-            width="24px"
-            height="24px"
             viewBox="-8 0 272 272"
             preserveAspectRatio="xMidYMid"
             {...props}

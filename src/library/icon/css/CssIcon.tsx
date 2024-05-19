@@ -1,16 +1,9 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
-export default function CssIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+export default function CssIcon(props: SVGProps<SVGSVGElement>): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 32 32"
-            {...props}
-        >
+        <SvgTechContainer viewBox="0 0 32 32" {...props}>
             <polygon
                 points="5.902 27.201 3.656 2 28.344 2 26.095 27.197 15.985 30 5.902 27.201"
                 style={{

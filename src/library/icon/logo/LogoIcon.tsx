@@ -1,13 +1,9 @@
-import * as React from 'react';
-import { ReactElement } from 'react';
+import { ReactElement, SVGProps } from 'react';
 import { SvgContainer } from './style';
 
-export default function LogoIcon(
-    props: React.SVGProps<SVGSVGElement>
-): ReactElement {
+export default function LogoIcon(props: SVGProps<SVGSVGElement>): ReactElement {
     return (
         <SvgContainer
-            id="logo"
             width={46}
             height={46}
             viewBox="0 0 46 46"

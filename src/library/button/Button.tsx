@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { ButtonContainer } from './styles';
 
 interface Props {
@@ -12,7 +13,7 @@ export default function Button({
     color,
     clickHandler,
     secondaryColor,
-}: Props): JSX.Element {
+}: Props): ReactElement {
     return (
         <ButtonContainer
             onClick={clickHandler}

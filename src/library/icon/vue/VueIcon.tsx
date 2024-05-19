@@ -1,15 +1,12 @@
-import * as React from 'react';
+import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from '../../icon-selector/style';
 
-export default function VueIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+export default function VueIcon(props: SVGProps<SVGSVGElement>): ReactElement {
     return (
         <SvgTechContainer
             width="24px"
             height="24px"
             viewBox="0 0 64 64"
-            xmlSpace="preserve"
             style={{
                 fillRule: 'evenodd',
                 clipRule: 'evenodd',

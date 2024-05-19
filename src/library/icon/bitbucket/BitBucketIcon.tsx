@@ -1,16 +1,11 @@
-import * as React from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement, SVGProps } from 'react';
+import { SvgTechContainer } from 'src/library/icon-selector/style';
 
 export default function BitBucketIcon(
-    props: React.SVGProps<SVGSVGElement>
-): JSX.Element {
+    props: SVGProps<SVGSVGElement>
+): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 32 32"
-            {...props}
-        >
+        <SvgTechContainer viewBox="0 0 32 32" {...props}>
             <path
                 d="M2.9087 3.00008C2.64368 2.99655 2.3907 3.11422 2.21764 3.32152C2.04458 3.52883 1.96915 3.80455 2.01158 4.07472L5.81987 27.9484C5.91782 28.5515 6.42093 28.9949 7.01305 28.9999H25.283C25.7274 29.0058 26.109 28.6748 26.1801 28.2217L29.9884 4.07935C30.0309 3.80918 29.9554 3.53346 29.7824 3.32615C29.6093 3.11885 29.3563 3.00118 29.0913 3.00471L2.9087 3.00008ZM18.9448 20.2546H13.1135L11.5346 11.7362H20.3578L18.9448 20.2546Z"
                 fill="#2684FF"

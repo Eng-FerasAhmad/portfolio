@@ -1,3 +1,5 @@
+import isPropValid from '@emotion/is-prop-valid';
+
 type FormatType = '2-digit' | 'numeric';
 
 interface Format {
@@ -33,4 +35,16 @@ export const formatDate = (dateAdded: string, longFormat: boolean): string => {
     const date = new Date(dateAdded).toLocaleDateString('de-DE', format);
 
     return date.toString();
+};
+
+export const shouldForwardProp = (
+    propName: string,
+    target: unknown
+): boolean => {
+    if (typeof target === 'string') {
+        // For HTML elements, forward the prop if it is a valid HTML attribute
+        return isPropValid(propName);
+    }
+    // For other elements, forward all props
+    return true;
 };
