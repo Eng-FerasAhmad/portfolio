@@ -15,7 +15,7 @@ interface Props {
 export default function TechstackItem({ category }: Props): JSX.Element {
     return (
         <TechstackItemContainer>
-            <AnimationFadeIn duration={2}>
+            <AnimationFadeIn duration={1}>
                 <ItemsGroupTitleWrapper>
                     {category?.name}
                 </ItemsGroupTitleWrapper>
@@ -23,10 +23,10 @@ export default function TechstackItem({ category }: Props): JSX.Element {
             <ItemsGroupWrapper>
                 {category &&
                     category.skills &&
-                    category.skills.map((ts, i) => {
+                    category.skills.map((ts) => {
                         return (
                             <ItemWrapper key={ts.id} data-testid="item-wrapper">
-                                <AnimationFadeIn duration={i}>
+                                <AnimationFadeIn duration={1}>
                                     <div>
                                         <IconSelector iconName={ts.icon} />
                                     </div>

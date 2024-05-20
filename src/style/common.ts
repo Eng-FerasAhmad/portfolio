@@ -1,6 +1,6 @@
 export const fontSize = {
     base: 16,
-    normalText: 28,
+    normalText: 25,
     normalSmallerText: 26,
     titleText: 38,
 

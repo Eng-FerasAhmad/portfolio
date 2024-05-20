@@ -17,7 +17,7 @@ export default function Developer(): ReactElement {
 
     return (
         <DeveloperContainer data-testid="developer">
-            <AnimationFadeIn duration={2}>
+            <AnimationFadeIn duration={1}>
                 {viewModel && (
                     <ContentContainer>
                         <ImageContainer>

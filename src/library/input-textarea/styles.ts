@@ -60,12 +60,12 @@ export const LabelWrapper = styled.label`
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(23)};
+        font-size: ${pixelToRem(20)};
     }
 `;
 
 export const ErrorLabelWrapper = styled.label`
-    color: ${color.red};
+    color: ${color.error};
     width: fit-content;
     margin: ${pixelToRem(5, 0, 0, 30)};
 

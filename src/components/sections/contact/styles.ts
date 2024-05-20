@@ -85,3 +85,24 @@ export const DescriptionWrapper = styled.div`
     width: fit-content;
     margin: ${pixelToRem(30)} auto;
 `;
+
+export const MailSentWrapper = styled.div`
+    margin: auto;
+    flex-direction: row;
+
+    @media ${device.mobile} {
+        width: fit-content;
+        height: ${pixelToRem(140)};
+    }
+
+    @media ${device.tablet} {
+        width: ${pixelToRem(500)};
+        height: ${pixelToRem(140)};
+        display: flex;
+        flex-direction: row;
+    }
+`;
+
+export const SentTextWrapper = styled.div`
+    margin-left: ${pixelToRem(10)};
+`;

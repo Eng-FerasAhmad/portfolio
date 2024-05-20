@@ -15,7 +15,8 @@
         "email": "E-Mail",
         "message": "Nachricht",
         "send": "Senden",
-        "error": "Bitte Pflichtfeld ausfüllen"
+        "error": "Pflichtfeld is invalid",
+        "messageSent": "Ihre E-Mail wurde erfolgreich versendet!"
     },
     "media": [
         {

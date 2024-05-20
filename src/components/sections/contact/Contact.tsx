@@ -6,16 +6,20 @@ import {
     DescriptionWrapper,
     ItemsContainer,
     ItemWrapper,
+    MailSentWrapper,
+    SentTextWrapper,
     SocialMediaWrapper,
 } from './styles';
 import useContact from './useContact';
 import Button from 'src/library/button/Button';
+import CheckIcon from 'src/library/icon/check/CheckIcon';
 import IconSelector from 'src/library/icon-selector/IconSelector';
 import InputText from 'src/library/input-text/InputText';
 import InputTextArea from 'src/library/input-textarea/InputTextArea';
 import { AnimationFadeIn } from 'style/animation';
 import { color } from 'style/color';
 import { FormViewModel } from 'types/ContactTypes';
+import { stringMailPattern } from 'utils/utils';
 
 export default function Contact(): ReactElement {
     const { viewModel } = useContact();
@@ -30,6 +34,7 @@ export default function Contact(): ReactElement {
     const changeNameHandler = (
         event: ChangeEvent<HTMLInputElement> | undefined
     ): void => {
+        setIsSubmit(false);
         setFormData({
             name: event?.target.value || '',
             subject: formData?.subject || '',
@@ -41,6 +46,7 @@ export default function Contact(): ReactElement {
     const changeSubjectHandler = (
         event: ChangeEvent<HTMLInputElement> | undefined
     ): void => {
+        setIsSubmit(false);
         setFormData({
             name: formData?.name || '',
             subject: event?.target.value || '',
@@ -52,6 +58,7 @@ export default function Contact(): ReactElement {
     const changeEmailHandler = (
         event: ChangeEvent<HTMLInputElement> | undefined
     ): void => {
+        setIsSubmit(false);
         setFormData({
             name: formData?.name || '',
             subject: formData?.subject || '',
@@ -62,6 +69,7 @@ export default function Contact(): ReactElement {
     const changeMessageHandler = (
         event: ChangeEvent<HTMLTextAreaElement> | undefined
     ): void => {
+        setIsSubmit(false);
         setFormData({
             name: formData?.name || '',
             subject: formData?.subject || '',
@@ -70,31 +78,60 @@ export default function Contact(): ReactElement {
         });
     };
 
+    const isMailValid = (): boolean => {
+        return formData.email !== '' && stringMailPattern(formData.email);
+    };
+
+    const handleValidation = (): boolean => {
+        return (
+            isSubmit &&
+            formData.name !== '' &&
+            formData.message !== '' &&
+            formData.subject !== '' &&
+            isMailValid()
+        );
+    };
+
     const submitHandler = (): void => {
         setIsSubmit(true);
     };
 
-    const isError = isSubmit && viewModel && formData;
+    const isCheck = isSubmit && viewModel && formData;
     const nameError =
-        isError && formData?.name.length === 0 ? viewModel?.form.error : '';
+        isCheck && formData?.name.length === 0 ? viewModel?.form.error : '';
     const subjectError =
-        isError && formData?.subject.length === 0 ? viewModel?.form.error : '';
+        isCheck && formData?.subject.length === 0 ? viewModel?.form.error : '';
     const emailError =
-        isError && formData?.email.length === 0 ? viewModel?.form.error : '';
+        (isCheck && formData?.email.length === 0) ||
+        (!stringMailPattern(formData.email) && isSubmit)
+            ? viewModel?.form.error
+            : '';
     const messageError =
-        isError && formData?.message.length === 0 ? viewModel?.form.error : '';
+        isCheck && formData?.message.length === 0 ? viewModel?.form.error : '';
 
     return (
         <ContactContainer data-testid="contact">
-            <AnimationFadeIn duration={2}>
+            <AnimationFadeIn duration={1}>
                 <SocialMediaWrapper>
                     <DescriptionWrapper>
                         {viewModel?.description}
                     </DescriptionWrapper>
                 </SocialMediaWrapper>
 
-                <ContactItemContainer data-testid="contact-item">
-                    <div>
+                {handleValidation() && (
+                    <MailSentWrapper>
+                        <CheckIcon />
+                        <SentTextWrapper>
+                            {viewModel?.form.messageSent}
+                        </SentTextWrapper>
+                    </MailSentWrapper>
+                )}
+
+                {!handleValidation() && (
+                    <ContactItemContainer
+                        data-testid="contact-item"
+                        onSubmit={submitHandler}
+                    >
                         <InputText
                             label={viewModel?.form.name || ''}
                             required={true}
@@ -123,8 +160,9 @@ export default function Contact(): ReactElement {
                             label={viewModel?.form.send || ''}
                             clickHandler={submitHandler}
                         />
-                    </div>
-                </ContactItemContainer>
+                    </ContactItemContainer>
+                )}
+
                 <div>
                     <DescriptionWrapper>{viewModel?.title}</DescriptionWrapper>
                     <ItemsContainer>

@@ -15,7 +15,8 @@
         "email": "E-Mail",
         "message": "Message",
         "send": "Send",
-        "error": "Please fill out the mandatory field"
+        "error": "Field empty or invalid",
+        "messageSent": "Your mail has been sent successfully!"
     },
     "media": [
         {

@@ -48,7 +48,7 @@ export const ItemWrapper = styled.div<Props>`
     font-size: ${pixelToRem(fontSize.iconLabel)};
 
     @media ${device.mobile} {
-        margin-top: 0;
+        margin: ${pixelToRem(20)} auto;
         font-size: ${pixelToRem(fontSize.base)};
     }
 
@@ -100,21 +100,18 @@ export const MenuTabletContainer = styled.div`
 `;
 export const TabletWrapper = styled.div`
     width: fit-content;
+    margin: auto;
 `;
 
 export const TabletNavigationWrapper = styled.div`
     position: absolute;
     top: ${pixelToRem(60)};
-    width: ${pixelToRem(160)};
-    height: ${pixelToRem(180)};
-    margin-left: ${pixelToRem(-70)};
-    background-color: ${(props) => props.theme.color.button.font};
-    border-style: solid;
-    border-width: ${pixelToRem(1)};
-    border-color: ${(props) => props.theme.color.page.font};
-    border-radius: ${pixelToRem(5)};
+    left: 0;
+    width: calc(100vw - 2px);
+    height: calc(100vh - 2px);
+    padding-left: ${pixelToRem(25)};
+    background-image: ${(props) => props.theme.color.page.backgroundImage};
     z-index: 10;
-    box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
 `;
 
 export const TabletContentWrapper = styled.div`
@@ -130,7 +127,7 @@ export const MenuMobileContainer = styled.div`
     @media ${device.mobile} {
         display: block;
         width: fit-content;
-        margin: ${pixelToRem(10, 0, -15, -3)};
+        margin: ${pixelToRem(0, 0, -15, -3)};
     }
 
     @media ${device.tablet} {
@@ -150,17 +147,13 @@ export const MenuMobileContainer = styled.div`
 
 export const MobileNavigationWrapper = styled.div`
     position: absolute;
-    top: ${pixelToRem(60)};
-    width: ${pixelToRem(150)};
-    height: ${pixelToRem(160)};
-    margin-left: ${pixelToRem(40)};
-    background-color: ${(props) => props.theme.color.button.font};
-    border-style: solid;
-    border-width: ${pixelToRem(1)};
-    border-color: ${(props) => props.theme.color.page.font};
-    border-radius: ${pixelToRem(5)};
+    top: 0;
+    left: 0;
+    width: calc(100vw - 0px);
+    height: calc(100vh - 0px);
+    overflow: hidden;
+    background-image: ${(props) => props.theme.color.page.backgroundImage};
     z-index: 10;
-    box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
 `;
 
 export const MobileWrapper = styled.div`

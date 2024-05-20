@@ -47,20 +47,20 @@ export default function MenuMobile(): ReactElement {
                 </MobileWrapper>
             )}
 
-            {show && (
-                <TabletWrapper onClick={() => setShow(false)}>
-                    <CloseIcon
-                        iconWidth={30}
-                        iconHeight={30}
-                        color={isDarkTheme ? color.light : color.dark}
-                    />
-                </TabletWrapper>
-            )}
-
             {show && viewModel && (
                 <MobileNavigationWrapper>
                     <TabletContentWrapper>
                         <>
+                            <TabletWrapper onClick={() => setShow(false)}>
+                                <CloseIcon
+                                    iconWidth={30}
+                                    iconHeight={30}
+                                    color={
+                                        isDarkTheme ? color.light : color.dark
+                                    }
+                                />
+                            </TabletWrapper>
+
                             <ItemWrapper
                                 border={isDeveloper()}
                                 onClick={() =>

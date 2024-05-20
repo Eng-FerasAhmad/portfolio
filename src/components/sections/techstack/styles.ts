@@ -57,3 +57,11 @@ export const ItemsGroupWrapper = styled.div`
     justify-content: center;
     flex-wrap: wrap-reverse;
 `;
+
+export const WorksWrapper = styled.div`
+    max-width: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 20px;
+`;

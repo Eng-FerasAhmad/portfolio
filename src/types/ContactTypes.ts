@@ -16,6 +16,7 @@ export interface FormViewModel {
     message: string;
     send?: string;
     error?: string;
+    messageSent?: string;
 }
 
 export interface MediaViewModel {

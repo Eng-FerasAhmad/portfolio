@@ -12,7 +12,7 @@ export default function Article(): ReactElement {
 
     return (
         <ArticleContainer>
-            <AnimationFadeIn duration={2}>
+            <AnimationFadeIn duration={1}>
                 {viewModel && (
                     <>
                         <ArticleTitleWrapper>
