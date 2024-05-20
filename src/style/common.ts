@@ -1,6 +1,7 @@
 export const fontSize = {
     base: 16,
     normalText: 28,
+    normalSmallerText: 26,
     titleText: 38,
 
     // icons

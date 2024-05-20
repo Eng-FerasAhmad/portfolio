@@ -6,6 +6,7 @@ import {
     ItemsGroupWrapper,
     TechstackItemContainer,
 } from './styles';
+import { AnimationFadeIn } from 'style/animation';
 
 interface Props {
     category: Category | undefined;
@@ -14,17 +15,23 @@ interface Props {
 export default function TechstackItem({ category }: Props): JSX.Element {
     return (
         <TechstackItemContainer>
-            <ItemsGroupTitleWrapper>{category?.name}</ItemsGroupTitleWrapper>
+            <AnimationFadeIn duration={2}>
+                <ItemsGroupTitleWrapper>
+                    {category?.name}
+                </ItemsGroupTitleWrapper>
+            </AnimationFadeIn>
             <ItemsGroupWrapper>
                 {category &&
                     category.skills &&
-                    category.skills.map((ts) => {
+                    category.skills.map((ts, i) => {
                         return (
                             <ItemWrapper key={ts.id} data-testid="item-wrapper">
-                                <div>
-                                    <IconSelector iconName={ts.icon} />
-                                </div>
-                                <div>{ts.name}</div>
+                                <AnimationFadeIn duration={i}>
+                                    <div>
+                                        <IconSelector iconName={ts.icon} />
+                                    </div>
+                                    <div>{ts.name}</div>
+                                </AnimationFadeIn>
                             </ItemWrapper>
                         );
                     })}

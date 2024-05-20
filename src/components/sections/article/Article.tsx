@@ -5,20 +5,25 @@ import {
     ArticleItemContainer,
 } from './styles';
 import useArticle from './useArticle';
+import { AnimationFadeIn } from 'style/animation';
 
 export default function Article(): ReactElement {
     const { viewModel } = useArticle();
 
     return (
         <ArticleContainer>
-            {viewModel && (
-                <>
-                    <ArticleTitleWrapper>
-                        {viewModel.entityHeader}
-                    </ArticleTitleWrapper>
-                    <ArticleItemContainer>Coming soon!</ArticleItemContainer>
-                </>
-            )}
+            <AnimationFadeIn duration={2}>
+                {viewModel && (
+                    <>
+                        <ArticleTitleWrapper>
+                            {viewModel.entityHeader}
+                        </ArticleTitleWrapper>
+                        <ArticleItemContainer>
+                            Coming soon!
+                        </ArticleItemContainer>
+                    </>
+                )}
+            </AnimationFadeIn>
         </ArticleContainer>
     );
 }

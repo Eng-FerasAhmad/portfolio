@@ -8,6 +8,8 @@ import {
     NameWrapper,
     IconsWrapper,
 } from './styles';
+import MenuMobile from 'components/navigation/MenuMobile';
+import MenuTablet from 'components/navigation/MenuTablet';
 import Navigation from 'components/navigation/Navigation';
 import { ThemeContext } from 'context/ThemeContext';
 import { routerPath } from 'router/constant';
@@ -36,7 +38,8 @@ export default function Header(): ReactElement {
                 </LogoWrapper>
 
                 <Navigation />
-
+                <MenuTablet />
+                <MenuMobile />
                 <IconsWrapper>
                     <GithubNavigation isDark={isDarkTheme!} />
                     <ThemeIcon

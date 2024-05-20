@@ -13,6 +13,7 @@ import Button from 'src/library/button/Button';
 import IconSelector from 'src/library/icon-selector/IconSelector';
 import InputText from 'src/library/input-text/InputText';
 import InputTextArea from 'src/library/input-textarea/InputTextArea';
+import { AnimationFadeIn } from 'style/animation';
 import { color } from 'style/color';
 import { FormViewModel } from 'types/ContactTypes';
 
@@ -85,62 +86,64 @@ export default function Contact(): ReactElement {
 
     return (
         <ContactContainer data-testid="contact">
-            <SocialMediaWrapper>
-                <DescriptionWrapper>
-                    {viewModel?.description}
-                </DescriptionWrapper>
-            </SocialMediaWrapper>
+            <AnimationFadeIn duration={2}>
+                <SocialMediaWrapper>
+                    <DescriptionWrapper>
+                        {viewModel?.description}
+                    </DescriptionWrapper>
+                </SocialMediaWrapper>
 
-            <ContactItemContainer data-testid="contact-item">
+                <ContactItemContainer data-testid="contact-item">
+                    <div>
+                        <InputText
+                            label={viewModel?.form.name || ''}
+                            required={true}
+                            error={nameError}
+                            changeHandler={changeNameHandler}
+                        />
+                        <InputText
+                            label={viewModel?.form.subject || ''}
+                            error={subjectError}
+                            changeHandler={changeSubjectHandler}
+                        />
+                        <InputText
+                            label={viewModel?.form.email || ''}
+                            changeHandler={changeEmailHandler}
+                            error={emailError}
+                            type="email"
+                        />
+                        <InputTextArea
+                            label={viewModel?.form.message || ''}
+                            changeHandler={changeMessageHandler}
+                            error={messageError}
+                        />
+                        <Button
+                            color={color.yellow}
+                            secondaryColor={color.yellowDark}
+                            label={viewModel?.form.send || ''}
+                            clickHandler={submitHandler}
+                        />
+                    </div>
+                </ContactItemContainer>
                 <div>
-                    <InputText
-                        label={viewModel?.form.name || ''}
-                        required={true}
-                        error={nameError}
-                        changeHandler={changeNameHandler}
-                    />
-                    <InputText
-                        label={viewModel?.form.subject || ''}
-                        error={subjectError}
-                        changeHandler={changeSubjectHandler}
-                    />
-                    <InputText
-                        label={viewModel?.form.email || ''}
-                        changeHandler={changeEmailHandler}
-                        error={emailError}
-                        type="email"
-                    />
-                    <InputTextArea
-                        label={viewModel?.form.message || ''}
-                        changeHandler={changeMessageHandler}
-                        error={messageError}
-                    />
-                    <Button
-                        color={color.yellow}
-                        secondaryColor={color.yellowDark}
-                        label={viewModel?.form.send || ''}
-                        clickHandler={submitHandler}
-                    />
-                </div>
-            </ContactItemContainer>
-            <div>
-                <DescriptionWrapper>Check my Accounts</DescriptionWrapper>
-                <ItemsContainer>
-                    {viewModel?.media.map((item) => {
-                        return (
-                            <ItemWrapper
-                                key={item.icon}
-                                href={item.link}
-                                target="_blank"
-                            >
-                                <IconSelector iconName={item.icon} />
+                    <DescriptionWrapper>{viewModel?.title}</DescriptionWrapper>
+                    <ItemsContainer>
+                        {viewModel?.media.map((item) => {
+                            return (
+                                <ItemWrapper
+                                    key={item.icon}
+                                    href={item.link}
+                                    target="_blank"
+                                >
+                                    <IconSelector iconName={item.icon} />
 
-                                <div>{item.name}</div>
-                            </ItemWrapper>
-                        );
-                    })}
-                </ItemsContainer>
-            </div>
+                                    <div>{item.name}</div>
+                                </ItemWrapper>
+                            );
+                        })}
+                    </ItemsContainer>
+                </div>
+            </AnimationFadeIn>
         </ContactContainer>
     );
 }

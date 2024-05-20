@@ -5,6 +5,7 @@ export interface DeveloperViewModel {
     title: string;
     name: string;
     about: string;
+    aboutMore: string;
     socialAccount: Array<SocialAccount>;
     language: Array<string>;
     pages: Pages;

@@ -17,7 +17,15 @@ export const SvgTechContainer = styled.svg<Props>`
         width: ${pixelToRem(35)};
         height: ${pixelToRem(35)};
     }
-    @media ${device.tablet} {
+
+    @media ${device.mobile} {
+        width: ${(props) =>
+            props.iconWidth ? pixelToRem(props.iconWidth) : pixelToRem(40)};
+        height: ${(props) =>
+            props.iconHeight ? pixelToRem(props.iconHeight) : pixelToRem(40)};
+    }
+
+    @media ${device.desktop} {
         width: ${(props) =>
             props.iconWidth ? pixelToRem(props.iconWidth) : pixelToRem(50)};
         height: ${(props) =>

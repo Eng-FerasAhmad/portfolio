@@ -83,5 +83,5 @@ export const ItemWrapper = styled.a`
 export const DescriptionWrapper = styled.div`
     border-bottom: ${pixelToRem(3)} solid ${color.yellow};
     width: fit-content;
-    margin: auto;
+    margin: ${pixelToRem(30)} auto;
 `;

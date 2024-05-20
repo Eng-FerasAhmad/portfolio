@@ -71,10 +71,12 @@ export const AboutWrapper = styled.div`
     line-height: 1.5;
 
     @media ${device.mobile} {
+        margin-bottom: ${pixelToRem(20)};
         font-size: ${pixelToRem(fontSize.descriptionMobileText)};
     }
 
     @media ${device.tablet} {
-        font-size: ${pixelToRem(fontSize.normalText)};
+        margin-bottom: ${pixelToRem(20)};
+        font-size: ${pixelToRem(fontSize.normalSmallerText)};
     }
 `;
