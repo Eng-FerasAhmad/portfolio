@@ -1,4 +1,5 @@
 import isPropValid from '@emotion/is-prop-valid';
+import { routerPath } from 'router/constant';
 
 type FormatType = '2-digit' | 'numeric';
 
@@ -52,3 +53,12 @@ export const shouldForwardProp = (
     // For other elements, forward all props
     return true;
 };
+
+export const isTechstack = (pathname: string): boolean =>
+    pathname === routerPath.techstack;
+export const isDeveloper = (pathname: string): boolean =>
+    pathname === routerPath.developer || pathname === routerPath.home;
+export const isBlog = (pathname: string): boolean =>
+    pathname === routerPath.blog;
+export const isContact = (pathname: string): boolean =>
+    pathname === routerPath.contact;

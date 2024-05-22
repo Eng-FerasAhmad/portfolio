@@ -14,6 +14,7 @@ export const color = {
     light: '#fff',
     dark: '#22272e',
     error: '#FF3333',
+    greenLight: '#c3efdd',
     green: '#5ed4a5',
     greenDark: '#36c98e',
     red: '#fca5a5',

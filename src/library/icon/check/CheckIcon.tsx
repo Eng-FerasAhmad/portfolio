@@ -1,37 +1,18 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgContainer } from './style';
-import { color } from 'style/color';
+import { ReactElement } from 'react';
+import {
+    Check,
+    Checkmark,
+    Circle,
+    SvgContainer,
+} from 'src/library/icon/check/style';
 
-interface Props {
-    iconWidth?: number;
-    iconHeight?: number;
-}
-
-export default function CheckIcon(
-    props: SVGProps<SVGSVGElement> & Props
-): ReactElement {
+export default function CheckIcon(): ReactElement {
     return (
-        <SvgContainer
-            width="24px"
-            height="24px"
-            fill="none"
-            viewBox="0 0 24 24"
-            {...props}
-        >
-            <circle
-                cx="12"
-                cy="12"
-                r="9"
-                fill={color.green}
-                fillOpacity="0.25"
-                stroke={color.green}
-                strokeWidth="1.2"
-            ></circle>
-            <path
-                stroke={color.green}
-                strokeWidth="1.2"
-                d="M8 12l3 3 5-6"
-            ></path>
+        <SvgContainer>
+            <Checkmark xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <Circle cx="26" cy="26" r="25" fill="none" />
+                <Check fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </Checkmark>
         </SvgContainer>
     );
 }

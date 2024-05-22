@@ -1,4 +1,4 @@
-import { ReactElement, useContext, useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import {
     ItemWrapper,
@@ -8,61 +8,62 @@ import {
     TabletContentWrapper,
     TabletWrapper,
 } from 'components/navigation/styles';
-import useDeveloper from 'components/sections/developer/useDeveloper';
-import { ThemeContext } from 'context/ThemeContext';
 import { routerPath } from 'router/constant';
 import CloseIcon from 'src/library/icon/close/CloseIcon';
 import MenuIcon from 'src/library/icon/menu/MenuIcon';
 import { color } from 'style/color';
+import { DeveloperViewModel } from 'types/developerTypes';
+import { isBlog, isContact, isDeveloper, isTechstack } from 'utils/utils';
 
-export default function MenuMobile(): ReactElement {
-    const { isDarkTheme } = useContext(ThemeContext);
-    const { viewModel } = useDeveloper();
-    const [show, setShow] = useState<boolean>(false);
+export interface Props {
+    viewModel: DeveloperViewModel;
+    isDarkTheme: boolean;
+}
+
+export default function MenuMobile({
+    viewModel,
+    isDarkTheme,
+}: Props): ReactElement {
+    const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
     const navigate = useNavigate();
     const location = useLocation();
 
-    const isTechstack = (): boolean =>
-        location.pathname === routerPath.techstack;
-    const isDeveloper = (): boolean =>
-        location.pathname === routerPath.developer ||
-        location.pathname === routerPath.home;
-    const isBlog = (): boolean => location.pathname === routerPath.blog;
-    const isContact = (): boolean => location.pathname === routerPath.contact;
-
     const handleClick = (pathname: string): void => {
         navigate(pathname);
-        setShow(false);
+        setShowMobileMenu(false);
     };
+
+    const toggleMenu = (visible: boolean): void => {
+        setShowMobileMenu(visible);
+    };
+
+    const menuColor = isDarkTheme ? color.light : color.dark;
+    const menuSize = 30;
 
     return (
         <MenuMobileContainer>
-            {!show && (
-                <MobileWrapper onClick={() => setShow(true)}>
+            {!showMobileMenu ? (
+                <MobileWrapper onClick={() => toggleMenu(true)}>
                     <MenuIcon
-                        iconWidth={30}
-                        iconHeight={30}
-                        color={isDarkTheme ? color.light : color.dark}
+                        iconWidth={menuSize}
+                        iconHeight={menuSize}
+                        color={menuColor}
                     />
                 </MobileWrapper>
-            )}
-
-            {show && viewModel && (
+            ) : (
                 <MobileNavigationWrapper>
                     <TabletContentWrapper>
                         <>
-                            <TabletWrapper onClick={() => setShow(false)}>
+                            <TabletWrapper onClick={() => toggleMenu(false)}>
                                 <CloseIcon
-                                    iconWidth={30}
-                                    iconHeight={30}
-                                    color={
-                                        isDarkTheme ? color.light : color.dark
-                                    }
+                                    iconWidth={menuSize}
+                                    iconHeight={menuSize}
+                                    color={menuColor}
                                 />
                             </TabletWrapper>
 
                             <ItemWrapper
-                                border={isDeveloper()}
+                                border={isDeveloper(location.pathname)}
                                 onClick={() =>
                                     handleClick(routerPath.developer)
                                 }
@@ -70,7 +71,7 @@ export default function MenuMobile(): ReactElement {
                                 {viewModel.pages.developer}
                             </ItemWrapper>
                             <ItemWrapper
-                                border={isTechstack()}
+                                border={isTechstack(location.pathname)}
                                 onClick={() =>
                                     handleClick(routerPath.techstack)
                                 }
@@ -78,13 +79,13 @@ export default function MenuMobile(): ReactElement {
                                 {viewModel.pages.techstack}
                             </ItemWrapper>
                             <ItemWrapper
-                                border={isBlog()}
+                                border={isBlog(location.pathname)}
                                 onClick={() => handleClick(routerPath.blog)}
                             >
                                 {viewModel.pages.blog}
                             </ItemWrapper>
                             <ItemWrapper
-                                border={isContact()}
+                                border={isContact(location.pathname)}
                                 onClick={() => handleClick(routerPath.contact)}
                             >
                                 {viewModel.pages.contact}

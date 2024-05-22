@@ -64,6 +64,7 @@ import YarnIcon from '../icon/yarn/YarnIcon';
 import ZeplinIcon from '../icon/zeplin/ZeplinIcon';
 import ZoomIcon from '../icon/zoom/ZoomIcon';
 import { IconSelectorContainer } from './style';
+import GmxIcon from 'src/library/icon/gmx/GmxIcon';
 
 interface Props {
     iconName: string;
@@ -198,12 +199,12 @@ export default function IconSelector({ iconName }: Props): ReactElement {
                 return <DrawioIcon />;
             case 'react-suite':
                 return <ReactSuiteIcon />;
-
             case 'linked-in':
                 return <LinkedInIcon />;
-
             case 'frontend-masters':
                 return <FrontendMastersIcon />;
+            case 'gmx':
+                return <GmxIcon />;
             default:
                 return <></>;
         }

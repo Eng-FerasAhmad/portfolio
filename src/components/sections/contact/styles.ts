@@ -89,20 +89,32 @@ export const DescriptionWrapper = styled.div`
 export const MailSentWrapper = styled.div`
     margin: auto;
     flex-direction: row;
+    background-color: ${color.greenLight};
+    border: ${pixelToRem(1)} solid ${color.green};
+    border-radius: ${pixelToRem(5)};
 
     @media ${device.mobile} {
+        font-size: ${pixelToRem(fontSize.descriptionMobileText)};
         width: fit-content;
-        height: ${pixelToRem(140)};
+        height: ${pixelToRem(120)};
+        padding: ${pixelToRem(20, 20)};
     }
 
     @media ${device.tablet} {
+        font-size: ${pixelToRem(20)};
         width: ${pixelToRem(500)};
-        height: ${pixelToRem(140)};
+        height: ${pixelToRem(120)};
+        padding: ${pixelToRem(30, 20)};
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 `;
 
 export const SentTextWrapper = styled.div`
     margin-left: ${pixelToRem(10)};
+`;
+
+export const FormContainer = styled.div`
+    width: 100%;
+    width: auto;
 `;

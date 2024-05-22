@@ -1,8 +1,9 @@
+import { ReactElement } from 'react';
 import { TechstackContainer } from './styles';
 import TechstackItem from './TechstackItem';
 import useTechstack from './useTechstack';
 
-export default function Techstack(): JSX.Element {
+export default function Techstack(): ReactElement {
     const { viewModel } = useTechstack();
 
     return (

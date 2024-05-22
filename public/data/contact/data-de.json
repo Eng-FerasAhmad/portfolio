@@ -15,10 +15,16 @@
         "email": "E-Mail",
         "message": "Nachricht",
         "send": "Senden",
-        "error": "Pflichtfeld is invalid",
+        "error": "Bitte füllen Sie dieses Feld aus",
+        "invalidMail": "Ungültige E-Mail Adresse",
         "messageSent": "Ihre E-Mail wurde erfolgreich versendet!"
     },
     "media": [
+        {
+            "name": "GMX",
+            "icon": "gmx",
+            "link": "feras.ahmad@gmx.de"
+        },
         {
             "name": "LinkedIn",
             "icon": "linked-in",

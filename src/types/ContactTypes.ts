@@ -4,18 +4,19 @@ export interface ContactViewModel {
     entityHeader: string;
     title: string;
     description: string;
-    form: FormViewModel;
+    form: ContactForm;
     media: Array<MediaViewModel>;
     pages: Pages;
 }
 
-export interface FormViewModel {
+export interface ContactForm {
     name: string;
     subject: string;
     email: string;
     message: string;
     send?: string;
     error?: string;
+    invalidMail?: string;
     messageSent?: string;
 }
 

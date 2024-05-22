@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import IconSelector from '../../../library/icon-selector/IconSelector';
 import { Category } from '../../../types/techstackTypes';
 import {
@@ -12,9 +13,9 @@ interface Props {
     category: Category | undefined;
 }
 
-export default function TechstackItem({ category }: Props): JSX.Element {
+export default function TechstackItem({ category }: Props): ReactElement {
     return (
-        <TechstackItemContainer>
+        <TechstackItemContainer data-testid="techstack-item">
             <AnimationFadeIn duration={1}>
                 <ItemsGroupTitleWrapper>
                     {category?.name}
