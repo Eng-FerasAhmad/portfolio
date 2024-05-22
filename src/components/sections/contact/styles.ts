@@ -89,15 +89,14 @@ export const DescriptionWrapper = styled.div`
 export const MailSentWrapper = styled.div`
     margin: auto;
     flex-direction: row;
-    background-color: ${color.greenLight};
-    border: ${pixelToRem(1)} solid ${color.green};
-    border-radius: ${pixelToRem(5)};
+    color: ${(props) => props.theme.color.page.font};
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(fontSize.descriptionMobileText)};
         width: fit-content;
-        height: ${pixelToRem(120)};
-        padding: ${pixelToRem(20, 20)};
+        height: ${pixelToRem(90)};
+        padding: ${pixelToRem(100, 20)};
+        border: none;
     }
 
     @media ${device.tablet} {
@@ -107,6 +106,8 @@ export const MailSentWrapper = styled.div`
         padding: ${pixelToRem(30, 20)};
         display: flex;
         flex-direction: column;
+        border: ${pixelToRem(1)} solid ${color.green};
+        border-radius: ${pixelToRem(5)};
     }
 `;
 

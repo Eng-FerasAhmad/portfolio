@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { color } from 'style/color';
 import { device } from 'style/screenSize';
 
+interface Props {
+    isDark: boolean;
+}
+
 export const SvgContainer = styled.div`
     width: fit-content;
     margin: 10px auto;
@@ -61,13 +65,13 @@ export const Checkmark = styled.svg`
     }
 `;
 
-export const Circle = styled.circle`
+export const Circle = styled.circle<Props>`
     stroke-dasharray: 166;
     stroke-dashoffset: 166;
     stroke-width: 2;
     stroke-miterlimit: 10;
     stroke: ${color.green};
-    fill: ${color.greenLight};
+    fill: ${(props) => (props.isDark ? color.dark : color.greenLight)};
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 `;
 
