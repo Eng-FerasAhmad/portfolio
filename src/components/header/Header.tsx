@@ -5,7 +5,6 @@ import {
     HeaderContainer,
     NavbarWrapper,
     LogoWrapper,
-    NameWrapper,
     IconsWrapper,
 } from './styles';
 import MenuMobile from 'components/navigation/MenuMobile';
@@ -35,7 +34,6 @@ export default function Header(): ReactElement {
             <NavbarWrapper>
                 <LogoWrapper onClick={clickHandler}>
                     <LogoIcon width={20} height={28} />
-                    <NameWrapper>Feras Ahmad</NameWrapper>
                 </LogoWrapper>
 
                 <Navigation />

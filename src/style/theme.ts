@@ -4,7 +4,9 @@ export const themeDark = {
     color: {
         page: {
             backgroundImage: 'url(background-dark.jpg)',
-            background: darkThemeColor.customBlack,
+            background:
+                'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)',
+            backgroundHeader: 'lineal-gradient(#1b2735 0%, #090a0f 30%)',
             font: darkThemeColor.fontPrimary,
             fontHover: color.dark,
             border: color.greenDark,

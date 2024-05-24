@@ -23,7 +23,7 @@ export const color = {
     blueDark: '#3385ff',
     yellowLight: '#ffcc99',
     yellow: '#ffa64d',
-    yellowDark: '#ff8c1a',
+    yellowDark: '#FFA64D',
     gray: '#cccccc',
     grayDarker: '#595959',
 };

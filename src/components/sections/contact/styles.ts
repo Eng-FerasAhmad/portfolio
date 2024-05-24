@@ -5,7 +5,7 @@ import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
 
 export const ContactContainer = styled.div`
-    padding: ${pixelToRem(0, 30)};
+    padding: ${pixelToRem(90, 30)};
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(fontSize.normalMobileText)};

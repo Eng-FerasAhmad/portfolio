@@ -17,7 +17,7 @@ export const HeaderContainer = styled.div`
     @media ${device.tablet} {
         width: -webkit-fill-available;
         padding: ${pixelToRem(16, 40)};
-        background-image: ${(props) => props.theme.color.page.backgroundImage};
+        background: ${(props) => props.theme.color.page.backgroundImage};
     }
 `;
 
@@ -53,17 +53,5 @@ export const IconsWrapper = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-`;
-
-export const NameWrapper = styled.div`
-    margin-left: ${pixelToRem(10)};
-
-    @media ${device.mobile} {
-        display: none;
-    }
-
-    @media ${device.tablet} {
-        display: block;
     }
 `;

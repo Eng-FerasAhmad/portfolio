@@ -10,13 +10,13 @@ import { shouldForwardProp } from 'utils/utils';
 export default function App(): ReactElement {
     return (
         <StyleSheetManager shouldForwardProp={shouldForwardProp}>
-            <AppContainer data-testid="app">
-                <ThemeContextProvider>
+            <ThemeContextProvider>
+                <AppContainer data-testid="app">
                     <GlobalStyle />
                     <Header />
                     <Landing />
-                </ThemeContextProvider>
-            </AppContainer>
+                </AppContainer>
+            </ThemeContextProvider>
         </StyleSheetManager>
     );
 }

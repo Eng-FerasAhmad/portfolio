@@ -6,7 +6,7 @@ import { pixelToRem } from 'utils/utils';
 
 export const TechstackContainer = styled.div`
     width: fit-content;
-    padding: ${pixelToRem(0, 30)};
+    padding: ${pixelToRem(90, 30)};
 
     @media ${device.mobile} {
         margin: 0 auto ${pixelToRem(15)} auto;

@@ -29,6 +29,8 @@ export const NavigationContainer = styled.div`
     @media ${device.desktop} {
         visibility: visible;
         width: fit-content;
+        height: 35px;
+        padding-left: 90px;
         margin: auto;
         display: flex;
         flex-direction: row;
@@ -43,7 +45,6 @@ export const ItemWrapper = styled.div<Props>`
     width: fit-content;
     margin: auto;
     height: fit-content;
-    display: block;
     padding: ${pixelToRem(0, 15)};
     font-size: ${pixelToRem(fontSize.iconLabel)};
 
@@ -62,10 +63,29 @@ export const ItemWrapper = styled.div<Props>`
         font-size: ${pixelToRem(fontSize.iconLabel)};
     }
 
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        top: 32px;
+        background-color: ${color.yellowDark};
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
     &:hover {
-        height: fit-content;
-        border-bottom: ${pixelToRem(2)} solid
-            ${(props) => props.theme.color.page.font};
         cursor: pointer;
     }
 `;
@@ -101,6 +121,14 @@ export const MenuTabletContainer = styled.div`
 export const TabletWrapper = styled.div`
     width: fit-content;
     margin: auto;
+
+    @media ${device.mobile} {
+        padding-left: 0;
+    }
+
+    @media ${device.tablet} {
+        padding-left: ${pixelToRem(80)};
+    }
 `;
 
 export const TabletNavigationWrapper = styled.div`
@@ -109,8 +137,8 @@ export const TabletNavigationWrapper = styled.div`
     left: 0;
     width: calc(100vw - 2px);
     height: calc(100vh - 2px);
-    padding-left: ${pixelToRem(25)};
-    background-image: ${(props) => props.theme.color.page.backgroundImage};
+    padding-left: ${pixelToRem(0)};
+    background: ${(props) => props.theme.color.page.background};
     z-index: 10;
 `;
 
@@ -152,7 +180,7 @@ export const MobileNavigationWrapper = styled.div`
     width: calc(100vw - 0px);
     height: calc(100vh - 0px);
     overflow: hidden;
-    background-image: ${(props) => props.theme.color.page.backgroundImage};
+    background: ${(props) => props.theme.color.page.background};
     z-index: 10;
 `;
 
