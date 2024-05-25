@@ -1,6 +1,6 @@
 import { Pages } from 'types/pageType';
 
-export interface ArticleViewModel {
+export interface BlogViewModel {
     entityHeader: string;
     title: string;
     description: string;

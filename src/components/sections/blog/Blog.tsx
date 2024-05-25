@@ -4,10 +4,10 @@ import {
     ArticleTitleWrapper,
     ArticleItemContainer,
 } from './styles';
-import useArticle from './useArticle';
+import useArticle from './useBlog';
 import { AnimationFadeIn } from 'style/animation';
 
-export default function Article(): ReactElement {
+export default function Blog(): ReactElement {
     const { viewModel } = useArticle();
 
     return (

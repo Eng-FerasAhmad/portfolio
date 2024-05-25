@@ -1,14 +1,14 @@
 {
     "pages": {
-        "contact": "Contact",
+        "contact": "Kontakt",
         "blog": "Blog",
         "techstack": "Techstack",
-        "project": "Project",
-        "developer": "About me!"
+        "project": "Projekte",
+        "developer": "Über mich!"
     },
     "entityHeader": "Blog",
-    "title": "Article",
-    "description": "Artikel Studio",
+    "title": "Blog",
+    "description": "Blog Studio",
     "slides": [
         {
             "title": "First Artikel",

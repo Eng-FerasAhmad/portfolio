@@ -6,7 +6,7 @@ const modelData = new Map<DataModel, string>([
     [DataModel.EDUCATION, 'education'],
     [DataModel.PROJECT, 'project'],
     [DataModel.TECHSTACK, 'techstack'],
-    [DataModel.ARTICLE, 'articles'],
+    [DataModel.BLOG, 'blog'],
 ]);
 
 const languageData = new Map<Language, string>([
