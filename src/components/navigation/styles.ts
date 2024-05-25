@@ -138,7 +138,7 @@ export const TabletNavigationWrapper = styled.div`
     width: calc(100vw - 2px);
     height: calc(100vh - 2px);
     padding-left: ${pixelToRem(0)};
-    background: ${(props) => props.theme.color.page.background};
+    background: ${(props) => props.theme.color.page.backgroundImage};
     z-index: 10;
 `;
 
@@ -146,6 +146,8 @@ export const TabletContentWrapper = styled.div`
     width: fit-content;
     margin: auto;
     padding-top: ${pixelToRem(10)};
+    display: flex;
+    flex-direction: column;
 `;
 
 // Mobile view:
@@ -173,6 +175,14 @@ export const MenuMobileContainer = styled.div`
     }
 `;
 
+export const MobileContentWrapper = styled.div`
+    width: fit-content;
+    margin: auto;
+    padding-top: ${pixelToRem(10)};
+    display: flex;
+    flex-direction: column;
+`;
+
 export const MobileNavigationWrapper = styled.div`
     position: absolute;
     top: 0;
@@ -180,7 +190,7 @@ export const MobileNavigationWrapper = styled.div`
     width: calc(100vw - 0px);
     height: calc(100vh - 0px);
     overflow: hidden;
-    background: ${(props) => props.theme.color.page.background};
+    background: ${(props) => props.theme.color.page.backgroundImage};
     z-index: 10;
 `;
 

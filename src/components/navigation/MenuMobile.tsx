@@ -3,9 +3,9 @@ import { useLocation, useNavigate } from 'react-router';
 import {
     ItemWrapper,
     MenuMobileContainer,
+    MobileContentWrapper,
     MobileNavigationWrapper,
     MobileWrapper,
-    TabletContentWrapper,
     TabletWrapper,
 } from 'components/navigation/styles';
 import { routerPath } from 'router/constant';
@@ -51,8 +51,8 @@ export default function MenuMobile({
                     />
                 </MobileWrapper>
             ) : (
-                <MobileNavigationWrapper>
-                    <TabletContentWrapper>
+                <MobileNavigationWrapper data-testid="mobile-navigation-wrapper">
+                    <MobileContentWrapper data-testid="mobile-content-wrapper">
                         <>
                             <TabletWrapper onClick={() => toggleMenu(false)}>
                                 <CloseIcon
@@ -91,7 +91,7 @@ export default function MenuMobile({
                                 {viewModel.pages.contact}
                             </ItemWrapper>
                         </>
-                    </TabletContentWrapper>
+                    </MobileContentWrapper>
                 </MobileNavigationWrapper>
             )}
         </MenuMobileContainer>
