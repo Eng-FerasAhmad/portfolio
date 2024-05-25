@@ -8,7 +8,6 @@ This template provides a minimal setup to get React working in Vite with HMR and
 -   `npm install`
 -   `npm run dev`
 -   run all tests: `npm run test`
--   run one test: `npm run test App.test.tsx`
 -   run fix prettier: `npx prettier . --write`
 
 ## Installed libraries

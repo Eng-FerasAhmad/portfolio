@@ -14,8 +14,7 @@
         "stylelint": "stylelint \"./src/**/styles.ts\"",
         "stylelint:fix": "stylelint \"./src/**/styles.ts\" --fix",
         "lint:fix": "eslint \"./src/**/*.{ts,tsx}\" --fix && npx prettier --write . && stylelint \"./src/**/styles.ts\" --fix",
-        "preview": "vite preview",
-        "test": "vitest"
+        "preview": "vite preview"
     },
     "dependencies": {
         "history": "^5.3.0",
@@ -28,9 +27,6 @@
         "styled-components": "^6.1.0"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "^6.1.4",
-        "@testing-library/react": "^14.0.0",
-        "@testing-library/user-event": "^14.5.1",
         "@types/react": "^18.2.15",
         "@types/react-dom": "^18.2.14",
         "@typescript-eslint/eslint-plugin": "^7.10.0",
@@ -55,7 +51,6 @@
         "stylelint-config-recommended": "^14.0.0",
         "stylelint-config-standard": "^36.0.0",
         "typescript": "^5.4.5",
-        "vite": "^4.4.5",
-        "vitest": "^0.34.6"
+        "vite": "^4.4.5"
     }
 }
