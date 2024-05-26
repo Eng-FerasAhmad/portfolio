@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { fontSize } from '../../../style/common';
-import { device } from '../../../style/screenSize';
-import { pixelToRem } from '../../../utils/utils';
+import { fontSize } from 'style/common';
+import { device } from 'style/screenSize';
+import { pixelToRem } from 'utils/utils';
 
 export const DeveloperContainer = styled.div`
     display: flex;
@@ -26,11 +26,11 @@ export const ContentContainer = styled.div`
 export const ImageContainer = styled.div`
     flex-shrink: 0;
     margin: ${pixelToRem(20)} auto;
-    background-image: 'url(profile.jpg)';
 `;
 
 export const ProfileWrapper = styled.img`
     border-radius: 50%;
+    box-shadow: rgb(251 131 131) 0 2px 100px -22px;
 
     @media ${device.mobile} {
         width: ${pixelToRem(180)};

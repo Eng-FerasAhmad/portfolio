@@ -11,6 +11,7 @@ import MenuMobile from 'components/navigation/MenuMobile';
 import MenuTablet from 'components/navigation/MenuTablet';
 import Navigation from 'components/navigation/Navigation';
 import useDeveloper from 'components/sections/developer/useDeveloper';
+import useSection from 'components/sections/useSection';
 import { ThemeContext } from 'context/ThemeContext';
 import { routerPath } from 'router/constant';
 import GithubNavigation from 'src/library/icon/github-navigation/GithubNavigation';
@@ -21,6 +22,7 @@ import ThemeIcon from 'src/library/icon/theme/ThemeIcon';
 
 export default function Header(): ReactElement {
     const navigate = useNavigate();
+    const { colorSection } = useSection();
     const { viewModel } = useDeveloper();
     const { toggleTheme, isDarkTheme, toggleLanguage } =
         useContext(ThemeContext);
@@ -33,12 +35,20 @@ export default function Header(): ReactElement {
         <HeaderContainer data-testid="header">
             <NavbarWrapper>
                 <LogoWrapper onClick={clickHandler}>
-                    <LogoIcon width={20} height={28} />
+                    <LogoIcon width={20} height={28} color={colorSection} />
                 </LogoWrapper>
 
-                <Navigation />
-                <MenuTablet viewModel={viewModel!} isDarkTheme={isDarkTheme!} />
-                <MenuMobile viewModel={viewModel!} isDarkTheme={isDarkTheme!} />
+                <Navigation colorSection={colorSection} />
+                <MenuTablet
+                    colorSection={colorSection}
+                    viewModel={viewModel!}
+                    isDarkTheme={isDarkTheme!}
+                />
+                <MenuMobile
+                    colorSection={colorSection}
+                    viewModel={viewModel!}
+                    isDarkTheme={isDarkTheme!}
+                />
                 <IconsWrapper>
                     <GithubNavigation isDark={isDarkTheme!} />
                     <ThemeIcon

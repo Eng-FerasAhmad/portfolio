@@ -4,10 +4,10 @@ import {
     LabelWrapper,
 } from 'src/library/works/box-build/styles';
 
-export default function BoxDesign(): ReactElement {
+export default function BoxTesting(): ReactElement {
     return (
         <BoxBuildContainer>
-            <LabelWrapper>Design</LabelWrapper>
+            <LabelWrapper>Test</LabelWrapper>
         </BoxBuildContainer>
     );
 }

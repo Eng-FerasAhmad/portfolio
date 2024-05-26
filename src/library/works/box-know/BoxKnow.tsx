@@ -1,10 +1,13 @@
 import { ReactElement } from 'react';
-import { BoxBuildContainer } from 'src/library/works/box-build/styles';
+import {
+    BoxBuildContainer,
+    LabelWrapper,
+} from 'src/library/works/box-build/styles';
 
 export default function BoxKnow(): ReactElement {
     return (
         <BoxBuildContainer>
-            <>Know</>
+            <LabelWrapper>Know</LabelWrapper>
         </BoxBuildContainer>
     );
 }

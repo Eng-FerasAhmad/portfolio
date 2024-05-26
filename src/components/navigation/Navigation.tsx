@@ -4,7 +4,11 @@ import { ItemWrapper, NavigationContainer } from 'components/navigation/styles';
 import useDeveloper from 'components/sections/developer/useDeveloper';
 import { routerPath } from 'router/constant';
 
-export default function Navigation(): ReactElement {
+interface Props {
+    colorSection: string;
+}
+
+export default function Navigation({ colorSection }: Props): ReactElement {
     const { viewModel } = useDeveloper();
     const navigate = useNavigate();
     const location = useLocation();
@@ -27,24 +31,28 @@ export default function Navigation(): ReactElement {
                 <>
                     <ItemWrapper
                         border={isDeveloper()}
+                        colorSection={colorSection}
                         onClick={() => handleClick(routerPath.developer)}
                     >
                         {viewModel.pages.developer}
                     </ItemWrapper>
                     <ItemWrapper
                         border={isTechstack()}
+                        colorSection={colorSection}
                         onClick={() => handleClick(routerPath.techstack)}
                     >
                         {viewModel.pages.techstack}
                     </ItemWrapper>
                     <ItemWrapper
                         border={isBlog()}
+                        colorSection={colorSection}
                         onClick={() => handleClick(routerPath.blog)}
                     >
                         {viewModel.pages.blog}
                     </ItemWrapper>
                     <ItemWrapper
                         border={isContact()}
+                        colorSection={colorSection}
                         onClick={() => handleClick(routerPath.contact)}
                     >
                         {viewModel.pages.contact}

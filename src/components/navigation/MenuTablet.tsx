@@ -18,11 +18,13 @@ import { isBlog, isContact, isDeveloper, isTechstack } from 'utils/utils';
 export interface Props {
     viewModel: DeveloperViewModel;
     isDarkTheme: boolean;
+    colorSection: string;
 }
 
 export default function MenuTablet({
     viewModel,
     isDarkTheme,
+    colorSection,
 }: Props): ReactElement {
     const [showTabletMenu, setShowTabletMenu] = useState<boolean>(false);
     const navigate = useNavigate();
@@ -66,6 +68,7 @@ export default function MenuTablet({
                         <>
                             <ItemWrapper
                                 border={isDeveloper(location.pathname)}
+                                colorSection={colorSection}
                                 onClick={() =>
                                     handleClick(routerPath.developer)
                                 }
@@ -74,6 +77,7 @@ export default function MenuTablet({
                             </ItemWrapper>
                             <ItemWrapper
                                 border={isTechstack(location.pathname)}
+                                colorSection={colorSection}
                                 onClick={() =>
                                     handleClick(routerPath.techstack)
                                 }
@@ -82,12 +86,14 @@ export default function MenuTablet({
                             </ItemWrapper>
                             <ItemWrapper
                                 border={isBlog(location.pathname)}
+                                colorSection={colorSection}
                                 onClick={() => handleClick(routerPath.blog)}
                             >
                                 {viewModel.pages.blog}
                             </ItemWrapper>
                             <ItemWrapper
                                 border={isContact(location.pathname)}
+                                colorSection={colorSection}
                                 onClick={() => handleClick(routerPath.contact)}
                             >
                                 {viewModel.pages.contact}

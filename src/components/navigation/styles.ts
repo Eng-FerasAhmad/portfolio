@@ -6,6 +6,7 @@ import { pixelToRem } from 'utils/utils';
 
 interface Props {
     border: boolean;
+    colorSection: string;
 }
 
 export const NavigationContainer = styled.div`
@@ -41,7 +42,7 @@ export const NavigationContainer = styled.div`
 export const ItemWrapper = styled.div<Props>`
     color: ${(props) => props.theme.color.page.font};
     border-bottom: ${(props) => (props.border ? pixelToRem(2) : 0)} solid
-        ${color.yellowDark};
+        ${(props) => props.colorSection};
     width: fit-content;
     margin: auto;
     height: fit-content;
@@ -75,7 +76,7 @@ export const ItemWrapper = styled.div<Props>`
         bottom: 0;
         left: 0;
         top: 32px;
-        background-color: ${color.yellowDark};
+        background-color: ${color.gray};
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }

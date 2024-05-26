@@ -21,11 +21,6 @@
     },
     "media": [
         {
-            "name": "GMX",
-            "icon": "gmx",
-            "link": "feras.ahmad@gmx.de"
-        },
-        {
             "name": "LinkedIn",
             "icon": "linked-in",
             "link": "https://www.linkedin.com/in/feras-j-ahmad/"

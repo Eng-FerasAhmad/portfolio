@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { device } from '../../../style/screenSize';
-import { pixelToRem } from '../../../utils/utils';
+import { device } from 'style/screenSize';
+import { pixelToRem } from 'utils/utils';
 
 export const ThemeIconWrapper = styled.div`
     cursor: pointer;
