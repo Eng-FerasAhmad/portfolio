@@ -71,7 +71,7 @@ export const Circle = styled.circle<Props>`
     stroke-width: 2;
     stroke-miterlimit: 10;
     stroke: ${color.green};
-    fill: ${(props) => (props.isDark ? color.dark : color.greenLight)};
+    fill: ${(props) => (props.isDark ? color.dark : color.light)};
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 `;
 

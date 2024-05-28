@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 
 import {
     ContactContainer,
@@ -12,17 +12,26 @@ import { AnimationFadeIn } from 'style/animation';
 
 export default function Contact(): ReactElement {
     const { viewModel } = useContact();
+    const [show, setShow] = useState<boolean>(true);
+    const isMailSent = (value: boolean): void => {
+        setShow(value);
+    };
 
     return (
         <ContactContainer data-testid="contact">
             <AnimationFadeIn duration={1}>
-                <SocialMediaWrapper>
-                    <DescriptionWrapper>
-                        {viewModel?.description}
-                    </DescriptionWrapper>
-                </SocialMediaWrapper>
+                {show && (
+                    <SocialMediaWrapper>
+                        <DescriptionWrapper>
+                            {viewModel?.description}
+                        </DescriptionWrapper>
+                    </SocialMediaWrapper>
+                )}
 
-                <Form viewModel={viewModel!} />
+                <Form
+                    viewModel={viewModel!}
+                    returnHandleValidation={isMailSent}
+                />
                 <Media viewModel={viewModel!} />
             </AnimationFadeIn>
         </ContactContainer>

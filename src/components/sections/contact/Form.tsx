@@ -13,9 +13,13 @@ import { stringMailPattern } from 'utils/utils';
 
 interface Props {
     viewModel: ContactViewModel;
+    returnHandleValidation: (value: boolean) => void;
 }
 
-export default function Form({ viewModel }: Props): ReactElement {
+export default function Form({
+    viewModel,
+    returnHandleValidation,
+}: Props): ReactElement {
     const [isSubmit, setIsSubmit] = useState<boolean>(false);
     const [formData, setFormData] = useState<ContactForm>({
         name: '',
@@ -76,17 +80,19 @@ export default function Form({ viewModel }: Props): ReactElement {
     };
 
     const handleValidation = (): boolean => {
-        return (
+        const valid =
             isSubmit &&
             formData.name !== '' &&
             formData.message !== '' &&
             formData.subject !== '' &&
-            isMailValid()
-        );
+            isMailValid();
+
+        return valid;
     };
 
     const submitHandler = (): void => {
         setIsSubmit(true);
+        returnHandleValidation(handleValidation());
     };
 
     const isCheck = isSubmit && viewModel && formData;

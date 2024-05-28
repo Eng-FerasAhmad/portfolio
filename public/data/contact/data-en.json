@@ -17,7 +17,7 @@
         "send": "Send",
         "error": "Please fill in this field",
         "invalidMail": "Invalid E-Mail address",
-        "messageSent": "Your mail has been sent successfully!"
+        "messageSent": "Thanks for sending me a Mail"
     },
     "media": [
         {

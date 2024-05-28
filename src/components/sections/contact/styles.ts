@@ -5,7 +5,7 @@ import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
 
 export const ContactContainer = styled.div`
-    padding: ${pixelToRem(90, 30)};
+    padding: ${pixelToRem(90, 30, 10, 30)};
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(fontSize.normalMobileText)};
@@ -94,7 +94,7 @@ export const MailSentWrapper = styled.div`
     @media ${device.mobile} {
         font-size: ${pixelToRem(fontSize.descriptionMobileText)};
         width: fit-content;
-        height: ${pixelToRem(90)};
+        height: ${pixelToRem(20)};
         padding: ${pixelToRem(100, 20)};
         border: none;
     }
@@ -106,8 +106,6 @@ export const MailSentWrapper = styled.div`
         padding: ${pixelToRem(30, 20)};
         display: flex;
         flex-direction: column;
-        border: ${pixelToRem(1)} solid ${color.green};
-        border-radius: ${pixelToRem(5)};
     }
 `;
 
