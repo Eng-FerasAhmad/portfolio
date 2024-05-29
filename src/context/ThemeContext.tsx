@@ -1,26 +1,35 @@
-import { createContext, useCallback, useState, useEffect } from 'react';
+import {
+    createContext,
+    useCallback,
+    useState,
+    useEffect,
+    ReactNode,
+} from 'react';
 import { ThemeProvider } from 'styled-components';
 import { LocalStorageKey } from '../library/local-storage/types';
 import useLocalStorage from '../library/local-storage/useLocalStorage';
 import { Language } from '../service/types';
 import { themeDark, themeLight } from '../style/theme';
+import { Devices } from 'style/screenSize';
 
 interface ContextValue {
     toggleTheme: () => void;
     isDarkTheme: boolean | undefined;
     language: Language;
+    media: Devices | undefined;
     toggleLanguage: () => void;
 }
 
 export const ThemeContext = createContext<ContextValue>({
     toggleTheme: () => undefined,
     isDarkTheme: undefined,
+    media: undefined,
     language: Language.EN,
     toggleLanguage: () => undefined,
 });
 
 interface Props {
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 export default function ThemeContextProvider({ children }: Props): JSX.Element {
@@ -33,6 +42,7 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
         undefined
     );
     const [language, setLanguage] = useState<Language>(Language.EN);
+    const [media, setMedia] = useState<Devices | undefined>('desktop');
 
     const toggleTheme = useCallback(() => {
         const darkTheme = getItemToLocalStorage<boolean>(
@@ -73,11 +83,21 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
 
         const lng = getItemToLocalStorage<Language>(LocalStorageKey.LANGUAGE);
         setLanguage(lng === undefined ? Language.EN : lng);
+
+        // determine the device output:
+        // const desktop = window.matchMedia(device.desktop);
+        setMedia('desktop');
     }, [getItemToLocalStorage]);
 
     return (
         <ThemeContext.Provider
-            value={{ toggleTheme, isDarkTheme, language, toggleLanguage }}
+            value={{
+                toggleTheme,
+                isDarkTheme,
+                language,
+                toggleLanguage,
+                media,
+            }}
         >
             {isDarkTheme !== undefined && (
                 <ThemeProvider theme={isDarkTheme ? themeDark : themeLight}>

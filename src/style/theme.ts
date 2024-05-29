@@ -22,7 +22,7 @@ export const themeDark = {
 export const themeLight = {
     color: {
         page: {
-            backgroundImage: 'url(background.jpg)',
+            backgroundImage: '#f1f2f4',
             background: lightThemeColor.customWhite,
             font: lightThemeColor.fontPrimary,
             fontHover: color.light,

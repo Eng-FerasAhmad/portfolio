@@ -1,13 +1,33 @@
 import { ReactElement } from 'react';
+import ReduxIcon from 'src/library/icon/redux/ReduxIcon';
 import {
-    BoxBuildContainer,
+    BoxContainer,
+    ItemWrapper,
     LabelWrapper,
-} from 'src/library/works/box-build/styles';
+    TechsWrapper,
+} from 'src/library/works/styles';
+import { WorksBox } from 'src/library/works/types';
+import { Works } from 'types/techstackTypes';
+import { scrollToSection } from 'utils/utils';
 
-export default function BoxTech(): ReactElement {
+interface Props {
+    boxItem: Works;
+    isDarkTheme: boolean;
+}
+
+export default function BoxTech({ isDarkTheme, boxItem }: Props): ReactElement {
     return (
-        <BoxBuildContainer>
-            <LabelWrapper>Tech</LabelWrapper>
-        </BoxBuildContainer>
+        <BoxContainer
+            box={WorksBox.TECH}
+            dark={isDarkTheme}
+            onClick={() => scrollToSection('tech')}
+        >
+            <TechsWrapper>
+                <ItemWrapper>
+                    <ReduxIcon />
+                </ItemWrapper>
+            </TechsWrapper>
+            <LabelWrapper>{boxItem.label}</LabelWrapper>
+        </BoxContainer>
     );
 }

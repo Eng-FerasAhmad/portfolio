@@ -9,7 +9,6 @@ export const AppContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: ${(props) => props.theme.color.page.backgroundImage};
 
     @media ${device.mobile} {
         margin: ${pixelToRem(0)};

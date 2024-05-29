@@ -1,27 +1,37 @@
 import { ReactElement } from 'react';
-import MaterialIcon from 'src/library/icon/material/MaterialIcon';
 import ReactIcon from 'src/library/icon/react/ReactIcon';
-import ReduxIcon from 'src/library/icon/redux/ReduxIcon';
-import TypescriptIcon from 'src/library/icon/typescript/TypescriptIcon';
+
 import {
-    BoxBuildContainer,
+    BoxContainer,
+    ItemWrapper,
     LabelWrapper,
     TechsWrapper,
-} from 'src/library/works/box-build/styles';
+} from 'src/library/works/styles';
+import { WorksBox } from 'src/library/works/types';
+import { Works } from 'types/techstackTypes';
+import { scrollToSection } from 'utils/utils';
 
-export default function BoxDevelop(): ReactElement {
-    const iconsSize = 35;
+interface Props {
+    boxItem: Works;
+    isDarkTheme: boolean;
+}
 
+export default function BoxDevelop({
+    isDarkTheme,
+    boxItem,
+}: Props): ReactElement {
     return (
-        <BoxBuildContainer>
+        <BoxContainer
+            box={WorksBox.DEVELOP}
+            dark={isDarkTheme}
+            onClick={() => scrollToSection('developer')}
+        >
             <TechsWrapper>
-                <ReactIcon iconWidth={iconsSize} iconHeight={iconsSize} />
-                <TypescriptIcon iconWidth={iconsSize} iconHeight={iconsSize} />
-                <ReduxIcon iconWidth={iconsSize} iconHeight={iconsSize} />
-                <MaterialIcon iconWidth={iconsSize} iconHeight={iconsSize} />
-                <MaterialIcon iconWidth={iconsSize} iconHeight={iconsSize} />
+                <ItemWrapper>
+                    <ReactIcon />
+                </ItemWrapper>
             </TechsWrapper>
-            <LabelWrapper>Develop</LabelWrapper>
-        </BoxBuildContainer>
+            <LabelWrapper>{boxItem.label}</LabelWrapper>
+        </BoxContainer>
     );
 }

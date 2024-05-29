@@ -1,13 +1,36 @@
 import { ReactElement } from 'react';
+import ViteIcon from 'src/library/icon/vite/ViteIcon';
 import {
-    BoxBuildContainer,
+    BoxContainer,
+    ItemWrapper,
     LabelWrapper,
-} from 'src/library/works/box-build/styles';
+    TechsWrapper,
+} from 'src/library/works/styles';
+import { WorksBox } from 'src/library/works/types';
+import { Works } from 'types/techstackTypes';
+import { scrollToSection } from 'utils/utils';
 
-export default function BoxBuild(): ReactElement {
+interface Props {
+    boxItem: Works;
+    isDarkTheme: boolean;
+}
+
+export default function BoxBuild({
+    isDarkTheme,
+    boxItem,
+}: Props): ReactElement {
     return (
-        <BoxBuildContainer>
-            <LabelWrapper>Build</LabelWrapper>
-        </BoxBuildContainer>
+        <BoxContainer
+            box={WorksBox.BUILD}
+            dark={isDarkTheme}
+            onClick={() => scrollToSection('build')}
+        >
+            <TechsWrapper>
+                <ItemWrapper>
+                    <ViteIcon />
+                </ItemWrapper>
+            </TechsWrapper>
+            <LabelWrapper>{boxItem.label}</LabelWrapper>
+        </BoxContainer>
     );
 }

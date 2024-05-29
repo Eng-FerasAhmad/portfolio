@@ -1,11 +1,18 @@
 import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from 'src/library/icon-selector/style';
 
+interface Props {
+    iconWidth?: number;
+    iconHeight?: number;
+}
+
 export default function EsLintIcon(
-    props: SVGProps<SVGSVGElement>
+    props: SVGProps<SVGSVGElement> & Props
 ): ReactElement {
     return (
         <SvgTechContainer
+            iconHeight={props.iconWidth}
+            iconWidth={props.iconWidth}
             viewBox="0 -15.5 256 256"
             preserveAspectRatio="xMidYMid"
             {...props}

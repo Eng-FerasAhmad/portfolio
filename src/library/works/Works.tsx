@@ -1,4 +1,5 @@
-import { ReactElement } from 'react';
+import { ReactElement, useContext } from 'react';
+import { ThemeContext } from 'context/ThemeContext';
 import BoxBuild from 'src/library/works/box-build/BoxBuild';
 import BoxDesign from 'src/library/works/box-design/BoxDesign';
 import BoxDevelop from 'src/library/works/box-develop/BoxDevelop';
@@ -10,22 +11,43 @@ import {
     TitleWrapper,
     WorksContainer,
 } from 'src/library/works/styles';
+import { WorksBox } from 'src/library/works/types';
+import { TechstackViewModel } from 'types/techstackTypes';
 
 interface Props {
-    title: string;
+    viewModel: TechstackViewModel;
 }
 
-export default function Works({ title }: Props): ReactElement {
+export default function Works({ viewModel }: Props): ReactElement {
+    const { isDarkTheme } = useContext(ThemeContext);
     return (
         <WorksContainer>
-            <TitleWrapper>{title}</TitleWrapper>
+            <TitleWrapper>{viewModel.worksTitle}</TitleWrapper>
             <ContentWrapper>
-                <BoxDevelop />
-                <BoxDesign />
-                <BoxBuild />
-                <BoxTesting />
-                <BoxTech />
-                <BoxKnow />
+                <BoxDevelop
+                    isDarkTheme={isDarkTheme!}
+                    boxItem={viewModel.works[WorksBox.DEVELOP]}
+                />
+                <BoxDesign
+                    isDarkTheme={isDarkTheme!}
+                    boxItem={viewModel.works[WorksBox.DESIGN]}
+                />
+                <BoxBuild
+                    isDarkTheme={isDarkTheme!}
+                    boxItem={viewModel.works[WorksBox.BUILD]}
+                />
+                <BoxTesting
+                    isDarkTheme={isDarkTheme!}
+                    boxItem={viewModel.works[WorksBox.TEST]}
+                />
+                <BoxTech
+                    isDarkTheme={isDarkTheme!}
+                    boxItem={viewModel.works[WorksBox.TECH]}
+                />
+                <BoxKnow
+                    isDarkTheme={isDarkTheme!}
+                    boxItem={viewModel.works[WorksBox.KNOW]}
+                />
             </ContentWrapper>
         </WorksContainer>
     );

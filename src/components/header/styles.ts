@@ -8,6 +8,7 @@ export const HeaderContainer = styled.div`
     line-height: ${pixelToRem(32)};
     position: fixed;
     top: 0;
+    z-index: 1000;
 
     @media ${device.mobile} {
         padding: ${pixelToRem(16, 15)};

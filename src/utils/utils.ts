@@ -62,3 +62,8 @@ export const isBlog = (pathname: string): boolean =>
     pathname === routerPath.blog;
 export const isContact = (pathname: string): boolean =>
     pathname === routerPath.contact;
+
+export const scrollToSection = (id: string): void => {
+    const divElement = document.getElementById(id);
+    divElement!.scrollIntoView({ behavior: 'smooth' });
+};

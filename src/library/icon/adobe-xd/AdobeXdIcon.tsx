@@ -1,11 +1,18 @@
 import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from 'src/library/icon-selector/style';
 
+interface Props {
+    iconWidth?: number;
+    iconHeight?: number;
+}
+
 export default function AdobeXdIcon(
-    props: SVGProps<SVGSVGElement>
+    props: SVGProps<SVGSVGElement> & Props
 ): ReactElement {
     return (
         <SvgTechContainer
+            iconHeight={props.iconWidth}
+            iconWidth={props.iconWidth}
             x="0px"
             y="0px"
             viewBox="0 0 2500 2437.5"

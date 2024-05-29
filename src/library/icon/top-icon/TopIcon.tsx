@@ -3,6 +3,8 @@ import { SvgTechContainer } from '../../icon-selector/style';
 
 interface Props {
     color: string;
+    iconWidth?: number;
+    iconHeight?: number;
 }
 
 export default function TopIcon(
@@ -10,8 +12,8 @@ export default function TopIcon(
 ): ReactElement {
     return (
         <SvgTechContainer
-            width="45px"
-            height="45px"
+            iconHeight={props.iconWidth}
+            iconWidth={props.iconWidth}
             viewBox="0 0 32 32"
             fill="#000000"
             {...props}

@@ -480,5 +480,264 @@
                 }
             ]
         }
+    ],
+    "worksTitle": "What I do",
+    "works": [
+        {
+            "label": "Developer",
+            "title": "Developer",
+            "description": "As a developer, I specialize in creating user interfaces for websites and web applications. Here are some of the technologies I use:",
+            "icons": [
+                {
+                    "id": "react",
+                    "name": "React",
+                    "icon": "react"
+                },
+                {
+                    "id": "vue",
+                    "name": "Vue",
+                    "icon": "vue"
+                },
+                {
+                    "id": "angular",
+                    "name": "Angular",
+                    "icon": "angular"
+                },
+                {
+                    "id": "typescript",
+                    "name": "Typescript",
+                    "icon": "typescript"
+                },
+                {
+                    "id": "javascript",
+                    "name": "Javascript",
+                    "icon": "javascript"
+                },
+                {
+                    "id": "node",
+                    "name": "Node.js",
+                    "icon": "node"
+                },
+                {
+                    "id": "redux",
+                    "name": "Redux",
+                    "icon": "redux"
+                },
+                {
+                    "id": "vuex",
+                    "name": "Vuex",
+                    "icon": "vuex"
+                },
+                {
+                    "id": "git",
+                    "name": "Git",
+                    "icon": "git"
+                },
+                {
+                    "id": "scrum",
+                    "name": "Scrum",
+                    "icon": "scrum"
+                },
+                {
+                    "id": "kanban",
+                    "name": "Kanban",
+                    "icon": "kanban"
+                },
+                {
+                    "id": "sentry",
+                    "name": "Sentry",
+                    "icon": "sentry"
+                }
+            ]
+        },
+        {
+            "label": "Design",
+            "title": "Design",
+            "description": "As a designer, I work with tools like Figma, Adobe XD, Sketch, and Draw.io to develop mockups and prototypes, ensuring that the final product meets the users' needs.",
+            "icons": [
+                {
+                    "id": "figma",
+                    "name": "Figma",
+                    "icon": "figma"
+                },
+                {
+                    "id": "zeplin",
+                    "name": "Zeplin",
+                    "icon": "zeplin"
+                },
+                {
+                    "id": "adobeXd",
+                    "name": "Adobe Xd",
+                    "icon": "adobeXd"
+                },
+                {
+                    "id": "drawio",
+                    "name": "drawio",
+                    "icon": "drawio"
+                },
+                {
+                    "id": "css",
+                    "name": "CSS",
+                    "icon": "css"
+                },
+                {
+                    "id": "vuetify",
+                    "name": "Vuetify",
+                    "icon": "vuetify"
+                },
+                {
+                    "id": "bootstrap",
+                    "name": "Bootstrap",
+                    "icon": "bootstrap"
+                },
+                {
+                    "id": "material",
+                    "name": "Material UI",
+                    "icon": "material"
+                },
+                {
+                    "id": "tailwind",
+                    "name": "tailwind",
+                    "icon": "tailwind"
+                },
+                {
+                    "id": "sass",
+                    "name": "Sass",
+                    "icon": "sass"
+                },
+                {
+                    "id": "react-suite",
+                    "name": "React Suite",
+                    "icon": "react-suite"
+                },
+                {
+                    "id": "styled-component",
+                    "name": "Styled Comp.",
+                    "icon": "styled-component"
+                }
+            ]
+        },
+        {
+            "label": "Build",
+            "title": "Build",
+            "description": "As a frontend developer, I specialize in building and bundling code to create efficient and optimized web applications. I use tools like Webpack, Babel, and Vite to manage and automate tasks, ensuring that the code is well-organized and performs optimally.",
+            "icons": [
+                {
+                    "id": "vite",
+                    "name": "Vite",
+                    "icon": "vite"
+                },
+                {
+                    "id": "webpack",
+                    "name": "Webpack",
+                    "icon": "webpack"
+                },
+                {
+                    "id": "rollup",
+                    "name": "Rollup",
+                    "icon": "rollup"
+                },
+                {
+                    "id": "babel",
+                    "name": "Babel",
+                    "icon": "babel"
+                },
+                {
+                    "id": "Gitlab",
+                    "name": "GitLab",
+                    "icon": "gitlab"
+                },
+                {
+                    "id": "bitbucket",
+                    "name": "BitBucket",
+                    "icon": "bitbucket"
+                },
+                {
+                    "id": "github",
+                    "name": "GitHub",
+                    "icon": "github"
+                }
+            ]
+        },
+        {
+            "label": "Testing",
+            "title": "Testing & Quality Assurance",
+            "description": "I ensure that web applications are user-friendly, error-free, and performant. I thoroughly test and review the code, conducting both manual and automated tests to identify and fix issues. My goal is to ensure high quality and an optimal user experience.",
+            "icons": [
+                {
+                    "id": "cypress",
+                    "name": "Cypress",
+                    "icon": "cypress"
+                },
+                {
+                    "id": "jest",
+                    "name": "Jest",
+                    "icon": "jest"
+                },
+                {
+                    "id": "testing-library",
+                    "name": "Testing Lib",
+                    "icon": "testing-library"
+                },
+                {
+                    "id": "chai",
+                    "name": "Chai",
+                    "icon": "chai"
+                },
+                {
+                    "id": "mocha",
+                    "name": "Mocha",
+                    "icon": "mocha"
+                },
+                {
+                    "id": "karma",
+                    "name": "Karma",
+                    "icon": "karma"
+                },
+                {
+                    "id": "jasmine",
+                    "name": "Jasmine",
+                    "icon": "jasmine"
+                }
+            ]
+        },
+        {
+            "label": "Trainer",
+            "title": "Web Development Trainer",
+            "description": "In addition to my work as a frontend developer, I impart comprehensive knowledge about the latest tools and frameworks that I utilize in web development. I design training sessions and workshops where I teach developers how to effectively work with HTML, CSS, JavaScript, and other relevant technologies.",
+            "icons": [
+                {
+                    "id": "react",
+                    "name": "React",
+                    "icon": "react"
+                },
+                {
+                    "id": "redux",
+                    "name": "Redux",
+                    "icon": "redux"
+                },
+                {
+                    "id": "cypress",
+                    "name": "Cypress",
+                    "icon": "cypress"
+                },
+                {
+                    "id": "jest",
+                    "name": "Jest",
+                    "icon": "jest"
+                },
+                {
+                    "id": "material",
+                    "name": "Material UI",
+                    "icon": "material"
+                }
+            ]
+        },
+        {
+            "label": "Learn",
+            "title": "Learn & Self Development",
+            "description": "By learning new frontend technologies alongside my job, I strengthen my skills and stay up-to-date with the latest trends in the industry. My initiative to acquire new skills outside of work hours underscores my commitment to personal and professional growth.",
+            "icons": []
+        }
     ]
 }

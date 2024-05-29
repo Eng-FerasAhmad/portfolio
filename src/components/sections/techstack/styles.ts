@@ -6,14 +6,14 @@ import { pixelToRem } from 'utils/utils';
 
 export const TechstackContainer = styled.div`
     width: fit-content;
-    padding: ${pixelToRem(90, 30)};
+    padding: ${pixelToRem(0, 30)};
 
     @media ${device.mobile} {
-        margin: 0 auto ${pixelToRem(15)} auto;
+        margin: 50px auto ${pixelToRem(15)} auto;
     }
 
     @media ${device.tablet} {
-        margin: 0 auto ${pixelToRem(30)} auto;
+        margin: 0 auto ${pixelToRem(0)} auto;
     }
 `;
 
@@ -58,10 +58,11 @@ export const ItemsGroupWrapper = styled.div`
     flex-wrap: wrap-reverse;
 `;
 
-export const WorksWrapper = styled.div`
-    max-width: fit-content;
+export const BoxDetailsContainer = styled.div`
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 20px;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+    position: absolute;
+    left: 0;
 `;

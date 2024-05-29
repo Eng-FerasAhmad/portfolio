@@ -1,13 +1,33 @@
 import { ReactElement } from 'react';
+import NodeIcon from 'src/library/icon/node/NodeIcon';
 import {
-    BoxBuildContainer,
+    ItemWrapper,
     LabelWrapper,
-} from 'src/library/works/box-build/styles';
+    TechsWrapper,
+    BoxContainer,
+} from 'src/library/works/styles';
+import { WorksBox } from 'src/library/works/types';
+import { Works } from 'types/techstackTypes';
+import { scrollToSection } from 'utils/utils';
 
-export default function BoxKnow(): ReactElement {
+interface Props {
+    boxItem: Works;
+    isDarkTheme: boolean;
+}
+
+export default function BoxKnow({ isDarkTheme, boxItem }: Props): ReactElement {
     return (
-        <BoxBuildContainer>
-            <LabelWrapper>Know</LabelWrapper>
-        </BoxBuildContainer>
+        <BoxContainer
+            box={WorksBox.KNOW}
+            dark={isDarkTheme}
+            onClick={() => scrollToSection('know')}
+        >
+            <TechsWrapper>
+                <ItemWrapper>
+                    <NodeIcon />
+                </ItemWrapper>
+            </TechsWrapper>
+            <LabelWrapper>{boxItem.label}</LabelWrapper>
+        </BoxContainer>
     );
 }

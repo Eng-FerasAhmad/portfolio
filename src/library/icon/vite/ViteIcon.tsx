@@ -1,11 +1,18 @@
 import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from '../../icon-selector/style';
 
-export default function ViteIcon(props: SVGProps<SVGSVGElement>): ReactElement {
+interface Props {
+    iconWidth?: number;
+    iconHeight?: number;
+}
+
+export default function ViteIcon(
+    props: SVGProps<SVGSVGElement> & Props
+): ReactElement {
     return (
         <SvgTechContainer
-            width="24px"
-            height="24px"
+            iconHeight={props.iconWidth}
+            iconWidth={props.iconWidth}
             viewBox="0 0 32 32"
             fill="none"
             {...props}

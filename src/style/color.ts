@@ -27,3 +27,18 @@ export const color = {
     gray: '#cccccc',
     grayDarker: '#595959',
 };
+
+export const colorWorks = {
+    build: '#FDAC53',
+    buildLight: '#fdb568',
+    design: '#A0DAA9',
+    designLight: '#b6e2bc',
+    develop: '#b7d7e8',
+    developLight: '#c5dfed',
+    know: '#9A8B4F',
+    knowLight: '#a89857',
+    tech: '#ea95a3',
+    techLight: '#eeaab5',
+    test: '#a280b3',
+    testLight: '#ad8fbc',
+};

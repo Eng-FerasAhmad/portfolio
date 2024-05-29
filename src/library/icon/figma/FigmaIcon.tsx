@@ -1,11 +1,21 @@
 import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from 'src/library/icon-selector/style';
 
+interface Props {
+    iconWidth?: number;
+    iconHeight?: number;
+}
+
 export default function FigmaIcon(
-    props: SVGProps<SVGSVGElement>
+    props: SVGProps<SVGSVGElement> & Props
 ): ReactElement {
     return (
-        <SvgTechContainer viewBox="0 0 24 24" {...props}>
+        <SvgTechContainer
+            iconHeight={props.iconWidth}
+            iconWidth={props.iconWidth}
+            viewBox="0 0 24 24"
+            {...props}
+        >
             <g fill="none" fillRule="evenodd" transform="translate(4)">
                 <circle cx={12} cy={12} r={4} fill="#19BCFE" />
                 <path

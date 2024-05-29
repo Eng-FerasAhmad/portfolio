@@ -1,10 +1,9 @@
 import { ReactElement, useEffect, useState } from 'react';
 import TopIcon from '../icon/top-icon/TopIcon';
 import { ButtonContainer } from './styles';
-import useSection from 'components/sections/useSection';
+import { color } from 'style/color';
 
 export default function ScrollButton(): ReactElement {
-    const { colorSection } = useSection();
     const [showScrollButton, setShowScrollButton] = useState<boolean>(false);
 
     useEffect(() => {
@@ -30,7 +29,11 @@ export default function ScrollButton(): ReactElement {
         <>
             {showScrollButton && (
                 <ButtonContainer onClick={scrollToTop} title="Scroll to Top">
-                    <TopIcon color={colorSection} />
+                    <TopIcon
+                        color={color.dark}
+                        iconHeight={33}
+                        iconWidth={33}
+                    />
                 </ButtonContainer>
             )}
         </>

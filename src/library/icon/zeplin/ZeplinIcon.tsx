@@ -1,13 +1,18 @@
 import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from '../../icon-selector/style';
 
+interface Props {
+    iconWidth?: number;
+    iconHeight?: number;
+}
+
 export default function ZeplinIcon(
-    props: SVGProps<SVGSVGElement>
+    props: SVGProps<SVGSVGElement> & Props
 ): ReactElement {
     return (
         <SvgTechContainer
-            width="24px"
-            height="24px"
+            iconHeight={props.iconWidth}
+            iconWidth={props.iconWidth}
             enableBackground="new 0 0 2406.8 1923.8"
             viewBox="0 0 2406.8 1923.8"
             {...props}

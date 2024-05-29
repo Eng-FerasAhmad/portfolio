@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     font-family: 'Rubik', sans-serif;
     font-weight: 200;
+      background: ${(props) => props.theme.color.page.backgroundImage};
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -1,6 +1,8 @@
+export type Devices = 'mobile' | 'tablet' | 'desktop';
+
 export const screenSize = {
     xs: '320px',
-    sm: '768px',
+    sm: '600px',
     md: '1024px',
     lg: '1200px',
 };

@@ -35,6 +35,7 @@ export default function Header(): ReactElement {
         <HeaderContainer data-testid="header">
             <NavbarWrapper>
                 <LogoWrapper onClick={clickHandler}>
+                    {/* icon source: https://iconscout.com/icon-pack/owl-8 */}
                     <LogoIcon width={20} height={28} color={colorSection} />
                 </LogoWrapper>
 

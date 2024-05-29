@@ -1,11 +1,18 @@
 import { ReactElement, SVGProps } from 'react';
 import { SvgTechContainer } from 'src/library/icon-selector/style';
 
-export default function JestIcon(props: SVGProps<SVGSVGElement>): ReactElement {
+interface Props {
+    iconWidth?: number;
+    iconHeight?: number;
+}
+
+export default function JestIcon(
+    props: SVGProps<SVGSVGElement> & Props
+): ReactElement {
     return (
         <SvgTechContainer
-            width="24px"
-            height="24px"
+            iconHeight={props.iconWidth}
+            iconWidth={props.iconWidth}
             viewBox="-13.5 0 283 283"
             preserveAspectRatio="xMidYMid"
             {...props}
