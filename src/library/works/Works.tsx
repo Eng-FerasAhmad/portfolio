@@ -19,33 +19,42 @@ interface Props {
 }
 
 export default function Works({ viewModel }: Props): ReactElement {
-    const { isDarkTheme } = useContext(ThemeContext);
+    const { isDarkTheme, isSmallScreen } = useContext(ThemeContext);
+
     return (
-        <WorksContainer>
-            <TitleWrapper>{viewModel.worksTitle}</TitleWrapper>
-            <ContentWrapper>
+        <WorksContainer data-testid="works">
+            <TitleWrapper data-testid="works-title">
+                {viewModel.worksTitle}
+            </TitleWrapper>
+            <ContentWrapper data-testid="works-content">
                 <BoxDevelop
                     isDarkTheme={isDarkTheme!}
+                    isSmallScreen={isSmallScreen}
                     boxItem={viewModel.works[WorksBox.DEVELOP]}
                 />
                 <BoxDesign
                     isDarkTheme={isDarkTheme!}
+                    isSmallScreen={isSmallScreen}
                     boxItem={viewModel.works[WorksBox.DESIGN]}
                 />
                 <BoxBuild
                     isDarkTheme={isDarkTheme!}
+                    isSmallScreen={isSmallScreen}
                     boxItem={viewModel.works[WorksBox.BUILD]}
                 />
                 <BoxTesting
                     isDarkTheme={isDarkTheme!}
+                    isSmallScreen={isSmallScreen}
                     boxItem={viewModel.works[WorksBox.TEST]}
                 />
                 <BoxTech
                     isDarkTheme={isDarkTheme!}
+                    isSmallScreen={isSmallScreen}
                     boxItem={viewModel.works[WorksBox.TECH]}
                 />
                 <BoxKnow
                     isDarkTheme={isDarkTheme!}
+                    isSmallScreen={isSmallScreen}
                     boxItem={viewModel.works[WorksBox.KNOW]}
                 />
             </ContentWrapper>

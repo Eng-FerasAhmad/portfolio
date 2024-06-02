@@ -6,7 +6,7 @@ import {
     BoxDescriptionWrapper,
     BoxTitleWrapper,
 } from 'src/library/works/styles';
-import { WorksBox } from 'src/library/works/types';
+import { WorksBox, WorksBoxName } from 'src/library/works/types';
 import { Works } from 'types/techstackTypes';
 
 interface Props {
@@ -15,7 +15,11 @@ interface Props {
 
 export default function BoxDesignContent({ works }: Props): ReactElement {
     return (
-        <BoxContentContainer box={WorksBox.DESIGN} dark={false} id="design">
+        <BoxContentContainer
+            box={WorksBox.DESIGN}
+            dark={false}
+            id={WorksBoxName.DESIGN}
+        >
             <BoxTitleWrapper>{works.title}</BoxTitleWrapper>
             <BoxDescriptionWrapper>{works.description}</BoxDescriptionWrapper>
             <BoxSkills icons={works.icons} />

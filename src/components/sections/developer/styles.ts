@@ -6,15 +6,14 @@ import { pixelToRem } from 'utils/utils';
 export const DeveloperContainer = styled.div`
     display: flex;
     justify-content: center;
+    margin: 0;
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(fontSize.normalMobileText)};
-        margin-bottom: ${pixelToRem(40)};
     }
 
     @media ${device.tablet} {
         font-size: ${pixelToRem(fontSize.normalText)};
-        margin-bottom: 0;
     }
 `;
 
@@ -49,7 +48,7 @@ export const DescriptionContainer = styled.div`
     line-height: ${pixelToRem(32)};
 
     @media ${device.mobile} {
-        width: 100%;
+        width: fit-content;
         margin: ${pixelToRem(0, 10)};
     }
 `;

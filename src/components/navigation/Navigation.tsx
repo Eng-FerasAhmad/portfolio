@@ -26,7 +26,7 @@ export default function Navigation({ colorSection }: Props): ReactElement {
     };
 
     return (
-        <NavigationContainer>
+        <NavigationContainer data-testid="navigation">
             {viewModel && (
                 <>
                     <ItemWrapper

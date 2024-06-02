@@ -18,7 +18,7 @@ export default function Techstack(): ReactElement {
             {viewModel && (
                 <>
                     <Works viewModel={viewModel!} />
-                    <BoxDetailsContainer>
+                    <BoxDetailsContainer data-testid="techstack-box-details">
                         <BoxDevelopContent
                             works={viewModel.works[WorksBox.DEVELOP]}
                         />

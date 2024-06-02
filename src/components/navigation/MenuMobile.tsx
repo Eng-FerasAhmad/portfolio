@@ -43,7 +43,7 @@ export default function MenuMobile({
     const menuSize = 30;
 
     return (
-        <MenuMobileContainer>
+        <MenuMobileContainer data-testid="menu-mobile">
             {!showMobileMenu ? (
                 <MobileWrapper onClick={() => toggleMenu(true)}>
                     <MenuIcon

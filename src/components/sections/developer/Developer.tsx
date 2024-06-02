@@ -19,11 +19,11 @@ export default function Developer(): ReactElement {
         <DeveloperContainer data-testid="developer">
             <AnimationFadeIn duration={1}>
                 {viewModel && (
-                    <ContentContainer>
-                        <ImageContainer>
+                    <ContentContainer data-testid="developer-content">
+                        <ImageContainer data-testid="developer-image">
                             <ProfileWrapper src="profile.jpg" alt="image" />
                         </ImageContainer>
-                        <DescriptionContainer>
+                        <DescriptionContainer data-testid="developer-description">
                             <NameWrapper>{viewModel.name}</NameWrapper>
                             <AboutWrapper>{viewModel.about}</AboutWrapper>
                             <AboutWrapper>{viewModel.aboutMore}</AboutWrapper>

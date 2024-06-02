@@ -6,14 +6,13 @@ import { pixelToRem } from 'utils/utils';
 
 export const TechstackContainer = styled.div`
     width: fit-content;
-    padding: ${pixelToRem(0, 30)};
 
     @media ${device.mobile} {
-        margin: 50px auto ${pixelToRem(15)} auto;
+        margin: 50px auto 0;
     }
 
     @media ${device.tablet} {
-        margin: 0 auto ${pixelToRem(0)} auto;
+        margin: 0 auto;
     }
 `;
 

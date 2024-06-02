@@ -6,21 +6,26 @@ import {
     LabelWrapper,
     TechsWrapper,
 } from 'src/library/works/styles';
-import { WorksBox } from 'src/library/works/types';
+import { WorksBox, WorksBoxName } from 'src/library/works/types';
 import { Works } from 'types/techstackTypes';
 import { scrollToSection } from 'utils/utils';
 
 interface Props {
     boxItem: Works;
+    isSmallScreen: boolean;
     isDarkTheme: boolean;
 }
 
-export default function BoxTech({ isDarkTheme, boxItem }: Props): ReactElement {
+export default function BoxTech({
+    isDarkTheme,
+    isSmallScreen,
+    boxItem,
+}: Props): ReactElement {
     return (
         <BoxContainer
             box={WorksBox.TECH}
             dark={isDarkTheme}
-            onClick={() => scrollToSection('tech')}
+            onClick={() => scrollToSection(WorksBoxName.TECH, isSmallScreen)}
         >
             <TechsWrapper>
                 <ItemWrapper>

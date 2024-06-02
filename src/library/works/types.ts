@@ -11,6 +11,15 @@ export enum WorksBox {
     KNOW,
 }
 
+export enum WorksBoxName {
+    DEVELOP = 'develop',
+    DESIGN = 'design',
+    BUILD = 'build',
+    TEST = 'test',
+    TECH = 'tech',
+    KNOW = 'know',
+}
+
 export interface WorksProps {
     box: WorksBox;
     dark: boolean;

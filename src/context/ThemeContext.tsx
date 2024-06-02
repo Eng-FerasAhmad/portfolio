@@ -10,20 +10,19 @@ import { LocalStorageKey } from '../library/local-storage/types';
 import useLocalStorage from '../library/local-storage/useLocalStorage';
 import { Language } from '../service/types';
 import { themeDark, themeLight } from '../style/theme';
-import { Devices } from 'style/screenSize';
 
 interface ContextValue {
     toggleTheme: () => void;
     isDarkTheme: boolean | undefined;
     language: Language;
-    media: Devices | undefined;
+    isSmallScreen: boolean;
     toggleLanguage: () => void;
 }
 
 export const ThemeContext = createContext<ContextValue>({
     toggleTheme: () => undefined,
     isDarkTheme: undefined,
-    media: undefined,
+    isSmallScreen: false,
     language: Language.EN,
     toggleLanguage: () => undefined,
 });
@@ -42,7 +41,6 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
         undefined
     );
     const [language, setLanguage] = useState<Language>(Language.EN);
-    const [media, setMedia] = useState<Devices | undefined>('desktop');
 
     const toggleTheme = useCallback(() => {
         const darkTheme = getItemToLocalStorage<boolean>(
@@ -83,11 +81,30 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
 
         const lng = getItemToLocalStorage<Language>(LocalStorageKey.LANGUAGE);
         setLanguage(lng === undefined ? Language.EN : lng);
-
-        // determine the device output:
-        // const desktop = window.matchMedia(device.desktop);
-        setMedia('desktop');
     }, [getItemToLocalStorage]);
+
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 600px)');
+
+        const handleMediaChange = (
+            event: MediaQueryListEvent | MediaQueryList
+        ): void => {
+            setIsSmallScreen(event.matches);
+        };
+
+        // Register the event listener
+        mediaQuery.addEventListener('change', handleMediaChange);
+
+        // Initial check
+        handleMediaChange(mediaQuery);
+
+        // Cleanup listener on component unmount
+        return () => {
+            mediaQuery.removeEventListener('change', handleMediaChange);
+        };
+    }, []);
 
     return (
         <ThemeContext.Provider
@@ -96,7 +113,7 @@ export default function ThemeContextProvider({ children }: Props): JSX.Element {
                 isDarkTheme,
                 language,
                 toggleLanguage,
-                media,
+                isSmallScreen,
             }}
         >
             {isDarkTheme !== undefined && (

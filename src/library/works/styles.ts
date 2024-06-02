@@ -162,9 +162,9 @@ export const BoxContainer = styled.div<WorksProps>`
     margin: 20px;
     cursor: pointer;
     box-sizing: border-box;
-    border-color: ${(props) => (props.dark ? getBgColor : getBgColor)};
-    border-style: ${(props) => (props.dark ? 'solid' : 'solid')};
-    border-width: ${(props) => (props.dark ? 1 : '3px')};
+    border-color: ${getBgColor};
+    border-style: solid;
+    border-width: 3px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -180,6 +180,10 @@ export const BoxContainer = styled.div<WorksProps>`
         box-shadow: ${getBgHoverColor} 0 2px 100px -22px;
     }
 
+    &:visited {
+        text-decoration: none;
+    }
+
     @keyframes fade-in {
         0% {
             transform: translateY(20vh);
@@ -188,8 +192,8 @@ export const BoxContainer = styled.div<WorksProps>`
     }
 
     @media ${device.mobile} {
-        width: 110px;
-        height: 110px;
+        width: 130px;
+        height: 130px;
         border-radius: ${getRadiusMobile};
     }
 
@@ -207,20 +211,19 @@ export const BoxContainer = styled.div<WorksProps>`
 `;
 
 export const BoxContentContainer = styled.div<Props>`
+    text-decoration: none;
     color: ${color.dark};
     background-color: ${getBgColor};
     height: fit-content;
-    padding: 30px;
     border-radius: 20px;
 
     @media ${device.mobile} {
-        margin: 90px 0 20px;
         border-radius: 0;
-        padding: 20px;
+        padding: 25px;
     }
 
     @media ${device.tablet} {
-        margin: 90px 40px 40px;
+        margin: 90px 70px 30px;
         border-radius: 20px;
         padding: 30px;
         font-size: 24px;
@@ -244,6 +247,7 @@ export const LabelWrapper = styled.div`
     font-family: 'Indie Flower', cursive;
     font-weight: 600;
     font-style: normal;
+    text-decoration: none;
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(18)};

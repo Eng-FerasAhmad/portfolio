@@ -1,5 +1,6 @@
 import isPropValid from '@emotion/is-prop-valid';
 import { routerPath } from 'router/constant';
+import { WorksBoxName } from 'src/library/works/types';
 
 type FormatType = '2-digit' | 'numeric';
 
@@ -63,7 +64,38 @@ export const isBlog = (pathname: string): boolean =>
 export const isContact = (pathname: string): boolean =>
     pathname === routerPath.contact;
 
-export const scrollToSection = (id: string): void => {
-    const divElement = document.getElementById(id);
-    divElement!.scrollIntoView({ behavior: 'smooth' });
+const getBoxOffset = (box: WorksBoxName): number => {
+    switch (box) {
+        case WorksBoxName.BUILD:
+            return 40;
+        case WorksBoxName.DESIGN:
+            return 70;
+        case WorksBoxName.DEVELOP:
+            return 100;
+        case WorksBoxName.KNOW:
+            return -100;
+        case WorksBoxName.TECH:
+            return -30;
+        case WorksBoxName.TEST:
+            return 0;
+        default:
+            return 0;
+    }
+};
+
+export const scrollToSection = (
+    id: WorksBoxName,
+    isSmallScreen?: boolean
+): void => {
+    const offset = isSmallScreen ? 0 : getBoxOffset(id);
+    const element = document.getElementById(id);
+
+    const elementPosition =
+        element!.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+    });
 };

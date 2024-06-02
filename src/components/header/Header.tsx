@@ -33,9 +33,8 @@ export default function Header(): ReactElement {
 
     return (
         <HeaderContainer data-testid="header">
-            <NavbarWrapper>
+            <NavbarWrapper data-testid="header-navbar">
                 <LogoWrapper onClick={clickHandler}>
-                    {/* icon source: https://iconscout.com/icon-pack/owl-8 */}
                     <LogoIcon width={20} height={28} color={colorSection} />
                 </LogoWrapper>
 
@@ -50,7 +49,7 @@ export default function Header(): ReactElement {
                     viewModel={viewModel!}
                     isDarkTheme={isDarkTheme!}
                 />
-                <IconsWrapper>
+                <IconsWrapper data-testid="header-icons">
                     <GithubNavigation isDark={isDarkTheme!} />
                     <ThemeIcon
                         isDark={isDarkTheme!}

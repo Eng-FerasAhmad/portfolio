@@ -5,6 +5,7 @@ import { fontSize } from './common';
 
 export const GlobalStyle = createGlobalStyle`
   html {
+      scroll-behavior: smooth;
     font-size: ${pixelToRem(fontSize.base)};
     color: ${(props) => props.theme.color.page.background};
   }

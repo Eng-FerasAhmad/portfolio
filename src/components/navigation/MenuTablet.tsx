@@ -43,7 +43,7 @@ export default function MenuTablet({
     const menuSize = 30;
 
     return (
-        <MenuTabletContainer>
+        <MenuTabletContainer data-testid="menu-tablet">
             {!showTabletMenu ? (
                 <TabletWrapper onClick={() => toggleMenu(true)}>
                     <MenuIcon
