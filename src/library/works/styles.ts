@@ -220,15 +220,15 @@ export const BoxContentContainer = styled.div<Props>`
     text-decoration: none;
     color: ${(props) => props.theme.color.page.font};
     background-color: ${(props) => (props.dark ? '' : getBgColor)};
-    border-style: solid;
-    border-width: 2px;
-    border-color: ${getBgColor};
     height: fit-content;
     border-radius: 20px;
 
     @media ${device.mobile} {
         border-radius: 0;
         padding: 25px;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-bottom-color: ${getBgColor};
     }
 
     @media ${device.tablet} {
@@ -237,6 +237,9 @@ export const BoxContentContainer = styled.div<Props>`
         padding: 30px;
         font-size: 24px;
         line-height: 40px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: ${getBgColor};
     }
 
     transition: all 0.9s cubic-bezier(0, 0, 0.5, 1);
