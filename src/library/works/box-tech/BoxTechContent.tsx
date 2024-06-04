@@ -11,13 +11,17 @@ import { Works } from 'types/techstackTypes';
 
 interface Props {
     works: Works;
+    isDarkTheme: boolean;
 }
 
-export default function BoxTechContent({ works }: Props): ReactElement {
+export default function BoxTechContent({
+    works,
+    isDarkTheme,
+}: Props): ReactElement {
     return (
         <BoxContentContainer
             box={WorksBox.TECH}
-            dark={false}
+            dark={isDarkTheme}
             id={WorksBoxName.TECH}
         >
             <BoxTitleWrapper>{works.title}</BoxTitleWrapper>

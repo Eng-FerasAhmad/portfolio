@@ -1,5 +1,4 @@
-import { ReactElement, useContext } from 'react';
-import { ThemeContext } from 'context/ThemeContext';
+import { ReactElement } from 'react';
 import BoxBuild from 'src/library/works/box-build/BoxBuild';
 import BoxDesign from 'src/library/works/box-design/BoxDesign';
 import BoxDevelop from 'src/library/works/box-develop/BoxDevelop';
@@ -16,11 +15,15 @@ import { TechstackViewModel } from 'types/techstackTypes';
 
 interface Props {
     viewModel: TechstackViewModel;
+    isDarkTheme: boolean;
+    isSmallScreen: boolean;
 }
 
-export default function Works({ viewModel }: Props): ReactElement {
-    const { isDarkTheme, isSmallScreen } = useContext(ThemeContext);
-
+export default function Works({
+    viewModel,
+    isDarkTheme,
+    isSmallScreen,
+}: Props): ReactElement {
     return (
         <WorksContainer data-testid="works">
             <TitleWrapper data-testid="works-title">

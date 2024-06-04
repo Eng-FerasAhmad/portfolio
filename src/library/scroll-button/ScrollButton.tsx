@@ -1,10 +1,12 @@
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useContext, useEffect, useState } from 'react';
 import TopIcon from '../icon/top-icon/TopIcon';
 import { ButtonContainer } from './styles';
-import { color } from 'style/color';
+import { ThemeContext } from 'context/ThemeContext';
+import { color, darkThemeColor } from 'style/color';
 
 export default function ScrollButton(): ReactElement {
     const [showScrollButton, setShowScrollButton] = useState<boolean>(false);
+    const { isDarkTheme } = useContext(ThemeContext);
 
     useEffect(() => {
         const triggerWindowScroll = (): void => {
@@ -30,7 +32,11 @@ export default function ScrollButton(): ReactElement {
             {showScrollButton && (
                 <ButtonContainer onClick={scrollToTop} title="Scroll to Top">
                     <TopIcon
-                        color={color.dark}
+                        color={
+                            isDarkTheme
+                                ? darkThemeColor.fontPrimary
+                                : color.dark
+                        }
                         iconHeight={33}
                         iconWidth={33}
                     />

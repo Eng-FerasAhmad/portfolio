@@ -117,7 +117,7 @@ export const WorksContainer = styled.div`
     margin: auto;
 
     @media ${device.mobile} {
-        padding-top: 30px;
+        padding-top: 70px;
         height: 100vh;
     }
 
@@ -197,10 +197,16 @@ export const BoxContainer = styled.div<WorksProps>`
         border-radius: ${getRadiusMobile};
     }
 
-    @media ${device.tablet} {
+    @media ${device.tablet800} {
         width: 200px;
         height: 200px;
         border-radius: ${getRadiusTablet};
+    }
+
+    @media ${device.tablet} {
+        width: 200px;
+        height: 200px;
+        border-radius: ${getRadiusDesktop};
     }
 
     @media ${device.desktop} {
@@ -212,8 +218,11 @@ export const BoxContainer = styled.div<WorksProps>`
 
 export const BoxContentContainer = styled.div<Props>`
     text-decoration: none;
-    color: ${color.dark};
-    background-color: ${getBgColor};
+    color: ${(props) => props.theme.color.page.font};
+    background-color: ${(props) => (props.dark ? '' : getBgColor)};
+    border-style: solid;
+    border-width: 2px;
+    border-color: ${getBgColor};
     height: fit-content;
     border-radius: 20px;
 
