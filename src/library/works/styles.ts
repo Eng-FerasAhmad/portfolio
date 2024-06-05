@@ -226,9 +226,7 @@ export const BoxContentContainer = styled.div<Props>`
     @media ${device.mobile} {
         border-radius: 0;
         padding: 25px;
-        border-bottom-style: solid;
-        border-bottom-width: 2px;
-        border-bottom-color: ${getBgColor};
+        border-bottom: 2px solid ${getBgColor};
     }
 
     @media ${device.tablet} {

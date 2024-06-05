@@ -12,10 +12,9 @@ export const InputTextContainer = styled.div`
 
 export const InputWrapper = styled.textarea`
     font-size: ${pixelToRem(20)};
-    color: ${color.grayDarker};
+    font-family: inherit;
     margin: 0;
     width: 100%;
-    max-width: 100%;
     min-width: 100%;
     display: inline-block;
     box-sizing: border-box;
@@ -42,10 +41,12 @@ export const InputWrapper = styled.textarea`
 
     @media ${device.mobile} {
         padding: ${pixelToRem(10, 20)};
+        max-width: 100%;
     }
 
     @media ${device.tablet} {
         padding: ${pixelToRem(10, 30)};
+        max-width: 600px;
     }
 `;
 

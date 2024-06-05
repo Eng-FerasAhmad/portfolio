@@ -12,7 +12,7 @@ export const InputTextContainer = styled.div`
 
 export const InputWrapper = styled.input`
     font-size: ${pixelToRem(20)};
-    color: ${color.grayDarker};
+    font-family: inherit;
     margin: 0;
     width: 100%;
     display: inline-block;
