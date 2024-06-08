@@ -117,17 +117,17 @@ export const WorksContainer = styled.div`
     margin: auto;
 
     @media ${device.mobile} {
-        padding-top: 20px;
+        padding-top: ${pixelToRem(20)};
         height: 100vh;
     }
 
     @media ${device.tablet} {
-        padding-top: 100px;
+        padding-top: ${pixelToRem(100)};
         height: 100vh;
     }
 
     @media ${device.desktop} {
-        padding-top: 100px;
+        padding-top: ${pixelToRem(100)};
     }
 `;
 
@@ -159,12 +159,12 @@ export const TitleWrapper = styled.div`
 
 // items:
 export const BoxContainer = styled.div<WorksProps>`
-    margin: 20px;
+    margin: ${pixelToRem(20)};
     cursor: pointer;
     box-sizing: border-box;
     border-color: ${getBgColor};
     border-style: solid;
-    border-width: 3px;
+    border-width: ${pixelToRem(3)};
     padding: 0;
     display: flex;
     justify-content: center;
@@ -192,26 +192,26 @@ export const BoxContainer = styled.div<WorksProps>`
     }
 
     @media ${device.mobile} {
-        width: 130px;
-        height: 130px;
+        width: ${pixelToRem(130)};
+        height: ${pixelToRem(130)};
         border-radius: ${getRadiusMobile};
     }
 
     @media ${device.tablet800} {
-        width: 200px;
-        height: 200px;
+        width: ${pixelToRem(200)};
+        height: ${pixelToRem(200)};
         border-radius: ${getRadiusTablet};
     }
 
     @media ${device.tablet} {
-        width: 200px;
-        height: 200px;
+        width: ${pixelToRem(200)};
+        height: ${pixelToRem(200)};
         border-radius: ${getRadiusDesktop};
     }
 
     @media ${device.desktop} {
-        width: 230px;
-        height: 230px;
+        width: ${pixelToRem(230)};
+        height: ${pixelToRem(230)};
         border-radius: ${getRadiusDesktop};
     }
 `;
@@ -221,22 +221,22 @@ export const BoxContentContainer = styled.div<Props>`
     color: ${(props) => props.theme.color.page.font};
     background-color: ${(props) => (props.dark ? '' : getBgColor)};
     height: fit-content;
-    border-radius: 20px;
+    border-radius: ${pixelToRem(20)};
 
     @media ${device.mobile} {
         border-radius: 0;
         padding: 25px;
-        border-bottom: 2px solid ${getBgColor};
+        border-bottom: ${pixelToRem(2)} solid ${getBgColor};
     }
 
     @media ${device.tablet} {
-        margin: 90px 70px 30px;
-        border-radius: 20px;
-        padding: 30px;
-        font-size: 24px;
-        line-height: 40px;
+        margin: ${pixelToRem(90, 70, 30)};
+        border-radius: ${pixelToRem(20)};
+        padding: ${pixelToRem(30)};
+        font-size: ${pixelToRem(24)};
+        line-height: ${pixelToRem(40)};
         border-style: solid;
-        border-width: 2px;
+        border-width: ${pixelToRem(2)};
         border-color: ${getBgColor};
     }
 
@@ -250,8 +250,8 @@ export const BoxContentContainer = styled.div<Props>`
 
 export const LabelWrapper = styled.div`
     margin: 0;
-    height: 50px;
-    padding: 4px 12px 16px;
+    height: ${pixelToRem(50)};
+    padding: ${pixelToRem(4, 12, 16)};
     box-sizing: border-box;
     color: ${(props) => props.theme.color.page.font};
     font-family: 'Indie Flower', cursive;
@@ -276,22 +276,22 @@ export const TechsWrapper = styled.div`
 `;
 
 export const ItemWrapper = styled.div`
-    margin: 10px;
+    margin: ${pixelToRem(10)};
 `;
 
 export const BoxTitleWrapper = styled.h2`
-    height: 40px;
+    height: ${pixelToRem(40)};
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
     @media ${device.mobile} {
-        font-size: ${18};
+        font-size: ${pixelToRem(18)};
     }
 
     @media ${device.tablet} {
-        font-size: ${28};
+        font-size: ${pixelToRem(28)};
     }
 `;
 
@@ -299,9 +299,9 @@ export const BoxDescriptionWrapper = styled.div`
     margin: auto;
 
     @media ${device.mobile} {
-        font-size: 18px;
-        padding: 0 25px;
-        line-height: 35px;
+        font-size: ${pixelToRem(18)};
+        padding: ${pixelToRem(0, 25)};
+        line-height: ${pixelToRem(35)};
         hyphens: auto;
         text-align: justify;
     }
@@ -309,12 +309,12 @@ export const BoxDescriptionWrapper = styled.div`
     @media ${device.tablet} {
         hyphens: none;
         text-align: center;
-        font-size: 24px;
+        font-size: ${pixelToRem(24)};
     }
 `;
 
 export const BoxSkillsContainer = styled.div`
-    margin: 30px auto;
+    margin: ${pixelToRem(30)} auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

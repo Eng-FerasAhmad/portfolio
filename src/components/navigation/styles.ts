@@ -30,8 +30,8 @@ export const NavigationContainer = styled.div`
     @media ${device.desktop} {
         visibility: visible;
         width: fit-content;
-        height: 35px;
-        padding-left: 90px;
+        height: ${pixelToRem(35)};
+        padding-left: ${pixelToRem(90)};
         margin: auto;
         display: flex;
         flex-direction: row;
@@ -72,10 +72,10 @@ export const ItemWrapper = styled.div<Props>`
         position: absolute;
         width: 100%;
         transform: scaleX(0);
-        height: 2px;
+        height: ${pixelToRem(2)};
         bottom: 0;
         left: 0;
-        top: 32px;
+        top: ${pixelToRem(32)};
         background-color: ${color.gray};
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;

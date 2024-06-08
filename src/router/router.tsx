@@ -1,11 +1,10 @@
-import App from '../components/app/App';
-import Contact from '../components/sections/contact/Contact';
-import Developer from '../components/sections/developer/Developer';
-import Project from '../components/sections/project/Project';
-import Techstack from '../components/sections/techstack/Techstack';
 import { routerPath } from './constant';
 import type { RouteObject } from 'react-router';
+import App from 'components/app/App';
 import Blog from 'components/sections/blog/Blog';
+import Contact from 'components/sections/contact/Contact';
+import Developer from 'components/sections/developer/Developer';
+import Techstack from 'components/sections/techstack/Techstack';
 
 export const createRouterElements = (): RouteObject[] => [
     {
@@ -27,10 +26,6 @@ export const createRouterElements = (): RouteObject[] => [
             {
                 path: routerPath.blog,
                 element: <Blog />,
-            },
-            {
-                path: routerPath.projects,
-                element: <Project />,
             },
             {
                 path: routerPath.contact,

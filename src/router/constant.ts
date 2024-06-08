@@ -3,6 +3,5 @@ export const routerPath = {
     developer: '/developer',
     techstack: '/techstack',
     blog: '/blog',
-    projects: '/projects',
     contact: '/contact',
 };
