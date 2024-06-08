@@ -1,3 +1,4 @@
+import { Common } from 'types/common';
 import { Pages } from 'types/pageType';
 
 export interface TechstackViewModel {
@@ -6,6 +7,7 @@ export interface TechstackViewModel {
     pages: Pages;
     worksTitle: string;
     works: Array<Works>;
+    common: Common;
 }
 
 export interface Category {

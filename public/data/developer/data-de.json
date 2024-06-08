@@ -6,6 +6,10 @@
         "project": "Projekte",
         "developer": "Über mich!"
     },
+    "common": {
+        "language": "Sprache",
+        "theme": "Theme"
+    },
     "entityHeader": "Entwickler",
     "title": "Senior Frontend Ingenieur",
     "name": "Hi, Ich bin Feras Ahmad",

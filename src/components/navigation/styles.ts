@@ -198,3 +198,16 @@ export const MobileNavigationWrapper = styled.div`
 export const MobileWrapper = styled.div`
     width: fit-content;
 `;
+
+export const IconsWrapper = styled.div`
+    @media ${device.tablet} {
+        display: none;
+    }
+`;
+
+export const IconItemsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;

@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { ReactElement, useContext, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import {
     ItemWrapper,
@@ -7,23 +7,26 @@ import {
     MobileNavigationWrapper,
     MobileWrapper,
     TabletWrapper,
+    IconsWrapper,
+    IconItemsWrapper,
 } from 'components/navigation/styles';
+import { ThemeContext } from 'context/ThemeContext';
 import { routerPath } from 'router/constant';
 import CloseIcon from 'src/library/icon/close/CloseIcon';
+import LanguageIcon from 'src/library/icon/language/LanguageIcon';
 import MenuIcon from 'src/library/icon/menu/MenuIcon';
+import ThemeIcon from 'src/library/icon/theme/ThemeIcon';
 import { color } from 'style/color';
 import { DeveloperViewModel } from 'types/developerTypes';
 import { isBlog, isContact, isDeveloper, isTechstack } from 'utils/utils';
 
 export interface Props {
     viewModel: DeveloperViewModel;
-    isDarkTheme: boolean;
     colorSection: string;
 }
 
 export default function MenuMobile({
     viewModel,
-    isDarkTheme,
     colorSection,
 }: Props): ReactElement {
     const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
@@ -38,6 +41,9 @@ export default function MenuMobile({
     const toggleMenu = (visible: boolean): void => {
         setShowMobileMenu(visible);
     };
+
+    const { toggleTheme, isDarkTheme, toggleLanguage } =
+        useContext(ThemeContext);
 
     const menuColor = isDarkTheme ? color.light : color.dark;
     const menuSize = 30;
@@ -97,6 +103,24 @@ export default function MenuMobile({
                                 {viewModel.pages.contact}
                             </ItemWrapper>
                         </>
+
+                        <IconsWrapper data-testid="menu-mobile-header-icons">
+                            <IconItemsWrapper onClick={() => toggleTheme()}>
+                                <ThemeIcon
+                                    isDark={isDarkTheme!}
+                                    clickHandler={() => undefined}
+                                />
+                                <div>{viewModel.common.theme}</div>
+                            </IconItemsWrapper>
+
+                            <IconItemsWrapper onClick={() => toggleLanguage()}>
+                                <LanguageIcon
+                                    isDark={isDarkTheme!}
+                                    clickHandler={() => undefined}
+                                />
+                                <div>{viewModel.common.language}</div>
+                            </IconItemsWrapper>
+                        </IconsWrapper>
                     </MobileContentWrapper>
                 </MobileNavigationWrapper>
             )}

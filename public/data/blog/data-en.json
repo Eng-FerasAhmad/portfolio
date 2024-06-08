@@ -6,6 +6,10 @@
         "project": "Project",
         "developer": "About me!"
     },
+    "common": {
+        "language": "Language",
+        "theme": "Theme"
+    },
     "entityHeader": "Blog",
     "title": "Blog",
     "description": "Blog Studio",

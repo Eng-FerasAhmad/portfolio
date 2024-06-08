@@ -47,7 +47,6 @@ export default function Header(): ReactElement {
                 <MenuMobile
                     colorSection={colorSection}
                     viewModel={viewModel!}
-                    isDarkTheme={isDarkTheme!}
                 />
                 <IconsWrapper data-testid="header-icons">
                     <GithubNavigation isDark={isDarkTheme!} />

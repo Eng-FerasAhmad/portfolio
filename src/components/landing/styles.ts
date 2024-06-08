@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
-import { contentWidth, device } from '../../style/screenSize';
-import { pixelToRem } from '../../utils/utils';
+import { contentWidth, device } from 'style/screenSize';
+import { pixelToRem } from 'utils/utils';
 
 export const LandingContainer = styled.div`
     color: ${(props) => props.theme.color.page.font};
@@ -8,7 +8,6 @@ export const LandingContainer = styled.div`
     @media ${device.mobile} {
         max-width: 100%;
         padding: ${pixelToRem(0, 20)};
-        margin-top: ${pixelToRem(-90)};
     }
 
     @media ${device.tablet} {

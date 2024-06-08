@@ -1,3 +1,4 @@
+import { Common } from 'types/common';
 import { Pages } from 'types/pageType';
 
 export interface EducationViewModel {
@@ -7,4 +8,5 @@ export interface EducationViewModel {
     country: string;
     visible: boolean;
     pages: Pages;
+    common: Common;
 }

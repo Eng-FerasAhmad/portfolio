@@ -1,3 +1,4 @@
+import { Common } from 'types/common';
 import { Pages } from 'types/pageType';
 
 export interface DeveloperViewModel {
@@ -9,6 +10,7 @@ export interface DeveloperViewModel {
     socialAccount: Array<SocialAccount>;
     language: Array<string>;
     pages: Pages;
+    common: Common;
 }
 
 export interface SocialAccount {

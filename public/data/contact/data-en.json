@@ -6,6 +6,10 @@
         "project": "Project",
         "developer": "About me!"
     },
+    "common": {
+        "language": "Language",
+        "theme": "Theme"
+    },
     "entityHeader": "Contact",
     "title": "Visite my profiles",
     "description": "Get in touch",

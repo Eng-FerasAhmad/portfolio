@@ -1,3 +1,4 @@
+import { Common } from 'types/common';
 import { Pages } from 'types/pageType';
 
 export interface ProjectViewModel {
@@ -12,6 +13,7 @@ export interface ProjectViewModel {
     branch: Array<Branch>;
     task: Array<ProjectTasks>;
     pages: Pages;
+    common: Common;
 }
 
 export interface ProjectTasks {

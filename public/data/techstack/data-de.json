@@ -6,6 +6,10 @@
         "project": "Projekte",
         "developer": "Über mich!"
     },
+    "common": {
+        "language": "Sprache",
+        "theme": "Theme"
+    },
     "entityHeader": "Techstack",
     "categories": [
         {

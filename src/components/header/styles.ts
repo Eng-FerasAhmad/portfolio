@@ -42,12 +42,19 @@ export const LogoWrapper = styled.div`
     font-family: 'Dancing Script', cursive;
     font-size: ${pixelToRem(fontSize.normalText)};
     cursor: pointer;
-    display: flex;
+
+    @media ${device.mobile} {
+        display: none;
+    }
+
+    @media ${device.tablet} {
+        display: flex;
+    }
 `;
 
 export const IconsWrapper = styled.div`
     @media ${device.mobile} {
-        display: block;
+        display: none;
     }
 
     @media ${device.tablet} {

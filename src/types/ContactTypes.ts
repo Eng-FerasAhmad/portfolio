@@ -1,3 +1,4 @@
+import { Common } from 'types/common';
 import { Pages } from 'types/pageType';
 
 export interface ContactViewModel {
@@ -7,6 +8,7 @@ export interface ContactViewModel {
     form: ContactForm;
     media: Array<MediaViewModel>;
     pages: Pages;
+    common: Common;
 }
 
 export interface ContactForm {

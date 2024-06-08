@@ -1,3 +1,4 @@
+import { Common } from 'types/common';
 import { Pages } from 'types/pageType';
 
 export interface BlogViewModel {
@@ -6,6 +7,7 @@ export interface BlogViewModel {
     description: string;
     slides: Array<Slides>;
     pages: Pages;
+    common: Common;
 }
 
 export interface Slides {
