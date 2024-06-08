@@ -86,7 +86,7 @@ const getBoxOffset = (box: WorksBoxName): number => {
 const getBoxOffsetSmallScreen = (box: WorksBoxName): number => {
     switch (box) {
         case WorksBoxName.BUILD:
-            return -70;
+            return -80;
         case WorksBoxName.DESIGN:
             return -40;
         case WorksBoxName.DEVELOP:
