@@ -5,14 +5,14 @@ import { device } from '../../../style/screenSize';
 import { pixelToRem } from '../../../utils/utils';
 
 export const ContactContainer = styled.div`
-    padding: ${pixelToRem(90, 30, 10, 30)};
-
     @media ${device.mobile} {
+        padding: ${pixelToRem(20, 30, 10, 30)};
         font-size: ${pixelToRem(fontSize.normalMobileText)};
         margin: 0 auto ${pixelToRem(15)} auto;
     }
 
     @media ${device.tablet} {
+        padding: ${pixelToRem(90, 30, 10, 30)};
         font-size: ${pixelToRem(fontSize.normalText)};
         margin: 0 auto ${pixelToRem(30)} auto;
     }

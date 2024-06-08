@@ -6,31 +6,9 @@ import { pixelToRem } from 'utils/utils';
 
 export const TechstackContainer = styled.div`
     width: fit-content;
-
-    @media ${device.mobile} {
-        margin: 50px auto 0;
-    }
-
-    @media ${device.tablet} {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
 `;
 
-export const TechstackItemContainer = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: ${pixelToRem(0, 0, 70, 0)};
-
-    @media ${device.mobile} {
-        font-size: ${pixelToRem(fontSize.normalMobileText)};
-    }
-
-    @media ${device.tablet} {
-        font-size: ${pixelToRem(fontSize.normalText)};
-    }
-`;
 export const ItemWrapper = styled.div`
     width: ${pixelToRem(140)};
     padding: ${pixelToRem(20, 0)};

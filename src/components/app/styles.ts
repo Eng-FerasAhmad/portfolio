@@ -11,7 +11,7 @@ export const AppContainer = styled.div`
         margin: ${pixelToRem(0)};
         min-height: 80vh;
         padding: 0;
-        max-width: fit-content;
+        max-width: 100%;
         height: fit-content;
     }
 

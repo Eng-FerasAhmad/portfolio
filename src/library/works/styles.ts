@@ -117,7 +117,7 @@ export const WorksContainer = styled.div`
     margin: auto;
 
     @media ${device.mobile} {
-        padding-top: 70px;
+        padding-top: 20px;
         height: 100vh;
     }
 
