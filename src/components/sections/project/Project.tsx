@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import {
     ProjectContainer,
     ProjectTitleWrapper,
     ProjectItemContainer,
 } from './styles';
 
-export default function Project(): JSX.Element {
+export default function Project(): ReactElement {
     const [show, setShow] = useState<boolean>(false);
 
     const clickHandler = (): void => {

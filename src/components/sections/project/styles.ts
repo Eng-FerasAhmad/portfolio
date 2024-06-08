@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { color } from '../../../style/color';
-import { fontSize } from '../../../style/common';
-import { device } from '../../../style/screenSize';
-import { pixelToRem } from '../../../utils/utils';
+import { color } from 'style/color';
+import { fontSize } from 'style/common';
+import { device } from 'style/screenSize';
+import { pixelToRem } from 'utils/utils';
 
 export const ProjectContainer = styled.div`
     width: 80%;

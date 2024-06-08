@@ -104,23 +104,27 @@ export default function MenuMobile({
                             </ItemWrapper>
                         </>
 
-                        <IconsWrapper data-testid="menu-mobile-header-icons">
-                            <IconItemsWrapper onClick={() => toggleTheme()}>
-                                <ThemeIcon
-                                    isDark={isDarkTheme!}
-                                    clickHandler={() => undefined}
-                                />
-                                <div>{viewModel.common.theme}</div>
-                            </IconItemsWrapper>
+                        {viewModel && (
+                            <IconsWrapper data-testid="menu-mobile-header-icons">
+                                <IconItemsWrapper onClick={() => toggleTheme()}>
+                                    <ThemeIcon
+                                        isDark={isDarkTheme!}
+                                        clickHandler={() => undefined}
+                                    />
+                                    <div>{viewModel.common.theme}</div>
+                                </IconItemsWrapper>
 
-                            <IconItemsWrapper onClick={() => toggleLanguage()}>
-                                <LanguageIcon
-                                    isDark={isDarkTheme!}
-                                    clickHandler={() => undefined}
-                                />
-                                <div>{viewModel.common.language}</div>
-                            </IconItemsWrapper>
-                        </IconsWrapper>
+                                <IconItemsWrapper
+                                    onClick={() => toggleLanguage()}
+                                >
+                                    <LanguageIcon
+                                        isDark={isDarkTheme!}
+                                        clickHandler={() => undefined}
+                                    />
+                                    <div>{viewModel.common.language}</div>
+                                </IconItemsWrapper>
+                            </IconsWrapper>
+                        )}
                     </MobileContentWrapper>
                 </MobileNavigationWrapper>
             )}
