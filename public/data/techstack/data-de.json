@@ -708,7 +708,7 @@
         {
             "label": "Trainer",
             "title": "Trainer für Webentwicklung",
-            "description": "Neben mein Arbeit als Frontend Entwickler, vermittele ich fundiertes Wissen über die neuesten Tools und Frameworks, die ich in Webentwicklung einsetzte. Ich gestalte Schulungen und Workshops, in denen ich Entwicklern beibringe, wie sie effektiv mit HTML, CSS, JavaScript und anderen relevanten Technologien arbeiten können.",
+            "description": "Neben mein Arbeit als Frontend Entwickler, vermittele ich fundiertes Wissen über die neuesten Tools und Frameworks, die ich in Webentwicklung einsetzte. Ich gestalte Schulungen und Workshops, in denen ich Entwicklern beibringe, wie sie effektiv mit React, Redux, Cypress und anderen relevanten Technologien arbeiten können.",
             "icons": [
                 {
                     "id": "react",

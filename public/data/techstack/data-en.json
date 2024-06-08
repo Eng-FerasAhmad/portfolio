@@ -708,7 +708,7 @@
         {
             "label": "Trainer",
             "title": "Web Development Trainer",
-            "description": "In addition to my work as a frontend developer, I impart comprehensive knowledge about the latest tools and frameworks that I utilize in web development. I design training sessions and workshops where I teach developers how to effectively work with HTML, CSS, JavaScript, and other relevant technologies.",
+            "description": "In addition to my work as a frontend developer, I impart comprehensive knowledge about the latest tools and frameworks that I utilize in web development. I design training sessions and workshops where I teach developers how to effectively work with React, Redux, Cypress and other relevant technologies.",
             "icons": [
                 {
                     "id": "react",
