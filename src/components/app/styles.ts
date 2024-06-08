@@ -12,6 +12,7 @@ export const AppContainer = styled.div`
 
     @media ${device.mobile} {
         margin: ${pixelToRem(0)};
+        padding: 0;
     }
 
     @media ${device.tablet} {

@@ -6,12 +6,12 @@ import { fontSize } from './common';
 export const GlobalStyle = createGlobalStyle`
   html {
       scroll-behavior: smooth;
-    font-size: ${pixelToRem(fontSize.base)};
-    color: ${(props) => props.theme.color.page.background};
+      font-size: ${pixelToRem(fontSize.base)};
   }
 
   html, body {
     margin: 0;
+    padding: 0;
     border: none;
     outline: 0;
     height: 100%;

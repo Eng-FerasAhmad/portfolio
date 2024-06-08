@@ -3,7 +3,7 @@ import { color, darkThemeColor, lightThemeColor } from './color';
 export const themeDark = {
     color: {
         page: {
-            backgroundImage: 'url(background-dark.jpg)',
+            backgroundImage: darkThemeColor.backgroundColor,
             background:
                 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)',
             backgroundHeader: 'lineal-gradient(#1b2735 0%, #090a0f 30%)',
@@ -22,7 +22,7 @@ export const themeDark = {
 export const themeLight = {
     color: {
         page: {
-            backgroundImage: '#f1f2f4',
+            backgroundImage: lightThemeColor.backgroundColor,
             background: lightThemeColor.customWhite,
             font: lightThemeColor.fontPrimary,
             fontHover: color.light,

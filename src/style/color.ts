@@ -2,12 +2,14 @@ export const darkThemeColor = {
     customBlack: '#22272e',
     fontPrimary: '#adbac7',
     fontSecondary: '',
+    backgroundColor: '#22272C',
 };
 
 export const lightThemeColor = {
     customWhite: '#eeeee4',
     fontPrimary: '#24292f',
     fontSecondary: '',
+    backgroundColor: '#f1f2f4',
 };
 
 export const color = {

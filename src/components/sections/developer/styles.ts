@@ -20,6 +20,8 @@ export const DeveloperContainer = styled.div`
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 `;
 
 export const ImageContainer = styled.div`

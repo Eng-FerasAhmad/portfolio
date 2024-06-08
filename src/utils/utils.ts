@@ -83,11 +83,32 @@ const getBoxOffset = (box: WorksBoxName): number => {
     }
 };
 
+const getBoxOffsetSmallScreen = (box: WorksBoxName): number => {
+    switch (box) {
+        case WorksBoxName.BUILD:
+            return -70;
+        case WorksBoxName.DESIGN:
+            return -40;
+        case WorksBoxName.DEVELOP:
+            return 0;
+        case WorksBoxName.KNOW:
+            return -100;
+        case WorksBoxName.TECH:
+            return -140;
+        case WorksBoxName.TEST:
+            return -105;
+        default:
+            return 0;
+    }
+};
+
 export const scrollToSection = (
     id: WorksBoxName,
     isSmallScreen?: boolean
 ): void => {
-    const offset = isSmallScreen ? 0 : getBoxOffset(id);
+    const offset = isSmallScreen
+        ? getBoxOffsetSmallScreen(id)
+        : getBoxOffset(id);
     const element = document.getElementById(id);
 
     const elementPosition =
