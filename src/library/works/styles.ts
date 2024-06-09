@@ -280,11 +280,13 @@ export const ItemWrapper = styled.div`
 `;
 
 export const BoxTitleWrapper = styled.h2`
+    font-family: 'Indie Flower', cursive;
     height: ${pixelToRem(40)};
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-weight: 700 !important;
 
     @media ${device.mobile} {
         font-size: ${pixelToRem(18)};

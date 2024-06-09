@@ -200,6 +200,14 @@ export const MobileWrapper = styled.div`
 `;
 
 export const IconsWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+
     @media ${device.tablet} {
         display: none;
     }

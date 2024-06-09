@@ -9,8 +9,6 @@ export const ThemeIconWrapper = styled.div`
 
     @media ${device.mobile} {
         margin-top: ${pixelToRem(10)};
-        height: ${pixelToRem(40)};
-        width: 25px;
     }
 
     @media ${device.tablet} {

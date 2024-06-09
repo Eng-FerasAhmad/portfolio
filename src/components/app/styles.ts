@@ -17,7 +17,7 @@ export const AppContainer = styled.div`
 
     @media ${device.tablet} {
         margin: ${pixelToRem(0)};
-        min-height: 80vh;
+        min-height: 100vh;
         max-width: 100%;
         height: 100%;
     }

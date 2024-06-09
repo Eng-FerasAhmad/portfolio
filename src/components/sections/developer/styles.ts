@@ -14,6 +14,7 @@ export const DeveloperContainer = styled.div`
 
     @media ${device.tablet} {
         font-size: ${pixelToRem(fontSize.normalText)};
+        margin-top: 40px;
     }
 `;
 
