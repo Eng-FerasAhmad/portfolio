@@ -8,7 +8,7 @@ interface UseBlog {
     viewModel: BlogViewModel | undefined;
 }
 
-export default function useArticle(): UseBlog {
+export default function useBlog(): UseBlog {
     const { language } = useContext(ThemeContext);
     const [viewModel, setViewModel] = useState<BlogViewModel | undefined>(
         undefined

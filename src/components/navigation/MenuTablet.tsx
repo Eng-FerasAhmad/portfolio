@@ -13,7 +13,7 @@ import CloseIcon from 'src/library/icon/close/CloseIcon';
 import MenuIcon from 'src/library/icon/menu/MenuIcon';
 import { color } from 'style/color';
 import { DeveloperViewModel } from 'types/developerTypes';
-import { isBlog, isContact, isDeveloper, isTechstack } from 'utils/utils';
+import { isContact, isDeveloper, isTechstack } from 'utils/utils';
 
 export interface Props {
     viewModel: DeveloperViewModel;
@@ -83,13 +83,6 @@ export default function MenuTablet({
                                 }
                             >
                                 {viewModel.pages.techstack}
-                            </ItemWrapper>
-                            <ItemWrapper
-                                border={isBlog(location.pathname)}
-                                colorSection={colorSection}
-                                onClick={() => handleClick(routerPath.blog)}
-                            >
-                                {viewModel.pages.blog}
                             </ItemWrapper>
                             <ItemWrapper
                                 border={isContact(location.pathname)}

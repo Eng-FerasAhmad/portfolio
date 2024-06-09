@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { color } from 'style/color';
 import { fontSize } from 'style/common';
 import { device } from 'style/screenSize';
 import { pixelToRem } from 'utils/utils';
@@ -20,19 +19,6 @@ export const ItemWrapper = styled.div`
     @media ${device.tablet} {
         font-size: ${pixelToRem(fontSize.iconLabel)};
     }
-`;
-
-export const ItemsGroupTitleWrapper = styled.div`
-    padding-bottom: ${pixelToRem(8)};
-    margin: ${pixelToRem(20)} auto;
-    border-bottom: ${pixelToRem(3)} solid ${color.green};
-`;
-
-export const ItemsGroupWrapper = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
 `;
 
 export const BoxDetailsContainer = styled.div`

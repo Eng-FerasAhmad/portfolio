@@ -13,13 +13,40 @@
     "entityHeader": "Blog",
     "title": "Blog",
     "description": "Blog Studio",
-    "slides": [
-        {
-            "title": "First Artikel",
-            "textTop": "Text top",
-            "textMid": "Text Mid",
-            "textBottom": "Text bottom",
-            "image": "image"
-        }
-    ]
+    "publish": {
+        "title": "Meine neue Artikels",
+        "articles": [
+            {
+                "id": "1",
+                "title" : "React for beginner",
+                "icon": "react",
+                "dateOfPublish": "01.01.2024",
+                "author": "Feras Ahmad",
+                "isNew": true
+            },
+            {
+                "id": "2",
+                "title" : "Redux Toolkit",
+                "icon": "redux",
+                "dateOfPublish": "01.01.2024",
+                "author": "Feras Ahmad",
+                "isNew": false
+            }
+        ]
+    },
+    "comingSoon": {
+        "title": "Meine nächste Artikels",
+        "articles": [
+            {
+                "title" : "React for Professional",
+                "icon": "react",
+                "author": "Feras Ahmad"
+            },
+            {
+                "title" : "Redux RTK Query",
+                "icon": "react",
+                "author": "Feras Ahmad"
+            }
+        ]
+    }
 }

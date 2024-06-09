@@ -1,12 +1,14 @@
+import { createBrowserRouter } from 'react-router-dom';
 import { routerPath } from './constant';
-import type { RouteObject } from 'react-router';
 import App from 'components/app/App';
 import Blog from 'components/sections/blog/Blog';
+import BlogOutlet from 'components/sections/blog/BlogOutlet';
 import Contact from 'components/sections/contact/Contact';
 import Developer from 'components/sections/developer/Developer';
 import Techstack from 'components/sections/techstack/Techstack';
+import BlogPosts from 'src/library/blog-posts/BlogPosts';
 
-export const createRouterElements = (): RouteObject[] => [
+export const createRouterElements = createBrowserRouter([
     {
         path: routerPath.home,
         element: <App />,
@@ -25,12 +27,23 @@ export const createRouterElements = (): RouteObject[] => [
             },
             {
                 path: routerPath.blog,
-                element: <Blog />,
+                element: <BlogOutlet />,
+                children: [
+                    {
+                        path: routerPath.start,
+                        element: <Blog />,
+                    },
+                    {
+                        path: routerPath.post,
+                        element: <BlogPosts />,
+                    },
+                ],
             },
+
             {
                 path: routerPath.contact,
                 element: <Contact />,
             },
         ],
     },
-];
+]);

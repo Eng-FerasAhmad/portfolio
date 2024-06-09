@@ -228,6 +228,26 @@
                     "id": "jasmine",
                     "name": "Jasmine",
                     "icon": "jasmine"
+                },
+                {
+                    "id": "eslint",
+                    "name": "Eslint",
+                    "icon": "eslint"
+                },
+                {
+                    "id": "prettier",
+                    "name": "prettier",
+                    "icon": "prettier"
+                },
+                {
+                    "id": "sonar-lint",
+                    "name": "Sonar Lint",
+                    "icon": "sonar-lint"
+                },
+                {
+                    "id": "stylelint",
+                    "name": "Style Lint",
+                    "icon": "stylelint"
                 }
             ]
         },

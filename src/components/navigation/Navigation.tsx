@@ -18,7 +18,6 @@ export default function Navigation({ colorSection }: Props): ReactElement {
     const isDeveloper = (): boolean =>
         location.pathname === routerPath.developer ||
         location.pathname === routerPath.home;
-    const isBlog = (): boolean => location.pathname === routerPath.blog;
     const isContact = (): boolean => location.pathname === routerPath.contact;
 
     const handleClick = (pathname: string): void => {
@@ -42,13 +41,6 @@ export default function Navigation({ colorSection }: Props): ReactElement {
                         onClick={() => handleClick(routerPath.techstack)}
                     >
                         {viewModel.pages.techstack}
-                    </ItemWrapper>
-                    <ItemWrapper
-                        border={isBlog()}
-                        colorSection={colorSection}
-                        onClick={() => handleClick(routerPath.blog)}
-                    >
-                        {viewModel.pages.blog}
                     </ItemWrapper>
                     <ItemWrapper
                         border={isContact()}
