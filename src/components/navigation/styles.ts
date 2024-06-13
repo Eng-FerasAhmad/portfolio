@@ -204,9 +204,8 @@ export const IconsWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 150px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
+    top: 300px;
+    margin: 30px auto;
 
     @media ${device.tablet} {
         display: none;
