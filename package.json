@@ -3,7 +3,11 @@
     "private": true,
     "version": "0.0.2",
     "type": "module",
-    "author": "Feras Ahmad",
+    "author": {
+        "email": "feras.ahmad@gmx.de",
+        "name": "Feras Ahmad",
+        "url": "feras.ahmad.net"
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",

@@ -94,12 +94,9 @@ module.exports = {
                     },
                 ],
                 'react/react-in-jsx-scope': 'off',
-                'import/prefer-default-export': 'off',
-                'import/prefer-default-export': 'off',
                 '@typescript-eslint/no-unsafe-assignment': 'off',
                 'import/no-extraneous-dependencies': 'off',
                 'import/prefer-default-export': 'off',
-                'react-refresh/only-export-components': 'off',
                 'import/order': [
                     'error',
                     {

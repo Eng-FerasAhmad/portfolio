@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { color } from 'style/color';
 import { fontSize } from 'style/common';
 import { device } from 'style/screenSize';
 import { pixelToRem } from 'utils/utils';
@@ -24,10 +23,4 @@ export const ArticleItemContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-`;
-
-export const Divider = styled.div`
-    height: 1px;
-    border: 1px solid ${color.blue};
-    background-color: ${color.blue};
 `;

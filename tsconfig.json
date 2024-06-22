@@ -33,7 +33,6 @@
             "test/*": ["./src/test/*"]
         }
     },
-
     "include": [
         "src",
         "public/data/education",
