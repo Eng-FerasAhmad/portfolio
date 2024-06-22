@@ -1,22 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-interface Props {
-    iconWidth?: number;
-    iconHeight?: number;
-}
-
-export default function EsLintIcon(
-    props: SVGProps<SVGSVGElement> & Props
-): ReactElement {
+export default function EsLintIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            iconHeight={props.iconWidth}
-            iconWidth={props.iconWidth}
-            viewBox="0 -15.5 256 256"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 -15.5 256 256">
             <g>
                 <path
                     d="M77.9645944,80.5683518 L126.534904,52.5264993 C127.750365,51.8245002 129.248632,51.8245002 130.464093,52.5264993 L179.035406,80.5683518 C180.249864,81.2703508 181,82.5670433 181,83.9710413 L181,140.054746 C181,141.457742 180.249864,142.755437 179.035406,143.458439 L130.464093,171.500291 C129.248632,172.20229 127.750365,172.20229 126.534904,171.500291 L77.9645944,143.458439 C76.7491332,142.75644 76,141.458744 76,140.054746 L76,83.9710413 C76.0010029,82.5670433 76.7501361,81.2703508 77.9645944,80.5683518"
@@ -27,6 +15,6 @@ export default function EsLintIcon(
                     fill="#4B32C3"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

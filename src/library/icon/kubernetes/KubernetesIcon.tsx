@@ -1,17 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function KubernetesIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function KubernetesIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 -29 256 256"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 -29 256 256">
             <g>
                 <path
                     d="M154.565149,138.601931 L193.810636,197.149425 L255.853854,197.149425 L185.543111,93.2663908 L154.565149,138.601931"
@@ -30,6 +23,6 @@ export default function KubernetesIcon(
                     fill="#56C5A8"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

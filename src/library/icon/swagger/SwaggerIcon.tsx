@@ -1,16 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function SwaggerIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function SwaggerIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 32 32"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 32 32">
             <path
                 d="M30,16a14,14,0,1,1-4.1-9.9A13.956,13.956,0,0,1,30,16Z"
                 style={{
@@ -53,6 +47,6 @@ export default function SwaggerIcon(
                     fill: '#fff',
                 }}
             />
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

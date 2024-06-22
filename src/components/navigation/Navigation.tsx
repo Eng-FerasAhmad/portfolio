@@ -1,15 +1,18 @@
 import { ReactElement } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { ItemWrapper, NavigationContainer } from 'components/navigation/styles';
-import useDeveloper from 'components/sections/developer/useDeveloper';
 import { routerPath } from 'router/constant';
+import { CommonViewModel } from 'types/common';
 
 interface Props {
+    viewModel: CommonViewModel;
     colorSection: string;
 }
 
-export default function Navigation({ colorSection }: Props): ReactElement {
-    const { viewModel } = useDeveloper();
+export default function Navigation({
+    viewModel,
+    colorSection,
+}: Props): ReactElement {
     const navigate = useNavigate();
     const location = useLocation();
 

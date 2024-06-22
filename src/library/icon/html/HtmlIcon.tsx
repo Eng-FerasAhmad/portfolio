@@ -1,16 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function HtmlIcon(props: SVGProps<SVGSVGElement>): ReactElement {
+export default function HtmlIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            height="24px"
-            width="24px"
-            aria-label="HTML5"
-            role="img"
-            viewBox="0 0 512 512"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 512 512">
             <path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52" />
             <path fill="#ef652a" d="M256 472l149-41 35-394H256" />
             <path
@@ -21,6 +15,6 @@ export default function HtmlIcon(props: SVGProps<SVGSVGElement>): ReactElement {
                 fill="#ffffff"
                 d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z"
             />
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

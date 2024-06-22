@@ -93,6 +93,7 @@ module.exports = {
                         singleQuote: true,
                     },
                 ],
+                'react-refresh/only-export-components': 'off',
                 'react/react-in-jsx-scope': 'off',
                 '@typescript-eslint/no-unsafe-assignment': 'off',
                 'import/no-extraneous-dependencies': 'off',

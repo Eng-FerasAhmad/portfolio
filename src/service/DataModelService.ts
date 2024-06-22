@@ -7,6 +7,7 @@ const modelData = new Map<DataModel, string>([
     [DataModel.PROJECT, 'project'],
     [DataModel.TECHSTACK, 'techstack'],
     [DataModel.BLOG, 'blog'],
+    [DataModel.COMMON, 'common'],
 ]);
 
 const languageData = new Map<Language, string>([

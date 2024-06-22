@@ -1,16 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function JenkinsIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function JenkinsIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 32 32"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 32 32">
             <path
                 d="M19.513,25.173c-.068,0-.136,0-.2-.01C19.378,25.169,19.445,25.173,19.513,25.173Z"
                 style={{
@@ -335,6 +329,6 @@ export default function JenkinsIcon(
                     fill: '#231f20',
                 }}
             />
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

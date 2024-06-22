@@ -1,13 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function ChaiIcon(props: SVGProps<SVGSVGElement>): ReactElement {
+export default function ChaiIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            viewBox="-20 0 296 296"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="-20 0 296 296">
             <defs>
                 <linearGradient
                     x1="50%"
@@ -34,6 +31,6 @@ export default function ChaiIcon(props: SVGProps<SVGSVGElement>): ReactElement {
                     fill="#A1070C"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

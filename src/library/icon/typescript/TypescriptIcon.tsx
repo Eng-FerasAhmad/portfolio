@@ -1,22 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-interface Props {
-    iconWidth?: number;
-    iconHeight?: number;
-}
-
-export default function TypescriptIcon(
-    props: SVGProps<SVGSVGElement> & Props
-): ReactElement {
+export default function TypescriptIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            iconHeight={props.iconWidth}
-            iconWidth={props.iconWidth}
-            viewBox="0 0 256 256"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 256 256">
             <g>
                 <polygon
                     fill="#007ACC"
@@ -34,6 +22,6 @@ export default function TypescriptIcon(
                     transform="translate(194.578507, 176.190240) scale(1, -1) translate(-194.578507, -176.190240) "
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

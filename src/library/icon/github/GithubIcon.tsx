@@ -1,22 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-interface Props {
-    iconWidth?: number;
-    iconHeight?: number;
-    color?: string;
-}
-
-export default function GitHubIcon(
-    props: SVGProps<SVGSVGElement> & Props
-): ReactElement {
+export default function GitHubIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            iconHeight={props.iconWidth}
-            iconWidth={props.iconWidth}
-            viewBox="0 -0.5 48 48"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 -0.5 48 48">
             <defs />
             <g
                 id="Icons"
@@ -36,6 +24,6 @@ export default function GitHubIcon(
                     />
                 </g>
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

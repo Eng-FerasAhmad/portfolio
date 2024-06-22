@@ -1,15 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function ConfluenceIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function ConfluenceIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            viewBox="0 -5 256 256"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 -5 256 256">
             <defs>
                 <linearGradient
                     x1="99.140087%"
@@ -42,6 +37,6 @@ export default function ConfluenceIcon(
                     fill="#2684FF"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

@@ -1,0 +1,11 @@
+{
+  "pages": {
+    "contact": "Contact",
+    "blog": "Blog",
+    "techstack": "Techstack",
+    "project": "Project",
+    "developer": "About me!"
+  },
+  "language": "Language",
+  "theme": "Theme"
+}

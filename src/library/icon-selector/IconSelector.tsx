@@ -1,6 +1,5 @@
-import { ReactElement, ReactNode, useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
-import { color } from '../../style/color';
+import { ReactElement, ReactNode } from 'react';
+
 import AdobeXdIcon from '../icon/adobe-xd/AdobeXdIcon';
 import AngularIcon from '../icon/angular/AngularIcon';
 import AzureIcon from '../icon/azure/AzureIcon';
@@ -71,8 +70,6 @@ interface Props {
 }
 
 export default function IconSelector({ iconName }: Props): ReactElement {
-    const { isDarkTheme } = useContext(ThemeContext);
-
     const iconSelector = (): ReactNode => {
         switch (iconName) {
             case 'react':
@@ -154,11 +151,7 @@ export default function IconSelector({ iconName }: Props): ReactElement {
             case 'eslint':
                 return <EsLintIcon />;
             case 'stylelint':
-                return (
-                    <StyleLintIcon
-                        fill={isDarkTheme ? color.light : color.dark}
-                    />
-                );
+                return <StyleLintIcon />;
             case 'jasmine':
                 return <JasmineIcon />;
             case 'kanban':

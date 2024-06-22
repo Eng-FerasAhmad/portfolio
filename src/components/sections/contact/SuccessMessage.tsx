@@ -4,7 +4,7 @@ import {
     SentTextWrapper,
 } from 'components/sections/contact/styles';
 import { ThemeContext } from 'context/ThemeContext';
-import CheckIcon from 'src/library/icon/check/CheckIcon';
+import CheckIcon from 'src/library/action-icons/check/CheckIcon';
 
 interface Props {
     messageSent: string;

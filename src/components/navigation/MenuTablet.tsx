@@ -9,14 +9,14 @@ import {
 } from 'components/navigation/styles';
 
 import { routerPath } from 'router/constant';
+import MenuIcon from 'src/library/action-icons/menu/MenuIcon';
 import CloseIcon from 'src/library/icon/close/CloseIcon';
-import MenuIcon from 'src/library/icon/menu/MenuIcon';
 import { color } from 'style/color';
-import { DeveloperViewModel } from 'types/developerTypes';
+import { CommonViewModel } from 'types/common';
 import { isContact, isDeveloper, isTechstack } from 'utils/utils';
 
 export interface Props {
-    viewModel: DeveloperViewModel;
+    viewModel: CommonViewModel;
     isDarkTheme: boolean;
     colorSection: string;
 }
@@ -40,25 +40,16 @@ export default function MenuTablet({
     };
 
     const menuColor = isDarkTheme ? color.light : color.dark;
-    const menuSize = 30;
 
     return (
         <MenuTabletContainer data-testid="menu-tablet">
             {!showTabletMenu ? (
                 <TabletWrapper onClick={() => toggleMenu(true)}>
-                    <MenuIcon
-                        iconWidth={menuSize}
-                        iconHeight={menuSize}
-                        color={menuColor}
-                    />
+                    <MenuIcon color={menuColor} />
                 </TabletWrapper>
             ) : (
                 <TabletWrapper onClick={() => toggleMenu(false)}>
-                    <CloseIcon
-                        iconWidth={menuSize}
-                        iconHeight={menuSize}
-                        color={menuColor}
-                    />
+                    <CloseIcon color={menuColor} />
                 </TabletWrapper>
             )}
 

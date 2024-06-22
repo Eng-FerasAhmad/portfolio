@@ -7,23 +7,23 @@ import {
     LogoWrapper,
     IconsWrapper,
 } from './styles';
+import useHeader from 'components/header/useHeader';
 import MenuMobile from 'components/navigation/MenuMobile';
 import MenuTablet from 'components/navigation/MenuTablet';
 import Navigation from 'components/navigation/Navigation';
-import useDeveloper from 'components/sections/developer/useDeveloper';
 import useSection from 'components/sections/useSection';
 import { ThemeContext } from 'context/ThemeContext';
 import { routerPath } from 'router/constant';
-import GithubNavigation from 'src/library/icon/github-navigation/GithubNavigation';
+import GithubNavigation from 'src/library/action-icons/github-navigation/GithubNavigation';
 
-import LanguageIcon from 'src/library/icon/language/LanguageIcon';
-import LogoIcon from 'src/library/icon/logo/LogoIcon';
-import ThemeIcon from 'src/library/icon/theme/ThemeIcon';
+import LanguageIcon from 'src/library/action-icons/language/LanguageIcon';
+import LogoIcon from 'src/library/action-icons/logo/LogoIcon';
+import ThemeIcon from 'src/library/action-icons/theme/ThemeIcon';
 
 export default function Header(): ReactElement {
     const navigate = useNavigate();
     const { colorSection } = useSection();
-    const { viewModel } = useDeveloper();
+    const { viewModel } = useHeader();
     const { toggleTheme, isDarkTheme, toggleLanguage } =
         useContext(ThemeContext);
 
@@ -35,10 +35,13 @@ export default function Header(): ReactElement {
         <HeaderContainer data-testid="header">
             <NavbarWrapper data-testid="header-navbar">
                 <LogoWrapper onClick={clickHandler}>
-                    <LogoIcon width={20} height={28} color={colorSection} />
+                    <LogoIcon color={colorSection} />
                 </LogoWrapper>
 
-                <Navigation colorSection={colorSection} />
+                <Navigation
+                    colorSection={colorSection}
+                    viewModel={viewModel!}
+                />
                 <MenuTablet
                     colorSection={colorSection}
                     viewModel={viewModel!}

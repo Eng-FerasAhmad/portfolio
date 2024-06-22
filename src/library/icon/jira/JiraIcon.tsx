@@ -1,16 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function JiraIcon(props: SVGProps<SVGSVGElement>): ReactElement {
+export default function JiraIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 16 16">
             <path
                 d="M15.808 7.552L8.69.667 8 0 2.642 5.183l-2.45 2.37A.623.623 0 000 8c0 .168.069.329.192.448l4.895 4.735L8 16l5.358-5.183.083-.08 2.367-2.29A.623.623 0 0016 8a.623.623 0 00-.192-.448zM8 10.365L5.554 8 8 5.635 10.446 8 8 10.365z"
                 fill="#2684FF"
@@ -47,6 +41,6 @@ export default function JiraIcon(props: SVGProps<SVGSVGElement>): ReactElement {
                     <stop offset={1} stopColor="#2684FF" />
                 </linearGradient>
             </defs>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

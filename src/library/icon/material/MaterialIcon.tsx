@@ -1,22 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-interface Props {
-    iconWidth?: number;
-    iconHeight?: number;
-}
-
-export default function MaterialIcon(
-    props: SVGProps<SVGSVGElement> & Props
-): ReactElement {
+export default function MaterialIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            iconHeight={props.iconWidth}
-            iconWidth={props.iconWidth}
-            viewBox="0 -26 256 256"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 -26 256 256">
             <g>
                 <polygon
                     fill="#00B0FF"
@@ -35,6 +23,6 @@ export default function MaterialIcon(
                     fill="#0081CB"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

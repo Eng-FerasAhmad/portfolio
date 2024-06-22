@@ -1,7 +1,7 @@
 import { ReactElement, useContext, useEffect, useState } from 'react';
-import TopIcon from '../icon/top-icon/TopIcon';
 import { ButtonContainer } from './styles';
 import { ThemeContext } from 'context/ThemeContext';
+import TopIcon from 'src/library/action-icons/top-icon/TopIcon';
 import { color, darkThemeColor } from 'style/color';
 
 export default function ScrollButton(): ReactElement {
@@ -37,8 +37,6 @@ export default function ScrollButton(): ReactElement {
                                 ? darkThemeColor.fontPrimary
                                 : color.dark
                         }
-                        iconHeight={33}
-                        iconWidth={33}
                     />
                 </ButtonContainer>
             )}

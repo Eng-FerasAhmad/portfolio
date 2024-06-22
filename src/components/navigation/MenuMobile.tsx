@@ -12,16 +12,16 @@ import {
 } from 'components/navigation/styles';
 import { ThemeContext } from 'context/ThemeContext';
 import { routerPath } from 'router/constant';
+import LanguageIcon from 'src/library/action-icons/language/LanguageIcon';
+import MenuIcon from 'src/library/action-icons/menu/MenuIcon';
+import ThemeIcon from 'src/library/action-icons/theme/ThemeIcon';
 import CloseIcon from 'src/library/icon/close/CloseIcon';
-import LanguageIcon from 'src/library/icon/language/LanguageIcon';
-import MenuIcon from 'src/library/icon/menu/MenuIcon';
-import ThemeIcon from 'src/library/icon/theme/ThemeIcon';
 import { color } from 'style/color';
-import { DeveloperViewModel } from 'types/developerTypes';
+import { CommonViewModel } from 'types/common';
 import { isContact, isDeveloper, isTechstack } from 'utils/utils';
 
 export interface Props {
-    viewModel: DeveloperViewModel;
+    viewModel: CommonViewModel;
     colorSection: string;
 }
 
@@ -46,28 +46,19 @@ export default function MenuMobile({
         useContext(ThemeContext);
 
     const menuColor = isDarkTheme ? color.light : color.dark;
-    const menuSize = 30;
 
     return (
         <MenuMobileContainer data-testid="menu-mobile">
             {!showMobileMenu ? (
                 <MobileWrapper onClick={() => toggleMenu(true)}>
-                    <MenuIcon
-                        iconWidth={menuSize}
-                        iconHeight={menuSize}
-                        color={menuColor}
-                    />
+                    <MenuIcon color={menuColor} />
                 </MobileWrapper>
             ) : (
                 <MobileNavigationWrapper data-testid="mobile-navigation-wrapper">
                     <MobileContentWrapper data-testid="mobile-content-wrapper">
                         <>
                             <TabletWrapper onClick={() => toggleMenu(false)}>
-                                <CloseIcon
-                                    iconWidth={menuSize}
-                                    iconHeight={menuSize}
-                                    color={menuColor}
-                                />
+                                <CloseIcon color={menuColor} />
                             </TabletWrapper>
 
                             <ItemWrapper
@@ -104,7 +95,7 @@ export default function MenuMobile({
                                         isDark={isDarkTheme!}
                                         clickHandler={() => undefined}
                                     />
-                                    <div>{viewModel.common.theme}</div>
+                                    <div>{viewModel.theme}</div>
                                 </IconItemsWrapper>
 
                                 <IconItemsWrapper
@@ -114,7 +105,7 @@ export default function MenuMobile({
                                         isDark={isDarkTheme!}
                                         clickHandler={() => undefined}
                                     />
-                                    <div>{viewModel.common.language}</div>
+                                    <div>{viewModel.language}</div>
                                 </IconItemsWrapper>
                             </IconsWrapper>
                         )}

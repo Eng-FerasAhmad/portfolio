@@ -1,12 +1,7 @@
-import { Common } from 'types/common';
-import { Pages } from 'types/pageType';
-
 export interface BlogViewModel {
     entityHeader: string;
     title: string;
     description: string;
-    pages: Pages;
-    common: Common;
     publish: Publish;
     comingSoon: ComingSoon;
 }

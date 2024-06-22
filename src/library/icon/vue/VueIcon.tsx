@@ -1,11 +1,11 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function VueIcon(props: SVGProps<SVGSVGElement>): ReactElement {
+export default function VueIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
+        <IconTemplate
+            {...props}
             viewBox="0 0 64 64"
             style={{
                 fillRule: 'evenodd',
@@ -13,7 +13,6 @@ export default function VueIcon(props: SVGProps<SVGSVGElement>): ReactElement {
                 strokeLinejoin: 'round',
                 strokeMiterlimit: 2,
             }}
-            {...props}
         >
             <rect
                 id="Icons"
@@ -88,6 +87,6 @@ export default function VueIcon(props: SVGProps<SVGSVGElement>): ReactElement {
                 <g id="clipboard-copy" />
                 <g id="Layer1" />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

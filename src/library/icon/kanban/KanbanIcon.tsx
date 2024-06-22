@@ -1,16 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function KanbanIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function KanbanIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 73 73"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 73 73">
             <desc>{'Created with Sketch.'}</desc>
             <defs />
             <g
@@ -81,6 +75,6 @@ export default function KanbanIcon(
                     />
                 </g>
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

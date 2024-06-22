@@ -1,12 +1,7 @@
-import { Common } from 'types/common';
-import { Pages } from 'types/pageType';
-
 export interface TechstackViewModel {
     entityHeader: string;
-    pages: Pages;
     worksTitle: string;
     works: Array<Works>;
-    common: Common;
 }
 
 export interface Works {

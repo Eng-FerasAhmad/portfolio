@@ -1,17 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function VuetifyIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function VuetifyIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="-18.5 0 293 293"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="-18.5 0 293 293">
             <g>
                 <polyline fill="#1697F6" points="128 0 68 0 128 141.816367" />
                 <polyline fill="#1867C0" points="128 0 188 0 128 141.816367" />
@@ -24,6 +17,6 @@ export default function VuetifyIcon(
                     points="128 182.746214 128 292.461921 256 42.5600014 188.95096 42.5600014"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

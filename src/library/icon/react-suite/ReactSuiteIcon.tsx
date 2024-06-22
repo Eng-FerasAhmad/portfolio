@@ -1,18 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function ReactSuiteIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function ReactSuiteIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            viewBox="0 0 120 138"
-            xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            height="100%"
-            preserveAspectRatio="xMidYMin slice"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 120 138">
             <defs>
                 <linearGradient
                     x1="71.5906675%"
@@ -89,6 +81,6 @@ export default function ReactSuiteIcon(
                     <circle fill="#6594ED" cx={111} cy={31} r={3} />
                 </g>
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

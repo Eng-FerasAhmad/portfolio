@@ -1,17 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function MochaIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function MochaIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="-17.5 0 291 291"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="-17.5 0 291 291">
             <g>
                 <path
                     d="M248.1951,223.7661 L135.8051,288.7031 C130.9661,291.5121 125.0341,291.5121 120.1951,288.7031 L7.8051,223.7661 C2.9661,220.9561 0.0001,215.8051 0.0001,210.3421 L0.0001,80.4681 C0.0001,74.8491 2.9661,69.8541 7.8051,67.0441 L120.1951,2.1071 C125.0341,-0.7019 130.9661,-0.7019 135.8051,2.1071 L248.1951,67.0441 C253.0341,69.8541 256.0001,75.0051 256.0001,80.4681 L256.0001,210.3421 C255.8441,215.8051 252.8781,220.9561 248.1951,223.7661 L248.1951,223.7661 Z"
@@ -22,6 +15,6 @@ export default function MochaIcon(
                     fill="#FFFFFF"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

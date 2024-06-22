@@ -1,9 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function CssIcon(props: SVGProps<SVGSVGElement>): ReactElement {
+export default function CssIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer viewBox="0 0 32 32" {...props}>
+        <IconTemplate {...props} viewBox="0 0 32 32">
             <polygon
                 points="5.902 27.201 3.656 2 28.344 2 26.095 27.197 15.985 30 5.902 27.201"
                 style={{
@@ -46,6 +47,6 @@ export default function CssIcon(props: SVGProps<SVGSVGElement>): ReactElement {
                     fill: '#ebebeb',
                 }}
             />
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

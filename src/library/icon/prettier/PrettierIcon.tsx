@@ -1,17 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function PrettierIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function PrettierIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 256 256"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 256 256">
             <g>
                 <rect
                     fill="#56B3B4"
@@ -360,6 +353,6 @@ export default function PrettierIcon(
                     rx={5}
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

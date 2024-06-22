@@ -1,14 +1,9 @@
-import { Common } from 'types/common';
-import { Pages } from 'types/pageType';
-
 export interface ContactViewModel {
     entityHeader: string;
     title: string;
     description: string;
     form: ContactForm;
     media: Array<MediaViewModel>;
-    pages: Pages;
-    common: Common;
 }
 
 export interface ContactForm {

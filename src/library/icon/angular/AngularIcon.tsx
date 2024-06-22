@@ -1,15 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function AngularIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function AngularIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            viewBox="-8 0 272 272"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="-8 0 272 272">
             <g>
                 <path
                     d="M0.0996108949,45.522179 L125.908171,0.697276265 L255.103502,44.7252918 L234.185214,211.175097 L125.908171,271.140856 L19.3245136,211.971984 L0.0996108949,45.522179 Z"
@@ -24,6 +19,6 @@ export default function AngularIcon(
                     fill="#FFFFFF"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

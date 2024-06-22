@@ -1,16 +1,13 @@
-import { ReactElement, SVGProps } from 'react';
+import { ReactElement } from 'react';
 import { SvgMastersContainer } from './style';
 
-export default function FrontendMastersIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function FrontendMastersIcon(): ReactElement {
     return (
         <SvgMastersContainer
             width={229}
             height={67}
             viewBox="0 0 229 67"
             fill="none"
-            {...props}
         >
             <rect
                 width={228.273}

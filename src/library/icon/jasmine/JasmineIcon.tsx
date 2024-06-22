@@ -1,17 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function JasmineIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function JasmineIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 -0.5 256 256"
-            preserveAspectRatio="xMidYMid"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 -0.5 256 256">
             <g
                 transform="translate(128.000000, 127.000000) scale(1, -1) translate(-128.000000, -127.000000) translate(0.000000, -1.000000)"
                 fill="#8A4182"
@@ -28,6 +21,6 @@ export default function JasmineIcon(
                 <path d="M50.608,100.093107 L48.0718182,107.858079 L86.4061818,120.240452 L88.9425455,112.47548 L50.608,100.093107" />
                 <path d="M123.807273,46.8411299 L132.018218,46.8411299 L132.018218,86.9259209 L123.807273,86.9259209 L123.807273,46.8411299 L123.807273,46.8411299 Z" />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

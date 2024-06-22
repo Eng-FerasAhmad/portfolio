@@ -1,22 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from '../../icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-interface Props {
-    iconWidth?: number;
-    iconHeight?: number;
-}
-
-export default function ViteIcon(
-    props: SVGProps<SVGSVGElement> & Props
-): ReactElement {
+export default function ViteIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            iconHeight={props.iconWidth}
-            iconWidth={props.iconWidth}
-            viewBox="0 0 32 32"
-            fill="none"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 32 32">
             <path
                 d="M29.8836 6.146L16.7418 29.6457c-.2714.4851-.9684.488-1.2439.0052L2.0956 6.1482c-.3-.5262.1498-1.1635.746-1.057l13.156 2.3516a.7144.7144 0 00.2537-.0004l12.8808-2.3478c.5942-.1083 1.0463.5241.7515 1.0513z"
                 fill="url(#paint0_linear)"
@@ -52,6 +40,6 @@ export default function ViteIcon(
                     <stop offset={1} stopColor="#FFA800" id="stop47" />
                 </linearGradient>
             </defs>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

@@ -1,15 +1,4 @@
 {
-    "pages": {
-        "contact": "Kontakt",
-        "blog": "Blog",
-        "techstack": "Techstack",
-        "project": "Projekte",
-        "developer": "Über mich!"
-    },
-    "common": {
-        "language": "Sprache",
-        "theme": "Theme"
-    },
     "entityHeader": "Techstack",
     "worksTitle": "Was ich mache",
     "works": [

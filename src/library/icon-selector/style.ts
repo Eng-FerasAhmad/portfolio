@@ -3,8 +3,8 @@ import { device } from '../../style/screenSize';
 import { pixelToRem } from '../../utils/utils';
 
 interface Props {
-    iconWidth?: number;
-    iconHeight?: number;
+    width?: number;
+    height?: number;
 }
 
 export const IconSelectorContainer = styled.div`
@@ -12,7 +12,7 @@ export const IconSelectorContainer = styled.div`
     margin: auto;
 `;
 
-export const SvgTechContainer = styled.svg<Props>`
+export const IconTemplateContainer = styled.svg<Props>`
     @media ${device.mobile} {
         width: ${pixelToRem(35)};
         height: ${pixelToRem(35)};
@@ -20,15 +20,15 @@ export const SvgTechContainer = styled.svg<Props>`
 
     @media ${device.mobile} {
         width: ${(props) =>
-            props.iconWidth ? pixelToRem(props.iconWidth) : pixelToRem(40)};
+            props.width ? pixelToRem(props.width) : pixelToRem(40)};
         height: ${(props) =>
-            props.iconHeight ? pixelToRem(props.iconHeight) : pixelToRem(40)};
+            props.height ? pixelToRem(props.height) : pixelToRem(40)};
     }
 
     @media ${device.desktop} {
         width: ${(props) =>
-            props.iconWidth ? pixelToRem(props.iconWidth) : pixelToRem(50)};
+            props.width ? pixelToRem(props.width) : pixelToRem(50)};
         height: ${(props) =>
-            props.iconHeight ? pixelToRem(props.iconHeight) : pixelToRem(50)};
+            props.height ? pixelToRem(props.height) : pixelToRem(50)};
     }
 `;

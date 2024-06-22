@@ -1,6 +1,3 @@
-import { Common } from 'types/common';
-import { Pages } from 'types/pageType';
-
 export interface DeveloperViewModel {
     entityHeader: string;
     title: string;
@@ -9,8 +6,6 @@ export interface DeveloperViewModel {
     aboutMore: string;
     socialAccount: Array<SocialAccount>;
     language: Array<string>;
-    pages: Pages;
-    common: Common;
 }
 
 export interface SocialAccount {

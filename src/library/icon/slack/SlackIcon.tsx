@@ -1,17 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function SlackIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function SlackIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 16 16"
-            fill="none"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 16 16">
             <g fillRule="evenodd" clipRule="evenodd">
                 <path
                     fill="#E01E5A"
@@ -30,6 +23,6 @@ export default function SlackIcon(
                     d="M8.377 9.847c.002.811.659 1.469 1.47 1.47h3.683A1.474 1.474 0 0015 9.848a1.474 1.474 0 00-1.47-1.47H9.847a1.474 1.474 0 00-1.47 1.47zm2.94 3.682a1.474 1.474 0 00-1.47-1.47h-1.47v1.47c.002.812.659 1.469 1.47 1.47a1.474 1.474 0 001.47-1.47z"
                 />
             </g>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }

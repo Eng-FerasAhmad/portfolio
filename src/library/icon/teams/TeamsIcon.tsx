@@ -1,17 +1,10 @@
-import { ReactElement, SVGProps } from 'react';
-import { SvgTechContainer } from 'src/library/icon-selector/style';
+import { ReactElement } from 'react';
+import IconTemplate from 'src/library/icon-selector/IconTemplate';
+import { IconProps } from 'src/library/icon-selector/types';
 
-export default function TeamsIcon(
-    props: SVGProps<SVGSVGElement>
-): ReactElement {
+export default function TeamsIcon(props: IconProps): ReactElement {
     return (
-        <SvgTechContainer
-            width="24px"
-            height="24px"
-            viewBox="0 0 32 32"
-            fill="none"
-            {...props}
-        >
+        <IconTemplate {...props} viewBox="0 0 32 32">
             <path
                 d="M19 13.9032C19 13.4044 19.4044 13 19.9032 13H31.0968C31.5956 13 32 13.4044 32 13.9032V20.5C32 24.0899 29.0899 27 25.5 27C21.9101 27 19 24.0899 19 20.5V13.9032Z"
                 fill="url(#paint0_linear_87_7777)"
@@ -140,6 +133,6 @@ export default function TeamsIcon(
                     <stop offset={1} stopColor="#4C56B9" />
                 </linearGradient>
             </defs>
-        </SvgTechContainer>
+        </IconTemplate>
     );
 }
