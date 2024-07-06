@@ -15,6 +15,7 @@ export const lightThemeColor = {
 export const color = {
     light: '#fff',
     dark: '#22272e',
+    border: '#d9d9d9',
     error: '#FF3333',
     greenLight: '#c3efdd',
     green: '#5ed4a5',

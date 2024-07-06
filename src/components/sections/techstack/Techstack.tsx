@@ -1,5 +1,6 @@
 import { ReactElement, useContext } from 'react';
 import { BoxDetailsContainer, TechstackContainer } from './styles';
+import Footer from 'components/footer/Footer';
 import useTechstack from 'components/sections/techstack/useTechstack';
 import { ThemeContext } from 'context/ThemeContext';
 import BoxBuildContent from 'src/library/works/box-build/BoxBuildContent';
@@ -49,6 +50,8 @@ export default function Techstack(): ReactElement {
                             works={viewModel.works[WorksBox.KNOW]}
                             isDarkTheme={isDarkTheme!}
                         />
+
+                        <Footer />
                     </BoxDetailsContainer>
                 </>
             )}

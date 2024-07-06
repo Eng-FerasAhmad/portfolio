@@ -6,6 +6,7 @@ import {
     SocialMediaWrapper,
 } from './styles';
 import useContact from './useContact';
+import Footer from 'components/footer/Footer';
 import Form from 'components/sections/contact/Form';
 import Media from 'components/sections/contact/Media';
 import { AnimationFadeIn } from 'style/animation';
@@ -33,6 +34,7 @@ export default function Contact(): ReactElement {
                     returnHandleValidation={isMailSent}
                 />
                 <Media viewModel={viewModel!} />
+                <Footer />
             </AnimationFadeIn>
         </ContactContainer>
     );

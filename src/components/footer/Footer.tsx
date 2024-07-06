@@ -1,15 +1,20 @@
 import { ReactElement } from 'react';
-import { FooterWrapper } from './styles';
-import ThemeContextProvider from 'context/ThemeContext';
+import { useLocation } from 'react-router';
+import { FooterContentWrapper, FooterWrapper } from './styles';
+import { isDeveloper } from 'utils/utils';
 
-export default function Footer(): ReactElement {
+export default function Footer(): ReactElement | null {
+    const location = useLocation();
     const currentYear = new Date().getFullYear();
 
+    if (isDeveloper(location.pathname)) return null;
+
     return (
-        <ThemeContextProvider>
-            <FooterWrapper data-testid="footer">
-                &copy; {currentYear} Feras Ahmad
-            </FooterWrapper>
-        </ThemeContextProvider>
+        <FooterWrapper data-testid="footer">
+            <FooterContentWrapper>
+                &copy; {currentYear} Feras Ahmad, All rights reserved.
+                <div></div>
+            </FooterContentWrapper>
+        </FooterWrapper>
     );
 }
